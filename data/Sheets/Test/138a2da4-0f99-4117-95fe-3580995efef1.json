@@ -1,0 +1,1871 @@
+{
+    "qProperty":  {
+                      "qInfo":  {
+                                    "qID":  "138a2da4-0f99-4117-95fe-3580995efef1",
+                                    "qType":  "sheet",
+                                    "qApp":  "Revenue-RateIncreaseTool"
+                                },
+                      "qMetaDef":  {
+                                       "title":  "Rate Increase Leaderboard",
+                                       "description":  ""
+                                   },
+                      "rank":  4,
+                      "thumbnail":  {
+                                        "qStaticContentUrlDef":  {
+                                                                     "qUrl":  "/appcontent/d11b65f7-ecdd-4c4e-af52-d0435876cbfb/Rate Increase - Rate Increase Leaderboard.jpg"
+                                                                 }
+                                    },
+                      "columns":  "24",
+                      "rows":  "14",
+                      "cells":  [
+                                    {
+                                        "name":  "139298e6-987b-43de-a53b-231f0399f495",
+                                        "type":  "text-image",
+                                        "col":  4,
+                                        "row":  1,
+                                        "colspan":  8,
+                                        "rowspan":  1,
+                                        "bounds":  {
+                                                       "y":  7.142857142857142,
+                                                       "x":  16.666666666666664,
+                                                       "width":  33.33333333333333,
+                                                       "height":  7.142857142857142
+                                                   }
+                                    },
+                                    {
+                                        "name":  "68f0d5fc-6e34-46fb-adc4-83b7b8221e71",
+                                        "type":  "qlik-multi-kpi",
+                                        "col":  0,
+                                        "row":  1,
+                                        "colspan":  4,
+                                        "rowspan":  3,
+                                        "bounds":  {
+                                                       "y":  7.142857142857142,
+                                                       "x":  0,
+                                                       "width":  16.666666666666664,
+                                                       "height":  21.428571428571427
+                                                   }
+                                    },
+                                    {
+                                        "name":  "GUFp",
+                                        "type":  "piechart",
+                                        "col":  4,
+                                        "row":  3,
+                                        "colspan":  6,
+                                        "rowspan":  9,
+                                        "bounds":  {
+                                                       "y":  21.428571428571427,
+                                                       "x":  16.666666666666664,
+                                                       "width":  25,
+                                                       "height":  64.28571428571429
+                                                   }
+                                    },
+                                    {
+                                        "name":  "JQpKn",
+                                        "type":  "gauge",
+                                        "col":  10,
+                                        "row":  3,
+                                        "colspan":  6,
+                                        "rowspan":  9,
+                                        "bounds":  {
+                                                       "y":  21.428571428571427,
+                                                       "x":  41.66666666666667,
+                                                       "width":  25,
+                                                       "height":  64.28571428571429
+                                                   }
+                                    },
+                                    {
+                                        "name":  "CedUgL",
+                                        "type":  "action-button",
+                                        "col":  0,
+                                        "row":  4,
+                                        "colspan":  4,
+                                        "rowspan":  2,
+                                        "bounds":  {
+                                                       "y":  28.57142857142857,
+                                                       "x":  0,
+                                                       "width":  16.666666666666664,
+                                                       "height":  14.285714285714285
+                                                   }
+                                    },
+                                    {
+                                        "name":  "mRtjW",
+                                        "type":  "action-button",
+                                        "col":  0,
+                                        "row":  6,
+                                        "colspan":  4,
+                                        "rowspan":  2,
+                                        "bounds":  {
+                                                       "y":  42.857142857142854,
+                                                       "x":  0,
+                                                       "width":  16.666666666666664,
+                                                       "height":  14.285714285714285
+                                                   }
+                                    },
+                                    {
+                                        "name":  "WCNZj",
+                                        "type":  "action-button",
+                                        "col":  0,
+                                        "row":  8,
+                                        "colspan":  4,
+                                        "rowspan":  2,
+                                        "bounds":  {
+                                                       "y":  57.14285714285714,
+                                                       "x":  0,
+                                                       "width":  16.666666666666664,
+                                                       "height":  14.285714285714285
+                                                   }
+                                    },
+                                    {
+                                        "name":  "pvLxACp",
+                                        "type":  "action-button",
+                                        "col":  0,
+                                        "row":  10,
+                                        "colspan":  4,
+                                        "rowspan":  2,
+                                        "bounds":  {
+                                                       "y":  71.42857142857143,
+                                                       "x":  0,
+                                                       "width":  16.666666666666664,
+                                                       "height":  14.285714285714285
+                                                   }
+                                    },
+                                    {
+                                        "name":  "grpyPm",
+                                        "type":  "action-button",
+                                        "col":  0,
+                                        "row":  12,
+                                        "colspan":  4,
+                                        "rowspan":  2,
+                                        "bounds":  {
+                                                       "y":  85.71428571428571,
+                                                       "x":  0,
+                                                       "width":  16.666666666666664,
+                                                       "height":  14.285714285714285
+                                                   }
+                                    },
+                                    {
+                                        "name":  "YxtAvK",
+                                        "type":  "container",
+                                        "col":  0,
+                                        "row":  0,
+                                        "colspan":  24,
+                                        "rowspan":  1,
+                                        "bounds":  {
+                                                       "y":  0,
+                                                       "x":  0,
+                                                       "width":  100,
+                                                       "height":  7.142857142857142
+                                                   }
+                                    },
+                                    {
+                                        "name":  "VBjYGU",
+                                        "type":  "container",
+                                        "col":  16,
+                                        "row":  1,
+                                        "colspan":  8,
+                                        "rowspan":  13,
+                                        "bounds":  {
+                                                       "y":  7.142857142857142,
+                                                       "x":  66.66666666666666,
+                                                       "width":  33.33333333333333,
+                                                       "height":  92.85714285714286
+                                                   }
+                                    }
+                                ],
+                      "navPoints":  [
+
+                                    ]
+                  },
+    "qChildren":  [
+                      {
+                          "qProperty":  {
+                                            "qInfo":  {
+                                                          "qId":  "CedUgL",
+                                                          "qType":  "action-button"
+                                                      },
+                                            "qExtendsId":  "a1d7cd7a-1975-45a9-94a4-a7d818202c08",
+                                            "qMetaDef":  {
+
+                                                         }
+                                        },
+                          "qChildren":  [
+
+                                        ]
+                      },
+                      {
+                          "qProperty":  {
+                                            "qInfo":  {
+                                                          "qId":  "mRtjW",
+                                                          "qType":  "action-button"
+                                                      },
+                                            "qExtendsId":  "20ec21dc-20d7-4af1-ac17-67ba1b5ff87e",
+                                            "qMetaDef":  {
+
+                                                         }
+                                        },
+                          "qChildren":  [
+
+                                        ]
+                      },
+                      {
+                          "qProperty":  {
+                                            "qInfo":  {
+                                                          "qId":  "JQpKn",
+                                                          "qType":  "gauge"
+                                                      },
+                                            "qMetaDef":  {
+
+                                                         },
+                                            "qHyperCubeDef":  {
+                                                                  "qDimensions":  [
+
+                                                                                  ],
+                                                                  "qMeasures":  [
+                                                                                    {
+                                                                                        "qLibraryId":  "7cbca995-b06a-4db3-aa6b-469c39e7f0f3",
+                                                                                        "qDef":  {
+                                                                                                     "qTags":  [
+
+                                                                                                               ],
+                                                                                                     "qGrouping":  "N",
+                                                                                                     "qAccumulate":  0,
+                                                                                                     "qActiveExpression":  0,
+                                                                                                     "qExpressions":  [
+
+                                                                                                                      ],
+                                                                                                     "autoSort":  true,
+                                                                                                     "cId":  "nPYyJDD",
+                                                                                                     "numFormatFromTemplate":  true,
+                                                                                                     "quarantine":  {
+                                                                                                                        "qNumFormat":  {
+
+                                                                                                                                       },
+                                                                                                                        "isCustomFormatted":  false
+                                                                                                                    }
+                                                                                                 },
+                                                                                        "qSortBy":  {
+                                                                                                        "qSortByNumeric":  -1,
+                                                                                                        "qSortByLoadOrder":  1,
+                                                                                                        "qExpression":  {
+
+                                                                                                                        }
+                                                                                                    },
+                                                                                        "qAttributeExpressions":  [
+
+                                                                                                                  ],
+                                                                                        "qAttributeDimensions":  [
+
+                                                                                                                 ],
+                                                                                        "qCalcCond":  {
+
+                                                                                                      },
+                                                                                        "qCalcCondition":  {
+                                                                                                               "qCond":  {
+
+                                                                                                                         },
+                                                                                                               "qMsg":  {
+
+                                                                                                                        }
+                                                                                                           },
+                                                                                        "qTrendLines":  [
+
+                                                                                                        ],
+                                                                                        "qMiniChartDef":  {
+                                                                                                              "qSortBy":  {
+                                                                                                                              "qExpression":  {
+
+                                                                                                                                              }
+                                                                                                                          },
+                                                                                                              "qOtherTotalSpec":  {
+                                                                                                                                      "qOtherMode":  "OTHER_OFF",
+                                                                                                                                      "qOtherCounted":  {
+
+                                                                                                                                                        },
+                                                                                                                                      "qOtherLimit":  {
+
+                                                                                                                                                      },
+                                                                                                                                      "qOtherLimitMode":  "OTHER_GT_LIMIT",
+                                                                                                                                      "qForceBadValueKeeping":  true,
+                                                                                                                                      "qApplyEvenWhenPossiblyWrongResult":  true,
+                                                                                                                                      "qOtherSortMode":  "OTHER_SORT_DESCENDING",
+                                                                                                                                      "qTotalMode":  "TOTAL_OFF",
+                                                                                                                                      "qReferencedExpression":  {
+
+                                                                                                                                                                }
+                                                                                                                                  },
+                                                                                                              "qMaxNumberPoints":  -1,
+                                                                                                              "qAttributeExpressions":  [
+
+                                                                                                                                        ]
+                                                                                                          }
+                                                                                    }
+                                                                                ],
+                                                                  "qInterColumnSortOrder":  [
+                                                                                                0
+                                                                                            ],
+                                                                  "qSuppressMissing":  true,
+                                                                  "qInitialDataFetch":  [
+                                                                                            {
+                                                                                                "qLeft":  0,
+                                                                                                "qTop":  0,
+                                                                                                "qWidth":  1,
+                                                                                                "qHeight":  1
+                                                                                            }
+                                                                                        ],
+                                                                  "qReductionMode":  "N",
+                                                                  "qMode":  "S",
+                                                                  "qPseudoDimPos":  -1,
+                                                                  "qNoOfLeftDims":  -1,
+                                                                  "qMaxStackedCells":  5000,
+                                                                  "qCalcCond":  {
+
+                                                                                },
+                                                                  "qTitle":  {
+
+                                                                             },
+                                                                  "qCalcCondition":  {
+                                                                                         "qCond":  {
+
+                                                                                                   },
+                                                                                         "qMsg":  {
+
+                                                                                                  }
+                                                                                     },
+                                                                  "qColumnOrder":  [
+
+                                                                                   ],
+                                                                  "qExpansionState":  [
+
+                                                                                      ],
+                                                                  "qLayoutExclude":  {
+                                                                                         "qHyperCubeDef":  {
+                                                                                                               "qDimensions":  [
+
+                                                                                                                               ],
+                                                                                                               "qMeasures":  [
+
+                                                                                                                             ],
+                                                                                                               "qInterColumnSortOrder":  [
+
+                                                                                                                                         ],
+                                                                                                               "qInitialDataFetch":  [
+
+                                                                                                                                     ],
+                                                                                                               "qReductionMode":  "N",
+                                                                                                               "qMode":  "S",
+                                                                                                               "qPseudoDimPos":  -1,
+                                                                                                               "qNoOfLeftDims":  -1,
+                                                                                                               "qMaxStackedCells":  5000,
+                                                                                                               "qCalcCond":  {
+
+                                                                                                                             },
+                                                                                                               "qTitle":  {
+
+                                                                                                                          },
+                                                                                                               "qCalcCondition":  {
+                                                                                                                                      "qCond":  {
+
+                                                                                                                                                },
+                                                                                                                                      "qMsg":  {
+
+                                                                                                                                               }
+                                                                                                                                  },
+                                                                                                               "qColumnOrder":  [
+
+                                                                                                                                ],
+                                                                                                               "qExpansionState":  [
+
+                                                                                                                                   ]
+                                                                                                           }
+                                                                                     }
+                                                              },
+                                            "refLine":  {
+                                                            "refLines":  [
+
+                                                                         ]
+                                                        },
+                                            "showTitles":  true,
+                                            "title":  "Progress to Target",
+                                            "subtitle":  "",
+                                            "footnote":  "",
+                                            "disableNavMenu":  false,
+                                            "showDetails":  true,
+                                            "measureAxis":  {
+                                                                "min":  0,
+                                                                "max":  {
+                                                                            "qValueExpression":  {
+                                                                                                     "qExpr":  "=Min(1, Ceil([Progress to Target %] * 1.1, .05))"
+                                                                                                 }
+                                                                        },
+                                                                "show":  "labels",
+                                                                "spacing":  1
+                                                            },
+                                            "gaugetype":  "radial",
+                                            "autoOrientation":  true,
+                                            "angle":  0.7,
+                                            "useSegments":  true,
+                                            "color":  {
+                                                          "useBaseColors":  "measure"
+                                                      },
+                                            "paletteProgressColor":  {
+                                                                         "index":  6
+                                                                     },
+                                            "valueMode":  "absolute",
+                                            "maxSegments":  6,
+                                            "segmentInfo":  {
+                                                                "limits":  [
+
+                                                                           ],
+                                                                "paletteColors":  [
+                                                                                      {
+                                                                                          "index":  6
+                                                                                      }
+                                                                                  ],
+                                                                "colors":  [
+                                                                               {
+                                                                                   "color":  3
+                                                                               }
+                                                                           ]
+                                                            },
+                                            "disclaimerClosed":  true,
+                                            "visualization":  "gauge",
+                                            "orientation":  "horizontal"
+                                        },
+                          "qChildren":  [
+
+                                        ]
+                      },
+                      {
+                          "qProperty":  {
+                                            "qInfo":  {
+                                                          "qId":  "pvLxACp",
+                                                          "qType":  "action-button"
+                                                      },
+                                            "qExtendsId":  "0d002135-6716-4bc0-af65-c34fc1d5b8ca",
+                                            "qMetaDef":  {
+
+                                                         }
+                                        },
+                          "qChildren":  [
+
+                                        ]
+                      },
+                      {
+                          "qProperty":  {
+                                            "qInfo":  {
+                                                          "qId":  "YxtAvK",
+                                                          "qType":  "container"
+                                                      },
+                                            "qMetaDef":  {
+
+                                                         },
+                                            "children":  [
+                                                             {
+                                                                 "refId":  "8e32fead-952c-46aa-b67e-7b78a7205f6c",
+                                                                 "label":  "With DivReg",
+                                                                 "isMaster":  true,
+                                                                 "cId":  "nCPEKS",
+                                                                 "condition":  {
+                                                                                   "qStringExpression":  {
+                                                                                                             "qExpr":  "=vDivReg=1"
+                                                                                                         }
+                                                                               }
+                                                             },
+                                                             {
+                                                                 "refId":  "9a0d397b-5035-4827-a938-b84f7c4870f0",
+                                                                 "label":  "Without DivReg",
+                                                                 "isMaster":  true,
+                                                                 "cId":  "emjztM",
+                                                                 "condition":  {
+                                                                                   "qStringExpression":  {
+                                                                                                             "qExpr":  "vDivReg=0"
+                                                                                                         }
+                                                                               }
+                                                             }
+                                                         ],
+                                            "showTitles":  false,
+                                            "title":  "",
+                                            "subtitle":  "",
+                                            "footnote":  "",
+                                            "disableNavMenu":  false,
+                                            "showDetails":  false,
+                                            "borders":  "noBorder",
+                                            "showTabs":  false,
+                                            "useDropdown":  true,
+                                            "useScrollButton":  true,
+                                            "showIcons":  false,
+                                            "visualization":  "container",
+                                            "qChildListDef":  {
+                                                                  "qData":  {
+                                                                                "visualization":  "/visualization",
+                                                                                "containerChildId":  "/containerChildId",
+                                                                                "qExtendsId":  "/qExtendsId",
+                                                                                "title":  "/title",
+                                                                                "showCondition":  "/showCondition"
+                                                                            }
+                                                              },
+                                            "supportRefresh":  false,
+                                            "hasExternalChildren":  false
+                                        },
+                          "qChildren":  [
+                                            {
+                                                "qProperty":  {
+                                                                  "qInfo":  {
+                                                                                "qId":  "9997bf25-4c1f-4c69-834a-ee637a93752f",
+                                                                                "qType":  "filterpane"
+                                                                            },
+                                                                  "qExtendsId":  "8e32fead-952c-46aa-b67e-7b78a7205f6c",
+                                                                  "qMetaDef":  {
+
+                                                                               },
+                                                                  "visualization":  "filterpane"
+                                                              },
+                                                "qChildren":  [
+
+                                                              ]
+                                            },
+                                            {
+                                                "qProperty":  {
+                                                                  "qInfo":  {
+                                                                                "qId":  "8bcac5dd-5618-4387-bd34-2c4e8fd0ac65",
+                                                                                "qType":  "filterpane"
+                                                                            },
+                                                                  "qExtendsId":  "9a0d397b-5035-4827-a938-b84f7c4870f0",
+                                                                  "qMetaDef":  {
+
+                                                                               },
+                                                                  "visualization":  "filterpane"
+                                                              },
+                                                "qChildren":  [
+
+                                                              ]
+                                            }
+                                        ]
+                      },
+                      {
+                          "qProperty":  {
+                                            "qInfo":  {
+                                                          "qId":  "68f0d5fc-6e34-46fb-adc4-83b7b8221e71",
+                                                          "qType":  "qlik-multi-kpi"
+                                                      },
+                                            "qExtendsId":  "d1f4eaea-23ba-45a1-9eec-418b5b300040",
+                                            "qMetaDef":  {
+
+                                                         }
+                                        },
+                          "qChildren":  [
+
+                                        ]
+                      },
+                      {
+                          "qProperty":  {
+                                            "qInfo":  {
+                                                          "qId":  "139298e6-987b-43de-a53b-231f0399f495",
+                                                          "qType":  "text-image"
+                                                      },
+                                            "qExtendsId":  "e9caac92-12db-4483-ab6b-6fb751824e0c",
+                                            "qMetaDef":  {
+
+                                                         }
+                                        },
+                          "qChildren":  [
+
+                                        ]
+                      },
+                      {
+                          "qProperty":  {
+                                            "qInfo":  {
+                                                          "qId":  "grpyPm",
+                                                          "qType":  "action-button"
+                                                      },
+                                            "qExtendsId":  "edd409e3-b6c7-4516-921c-6b99f3eeabb9",
+                                            "qMetaDef":  {
+
+                                                         }
+                                        },
+                          "qChildren":  [
+
+                                        ]
+                      },
+                      {
+                          "qProperty":  {
+                                            "qInfo":  {
+                                                          "qId":  "WCNZj",
+                                                          "qType":  "action-button"
+                                                      },
+                                            "qExtendsId":  "8b94bf9b-a556-425c-8e7b-fd76dcc45bbf",
+                                            "qMetaDef":  {
+
+                                                         }
+                                        },
+                          "qChildren":  [
+
+                                        ]
+                      },
+                      {
+                          "qProperty":  {
+                                            "qInfo":  {
+                                                          "qId":  "GUFp",
+                                                          "qType":  "piechart"
+                                                      },
+                                            "qMetaDef":  {
+
+                                                         },
+                                            "qHyperCubeDef":  {
+                                                                  "qDimensions":  [
+                                                                                      {
+                                                                                          "qLibraryId":  "UksBjCL",
+                                                                                          "qDef":  {
+                                                                                                       "qGrouping":  "N",
+                                                                                                       "qFieldDefs":  [
+
+                                                                                                                      ],
+                                                                                                       "qFieldLabels":  [
+
+                                                                                                                        ],
+                                                                                                       "qSortCriterias":  [
+                                                                                                                              {
+                                                                                                                                  "qSortByNumeric":  1,
+                                                                                                                                  "qSortByAscii":  1,
+                                                                                                                                  "qSortByLoadOrder":  1,
+                                                                                                                                  "qExpression":  {
+
+                                                                                                                                                  }
+                                                                                                                              }
+                                                                                                                          ],
+                                                                                                       "qNumberPresentations":  [
+
+                                                                                                                                ],
+                                                                                                       "qActiveField":  0,
+                                                                                                       "autoSort":  true,
+                                                                                                       "cId":  "UHDtuJ",
+                                                                                                       "othersLabel":  "Others"
+                                                                                                   },
+                                                                                          "qOtherTotalSpec":  {
+                                                                                                                  "qOtherMode":  "OTHER_OFF",
+                                                                                                                  "qOtherCounted":  {
+                                                                                                                                        "qv":  "10"
+                                                                                                                                    },
+                                                                                                                  "qOtherLimit":  {
+                                                                                                                                      "qv":  "0"
+                                                                                                                                  },
+                                                                                                                  "qOtherLimitMode":  "OTHER_GE_LIMIT",
+                                                                                                                  "qForceBadValueKeeping":  true,
+                                                                                                                  "qApplyEvenWhenPossiblyWrongResult":  true,
+                                                                                                                  "qOtherSortMode":  "OTHER_SORT_DESCENDING",
+                                                                                                                  "qTotalMode":  "TOTAL_OFF",
+                                                                                                                  "qReferencedExpression":  {
+
+                                                                                                                                            }
+                                                                                                              },
+                                                                                          "qOtherLabel":  {
+                                                                                                              "qv":  "Others"
+                                                                                                          },
+                                                                                          "qTotalLabel":  {
+
+                                                                                                          },
+                                                                                          "qCalcCond":  {
+
+                                                                                                        },
+                                                                                          "qAttributeExpressions":  [
+
+                                                                                                                    ],
+                                                                                          "qAttributeDimensions":  [
+
+                                                                                                                   ],
+                                                                                          "qCalcCondition":  {
+                                                                                                                 "qCond":  {
+
+                                                                                                                           },
+                                                                                                                 "qMsg":  {
+
+                                                                                                                          }
+                                                                                                             }
+                                                                                      }
+                                                                                  ],
+                                                                  "qMeasures":  [
+                                                                                    {
+                                                                                        "qLibraryId":  "8ece61a9-1182-47d6-9fe7-1bd90d407e44",
+                                                                                        "qDef":  {
+                                                                                                     "qTags":  [
+
+                                                                                                               ],
+                                                                                                     "qGrouping":  "N",
+                                                                                                     "qAccumulate":  0,
+                                                                                                     "qActiveExpression":  0,
+                                                                                                     "qExpressions":  [
+
+                                                                                                                      ],
+                                                                                                     "autoSort":  true,
+                                                                                                     "cId":  "Ujhwm",
+                                                                                                     "numFormatFromTemplate":  true,
+                                                                                                     "quarantine":  {
+                                                                                                                        "qNumFormat":  {
+
+                                                                                                                                       },
+                                                                                                                        "isCustomFormatted":  false
+                                                                                                                    }
+                                                                                                 },
+                                                                                        "qSortBy":  {
+                                                                                                        "qSortByNumeric":  -1,
+                                                                                                        "qSortByLoadOrder":  1,
+                                                                                                        "qExpression":  {
+
+                                                                                                                        }
+                                                                                                    },
+                                                                                        "qAttributeExpressions":  [
+
+                                                                                                                  ],
+                                                                                        "qAttributeDimensions":  [
+
+                                                                                                                 ],
+                                                                                        "qCalcCond":  {
+
+                                                                                                      },
+                                                                                        "qCalcCondition":  {
+                                                                                                               "qCond":  {
+
+                                                                                                                         },
+                                                                                                               "qMsg":  {
+
+                                                                                                                        }
+                                                                                                           },
+                                                                                        "qTrendLines":  [
+
+                                                                                                        ],
+                                                                                        "qMiniChartDef":  {
+                                                                                                              "qSortBy":  {
+                                                                                                                              "qExpression":  {
+
+                                                                                                                                              }
+                                                                                                                          },
+                                                                                                              "qOtherTotalSpec":  {
+                                                                                                                                      "qOtherMode":  "OTHER_OFF",
+                                                                                                                                      "qOtherCounted":  {
+
+                                                                                                                                                        },
+                                                                                                                                      "qOtherLimit":  {
+
+                                                                                                                                                      },
+                                                                                                                                      "qOtherLimitMode":  "OTHER_GT_LIMIT",
+                                                                                                                                      "qForceBadValueKeeping":  true,
+                                                                                                                                      "qApplyEvenWhenPossiblyWrongResult":  true,
+                                                                                                                                      "qOtherSortMode":  "OTHER_SORT_DESCENDING",
+                                                                                                                                      "qTotalMode":  "TOTAL_OFF",
+                                                                                                                                      "qReferencedExpression":  {
+
+                                                                                                                                                                }
+                                                                                                                                  },
+                                                                                                              "qMaxNumberPoints":  -1,
+                                                                                                              "qAttributeExpressions":  [
+
+                                                                                                                                        ]
+                                                                                                          }
+                                                                                    }
+                                                                                ],
+                                                                  "qInterColumnSortOrder":  [
+                                                                                                1,
+                                                                                                0
+                                                                                            ],
+                                                                  "qSuppressMissing":  true,
+                                                                  "qInitialDataFetch":  [
+                                                                                            {
+                                                                                                "qLeft":  0,
+                                                                                                "qTop":  0,
+                                                                                                "qWidth":  10,
+                                                                                                "qHeight":  500
+                                                                                            }
+                                                                                        ],
+                                                                  "qReductionMode":  "N",
+                                                                  "qMode":  "S",
+                                                                  "qPseudoDimPos":  -1,
+                                                                  "qNoOfLeftDims":  -1,
+                                                                  "qMaxStackedCells":  5000,
+                                                                  "qCalcCond":  {
+
+                                                                                },
+                                                                  "qTitle":  {
+
+                                                                             },
+                                                                  "qCalcCondition":  {
+                                                                                         "qCond":  {
+
+                                                                                                   },
+                                                                                         "qMsg":  {
+
+                                                                                                  }
+                                                                                     },
+                                                                  "qColumnOrder":  [
+
+                                                                                   ],
+                                                                  "qExpansionState":  [
+
+                                                                                      ],
+                                                                  "qLayoutExclude":  {
+                                                                                         "qHyperCubeDef":  {
+                                                                                                               "qDimensions":  [
+
+                                                                                                                               ],
+                                                                                                               "qMeasures":  [
+
+                                                                                                                             ],
+                                                                                                               "qInterColumnSortOrder":  [
+
+                                                                                                                                         ],
+                                                                                                               "qInitialDataFetch":  [
+
+                                                                                                                                     ],
+                                                                                                               "qReductionMode":  "N",
+                                                                                                               "qMode":  "S",
+                                                                                                               "qPseudoDimPos":  -1,
+                                                                                                               "qNoOfLeftDims":  -1,
+                                                                                                               "qMaxStackedCells":  5000,
+                                                                                                               "qCalcCond":  {
+
+                                                                                                                             },
+                                                                                                               "qTitle":  {
+
+                                                                                                                          },
+                                                                                                               "qCalcCondition":  {
+                                                                                                                                      "qCond":  {
+
+                                                                                                                                                },
+                                                                                                                                      "qMsg":  {
+
+                                                                                                                                               }
+                                                                                                                                  },
+                                                                                                               "qColumnOrder":  [
+
+                                                                                                                                ],
+                                                                                                               "qExpansionState":  [
+
+                                                                                                                                   ]
+                                                                                                           }
+                                                                                     }
+                                                              },
+                                            "showTitles":  true,
+                                            "title":  "Rate Increase by Status",
+                                            "subtitle":  "",
+                                            "footnote":  "",
+                                            "disableNavMenu":  false,
+                                            "showDetails":  true,
+                                            "showDisclaimer":  false,
+                                            "components":  [
+                                                               {
+                                                                   "key":  "slices",
+                                                                   "style":  {
+                                                                                 "strokeWidth":  "none",
+                                                                                 "strokeColor":  {
+                                                                                                     "index":  -1,
+                                                                                                     "color":  "#FFFFFF"
+                                                                                                 },
+                                                                                 "cornerRadius":  0,
+                                                                                 "innerRadius":  0.55
+                                                                             }
+                                                               }
+                                                           ],
+                                            "donut":  {
+                                                          "showAsDonut":  true
+                                                      },
+                                            "dimensionTitle":  false,
+                                            "dataPoint":  {
+                                                              "auto":  false,
+                                                              "labelMode":  "share",
+                                                              "labelValueMode":  "arc"
+                                                          },
+                                            "color":  {
+                                                          "auto":  true,
+                                                          "mode":  "byDimension",
+                                                          "formatting":  {
+                                                                             "numFormatFromTemplate":  true
+                                                                         },
+                                                          "useBaseColors":  "off",
+                                                          "paletteColor":  {
+                                                                               "index":  6
+                                                                           },
+                                                          "useDimColVal":  true,
+                                                          "useMeasureGradient":  true,
+                                                          "persistent":  true,
+                                                          "expressionIsColor":  true,
+                                                          "expressionLabel":  "",
+                                                          "measureScheme":  "sg",
+                                                          "reverseScheme":  false,
+                                                          "dimensionScheme":  "12",
+                                                          "autoMinMax":  true,
+                                                          "measureMin":  0,
+                                                          "measureMax":  10,
+                                                          "altLabel":  "Care Type",
+                                                          "byDimDef":  {
+                                                                           "label":  "Care Type",
+                                                                           "key":  "caqdYb",
+                                                                           "type":  "libraryItem"
+                                                                       }
+                                                      },
+                                            "legend":  {
+                                                           "show":  false,
+                                                           "dock":  "auto",
+                                                           "showTitle":  true
+                                                       },
+                                            "tooltip":  {
+                                                            "auto":  true,
+                                                            "hideBasic":  false,
+                                                            "data":  {
+
+                                                                     }
+                                                        },
+                                            "visualization":  "piechart",
+                                            "version":  "1.5.0",
+                                            "qLayoutExclude":  {
+                                                                   "quarantine":  {
+
+                                                                                  }
+                                                               }
+                                        },
+                          "qChildren":  [
+
+                                        ]
+                      },
+                      {
+                          "qProperty":  {
+                                            "qInfo":  {
+                                                          "qId":  "VBjYGU",
+                                                          "qType":  "container"
+                                                      },
+                                            "qMetaDef":  {
+
+                                                         },
+                                            "children":  [
+                                                             {
+                                                                 "refId":  "ULaNW",
+                                                                 "label":  "Effective % by Community",
+                                                                 "isMaster":  false,
+                                                                 "cId":  "VNkzQqZ",
+                                                                 "condition":  {
+                                                                                   "qStringExpression":  {
+                                                                                                             "qExpr":  "=vDivReg=0"
+                                                                                                         }
+                                                                               }
+                                                             },
+                                                             {
+                                                                 "refId":  "CnfUd",
+                                                                 "label":  "Effective % by Division",
+                                                                 "isMaster":  false,
+                                                                 "cId":  "AVKgBmm",
+                                                                 "condition":  {
+                                                                                   "qStringExpression":  {
+                                                                                                             "qExpr":  "=vDivReg=1"
+                                                                                                         }
+                                                                               }
+                                                             }
+                                                         ],
+                                            "showTitles":  false,
+                                            "title":  "",
+                                            "subtitle":  "",
+                                            "footnote":  "",
+                                            "disableNavMenu":  false,
+                                            "showDetails":  false,
+                                            "borders":  "noBorder",
+                                            "showTabs":  false,
+                                            "useDropdown":  true,
+                                            "useScrollButton":  true,
+                                            "showIcons":  false,
+                                            "visualization":  "container",
+                                            "qChildListDef":  {
+                                                                  "qData":  {
+                                                                                "visualization":  "/visualization",
+                                                                                "containerChildId":  "/containerChildId",
+                                                                                "qExtendsId":  "/qExtendsId",
+                                                                                "title":  "/title",
+                                                                                "showCondition":  "/showCondition"
+                                                                            }
+                                                              },
+                                            "supportRefresh":  false,
+                                            "hasExternalChildren":  false
+                                        },
+                          "qChildren":  [
+                                            {
+                                                "qProperty":  {
+                                                                  "qInfo":  {
+                                                                                "qId":  "fc913596-05f1-42c2-be39-8817243195f9",
+                                                                                "qType":  "barchart"
+                                                                            },
+                                                                  "qMetaDef":  {
+
+                                                                               },
+                                                                  "qHyperCubeDef":  {
+                                                                                        "qDimensions":  [
+                                                                                                            {
+                                                                                                                "qLibraryId":  "mJwPmpa",
+                                                                                                                "qDef":  {
+                                                                                                                             "qGrouping":  "N",
+                                                                                                                             "qFieldDefs":  [
+
+                                                                                                                                            ],
+                                                                                                                             "qFieldLabels":  [
+
+                                                                                                                                              ],
+                                                                                                                             "qSortCriterias":  [
+                                                                                                                                                    {
+                                                                                                                                                        "qSortByNumeric":  1,
+                                                                                                                                                        "qSortByAscii":  1,
+                                                                                                                                                        "qSortByLoadOrder":  1,
+                                                                                                                                                        "qExpression":  {
+
+                                                                                                                                                                        }
+                                                                                                                                                    }
+                                                                                                                                                ],
+                                                                                                                             "qNumberPresentations":  [
+
+                                                                                                                                                      ],
+                                                                                                                             "qActiveField":  0,
+                                                                                                                             "autoSort":  true,
+                                                                                                                             "cId":  "MMpp",
+                                                                                                                             "othersLabel":  "Others"
+                                                                                                                         },
+                                                                                                                "qOtherTotalSpec":  {
+                                                                                                                                        "qOtherMode":  "OTHER_OFF",
+                                                                                                                                        "qOtherCounted":  {
+                                                                                                                                                              "qv":  "10"
+                                                                                                                                                          },
+                                                                                                                                        "qOtherLimit":  {
+                                                                                                                                                            "qv":  "0"
+                                                                                                                                                        },
+                                                                                                                                        "qOtherLimitMode":  "OTHER_GE_LIMIT",
+                                                                                                                                        "qForceBadValueKeeping":  true,
+                                                                                                                                        "qApplyEvenWhenPossiblyWrongResult":  true,
+                                                                                                                                        "qOtherSortMode":  "OTHER_SORT_DESCENDING",
+                                                                                                                                        "qTotalMode":  "TOTAL_OFF",
+                                                                                                                                        "qReferencedExpression":  {
+
+                                                                                                                                                                  }
+                                                                                                                                    },
+                                                                                                                "qOtherLabel":  {
+                                                                                                                                    "qv":  "Others"
+                                                                                                                                },
+                                                                                                                "qTotalLabel":  {
+
+                                                                                                                                },
+                                                                                                                "qCalcCond":  {
+
+                                                                                                                              },
+                                                                                                                "qAttributeExpressions":  [
+                                                                                                                                              {
+                                                                                                                                                  "qLibraryId":  "76acc94c-3470-42fa-9d9b-f8862a092a3d",
+                                                                                                                                                  "qAttribute":  true,
+                                                                                                                                                  "id":  "colorByAlternative",
+                                                                                                                                                  "matchMeasure":  0,
+                                                                                                                                                  "colorMapRef":  "76acc94c-3470-42fa-9d9b-f8862a092a3d"
+                                                                                                                                              }
+                                                                                                                                          ],
+                                                                                                                "qAttributeDimensions":  [
+
+                                                                                                                                         ],
+                                                                                                                "qCalcCondition":  {
+                                                                                                                                       "qCond":  {
+
+                                                                                                                                                 },
+                                                                                                                                       "qMsg":  {
+
+                                                                                                                                                }
+                                                                                                                                   }
+                                                                                                            }
+                                                                                                        ],
+                                                                                        "qMeasures":  [
+                                                                                                          {
+                                                                                                              "qLibraryId":  "76acc94c-3470-42fa-9d9b-f8862a092a3d",
+                                                                                                              "qDef":  {
+                                                                                                                           "qTags":  [
+
+                                                                                                                                     ],
+                                                                                                                           "qGrouping":  "N",
+                                                                                                                           "qAccumulate":  0,
+                                                                                                                           "qActiveExpression":  0,
+                                                                                                                           "qExpressions":  [
+
+                                                                                                                                            ],
+                                                                                                                           "autoSort":  false,
+                                                                                                                           "cId":  "HLmq",
+                                                                                                                           "numFormatFromTemplate":  true,
+                                                                                                                           "quarantine":  {
+                                                                                                                                              "qNumFormat":  {
+                                                                                                                                                                 "qType":  "U",
+                                                                                                                                                                 "qnDec":  10,
+                                                                                                                                                                 "qUseThou":  0,
+                                                                                                                                                                 "qFmt":  "",
+                                                                                                                                                                 "qDec":  "",
+                                                                                                                                                                 "qThou":  ""
+                                                                                                                                                             },
+                                                                                                                                              "isCustomFormatted":  false
+                                                                                                                                          }
+                                                                                                                       },
+                                                                                                              "qSortBy":  {
+                                                                                                                              "qSortByNumeric":  1,
+                                                                                                                              "qSortByLoadOrder":  1,
+                                                                                                                              "qExpression":  {
+
+                                                                                                                                              }
+                                                                                                                          },
+                                                                                                              "qAttributeExpressions":  [
+
+                                                                                                                                        ],
+                                                                                                              "qAttributeDimensions":  [
+
+                                                                                                                                       ],
+                                                                                                              "qCalcCond":  {
+
+                                                                                                                            },
+                                                                                                              "qCalcCondition":  {
+                                                                                                                                     "qCond":  {
+
+                                                                                                                                               },
+                                                                                                                                     "qMsg":  {
+
+                                                                                                                                              }
+                                                                                                                                 },
+                                                                                                              "qTrendLines":  [
+
+                                                                                                                              ],
+                                                                                                              "qMiniChartDef":  {
+                                                                                                                                    "qSortBy":  {
+                                                                                                                                                    "qExpression":  {
+
+                                                                                                                                                                    }
+                                                                                                                                                },
+                                                                                                                                    "qOtherTotalSpec":  {
+                                                                                                                                                            "qOtherMode":  "OTHER_OFF",
+                                                                                                                                                            "qOtherCounted":  {
+
+                                                                                                                                                                              },
+                                                                                                                                                            "qOtherLimit":  {
+
+                                                                                                                                                                            },
+                                                                                                                                                            "qOtherLimitMode":  "OTHER_GT_LIMIT",
+                                                                                                                                                            "qForceBadValueKeeping":  true,
+                                                                                                                                                            "qApplyEvenWhenPossiblyWrongResult":  true,
+                                                                                                                                                            "qOtherSortMode":  "OTHER_SORT_DESCENDING",
+                                                                                                                                                            "qTotalMode":  "TOTAL_OFF",
+                                                                                                                                                            "qReferencedExpression":  {
+
+                                                                                                                                                                                      }
+                                                                                                                                                        },
+                                                                                                                                    "qMaxNumberPoints":  -1,
+                                                                                                                                    "qAttributeExpressions":  [
+
+                                                                                                                                                              ]
+                                                                                                                                }
+                                                                                                          }
+                                                                                                      ],
+                                                                                        "qInterColumnSortOrder":  [
+                                                                                                                      1,
+                                                                                                                      0
+                                                                                                                  ],
+                                                                                        "qSuppressMissing":  true,
+                                                                                        "qInitialDataFetch":  [
+                                                                                                                  {
+                                                                                                                      "qLeft":  0,
+                                                                                                                      "qTop":  0,
+                                                                                                                      "qWidth":  17,
+                                                                                                                      "qHeight":  500
+                                                                                                                  }
+                                                                                                              ],
+                                                                                        "qReductionMode":  "N",
+                                                                                        "qMode":  "S",
+                                                                                        "qPseudoDimPos":  -1,
+                                                                                        "qNoOfLeftDims":  -1,
+                                                                                        "qMaxStackedCells":  5000,
+                                                                                        "qCalcCond":  {
+
+                                                                                                      },
+                                                                                        "qTitle":  {
+
+                                                                                                   },
+                                                                                        "qCalcCondition":  {
+                                                                                                               "qCond":  {
+
+                                                                                                                         },
+                                                                                                               "qMsg":  {
+
+                                                                                                                        }
+                                                                                                           },
+                                                                                        "qColumnOrder":  [
+                                                                                                             0,
+                                                                                                             1,
+                                                                                                             2
+                                                                                                         ],
+                                                                                        "qExpansionState":  [
+
+                                                                                                            ],
+                                                                                        "qLayoutExclude":  {
+                                                                                                               "qHyperCubeDef":  {
+                                                                                                                                     "qDimensions":  [
+
+                                                                                                                                                     ],
+                                                                                                                                     "qMeasures":  [
+
+                                                                                                                                                   ],
+                                                                                                                                     "qInterColumnSortOrder":  [
+
+                                                                                                                                                               ],
+                                                                                                                                     "qInitialDataFetch":  [
+
+                                                                                                                                                           ],
+                                                                                                                                     "qReductionMode":  "N",
+                                                                                                                                     "qMode":  "S",
+                                                                                                                                     "qPseudoDimPos":  -1,
+                                                                                                                                     "qNoOfLeftDims":  -1,
+                                                                                                                                     "qMaxStackedCells":  5000,
+                                                                                                                                     "qCalcCond":  {
+
+                                                                                                                                                   },
+                                                                                                                                     "qTitle":  {
+
+                                                                                                                                                },
+                                                                                                                                     "qCalcCondition":  {
+                                                                                                                                                            "qCond":  {
+
+                                                                                                                                                                      },
+                                                                                                                                                            "qMsg":  {
+
+                                                                                                                                                                     }
+                                                                                                                                                        },
+                                                                                                                                     "qColumnOrder":  [
+
+                                                                                                                                                      ],
+                                                                                                                                     "qExpansionState":  [
+
+                                                                                                                                                         ]
+                                                                                                                                 }
+                                                                                                           }
+                                                                                    },
+                                                                  "refLine":  {
+                                                                                  "refLines":  [
+
+                                                                                               ],
+                                                                                  "dimRefLines":  [
+
+                                                                                                  ]
+                                                                              },
+                                                                  "showTitles":  true,
+                                                                  "title":  "Effective % by Community",
+                                                                  "subtitle":  "",
+                                                                  "footnote":  "",
+                                                                  "disableNavMenu":  false,
+                                                                  "showDetails":  true,
+                                                                  "showDisclaimer":  false,
+                                                                  "components":  [
+
+                                                                                 ],
+                                                                  "barGrouping":  {
+                                                                                      "grouping":  "grouped"
+                                                                                  },
+                                                                  "orientation":  "horizontal",
+                                                                  "scrollbar":  "none",
+                                                                  "scrollStartPos":  0,
+                                                                  "gridLine":  {
+                                                                                   "auto":  true,
+                                                                                   "spacing":  2
+                                                                               },
+                                                                  "dataPoint":  {
+                                                                                    "showLabels":  true,
+                                                                                    "showSegmentLabels":  false,
+                                                                                    "showTotalLabels":  true
+                                                                                },
+                                                                  "color":  {
+                                                                                "auto":  false,
+                                                                                "mode":  "byMeasure",
+                                                                                "formatting":  {
+                                                                                                   "numFormatFromTemplate":  true,
+                                                                                                   "quarantine":  {
+                                                                                                                      "qNumFormat":  {
+
+                                                                                                                                     },
+                                                                                                                      "isCustomFormatted":  false
+                                                                                                                  },
+                                                                                                   "qNumFormat":  null
+                                                                                               },
+                                                                                "useBaseColors":  "off",
+                                                                                "paletteColor":  {
+                                                                                                     "index":  6
+                                                                                                 },
+                                                                                "useDimColVal":  true,
+                                                                                "useMeasureGradient":  true,
+                                                                                "persistent":  true,
+                                                                                "expressionIsColor":  true,
+                                                                                "expressionLabel":  "",
+                                                                                "measureScheme":  "sg",
+                                                                                "reverseScheme":  false,
+                                                                                "dimensionScheme":  "12",
+                                                                                "autoMinMax":  true,
+                                                                                "measureMin":  0,
+                                                                                "measureMax":  10,
+                                                                                "altLabel":  "76acc94c-3470-42fa-9d9b-f8862a092a3d",
+                                                                                "byMeasureDef":  {
+                                                                                                     "label":  "76acc94c-3470-42fa-9d9b-f8862a092a3d",
+                                                                                                     "key":  "76acc94c-3470-42fa-9d9b-f8862a092a3d",
+                                                                                                     "type":  "libraryItem"
+                                                                                                 }
+                                                                            },
+                                                                  "legend":  {
+                                                                                 "show":  false,
+                                                                                 "dock":  "auto",
+                                                                                 "showTitle":  true
+                                                                             },
+                                                                  "dimensionAxis":  {
+                                                                                        "continuousAuto":  true,
+                                                                                        "show":  "labels",
+                                                                                        "label":  "auto",
+                                                                                        "dock":  "near",
+                                                                                        "axisDisplayMode":  "auto",
+                                                                                        "maxVisibleItems":  10
+                                                                                    },
+                                                                  "preferContinuousAxis":  true,
+                                                                  "measureAxis":  {
+                                                                                      "show":  "none",
+                                                                                      "dock":  "near",
+                                                                                      "spacing":  1,
+                                                                                      "autoMinMax":  true,
+                                                                                      "minMax":  "min",
+                                                                                      "min":  0,
+                                                                                      "max":  10
+                                                                                  },
+                                                                  "tooltip":  {
+                                                                                  "auto":  true,
+                                                                                  "hideBasic":  false,
+                                                                                  "data":  {
+
+                                                                                           }
+                                                                              },
+                                                                  "visualization":  "barchart",
+                                                                  "version":  "1.6.0",
+                                                                  "showMiniChartForContinuousAxis":  true,
+                                                                  "qLayoutExclude":  {
+                                                                                         "quarantine":  {
+
+                                                                                                        }
+                                                                                     },
+                                                                  "containerChildId":  "ULaNW"
+                                                              },
+                                                "qChildren":  [
+
+                                                              ]
+                                            },
+                                            {
+                                                "qProperty":  {
+                                                                  "qInfo":  {
+                                                                                "qId":  "8f17c141-d491-4622-8e76-211309b008a0",
+                                                                                "qType":  "barchart"
+                                                                            },
+                                                                  "qMetaDef":  {
+
+                                                                               },
+                                                                  "qHyperCubeDef":  {
+                                                                                        "qDimensions":  [
+                                                                                                            {
+                                                                                                                "qLibraryId":  "WXvKup",
+                                                                                                                "qDef":  {
+                                                                                                                             "qGrouping":  "N",
+                                                                                                                             "qFieldDefs":  [
+
+                                                                                                                                            ],
+                                                                                                                             "qFieldLabels":  [
+
+                                                                                                                                              ],
+                                                                                                                             "qSortCriterias":  [
+                                                                                                                                                    {
+                                                                                                                                                        "qSortByNumeric":  1,
+                                                                                                                                                        "qSortByAscii":  1,
+                                                                                                                                                        "qSortByLoadOrder":  1,
+                                                                                                                                                        "qExpression":  {
+
+                                                                                                                                                                        }
+                                                                                                                                                    },
+                                                                                                                                                    {
+                                                                                                                                                        "qSortByNumeric":  1,
+                                                                                                                                                        "qSortByAscii":  1,
+                                                                                                                                                        "qSortByLoadOrder":  1,
+                                                                                                                                                        "qExpression":  {
+
+                                                                                                                                                                        }
+                                                                                                                                                    },
+                                                                                                                                                    {
+                                                                                                                                                        "qSortByNumeric":  1,
+                                                                                                                                                        "qSortByAscii":  1,
+                                                                                                                                                        "qSortByLoadOrder":  1,
+                                                                                                                                                        "qExpression":  {
+
+                                                                                                                                                                        }
+                                                                                                                                                    }
+                                                                                                                                                ],
+                                                                                                                             "qNumberPresentations":  [
+
+                                                                                                                                                      ],
+                                                                                                                             "qActiveField":  0,
+                                                                                                                             "autoSort":  true,
+                                                                                                                             "cId":  "XHXKH",
+                                                                                                                             "othersLabel":  "Others"
+                                                                                                                         },
+                                                                                                                "qOtherTotalSpec":  {
+                                                                                                                                        "qOtherMode":  "OTHER_OFF",
+                                                                                                                                        "qOtherCounted":  {
+                                                                                                                                                              "qv":  "10"
+                                                                                                                                                          },
+                                                                                                                                        "qOtherLimit":  {
+                                                                                                                                                            "qv":  "0"
+                                                                                                                                                        },
+                                                                                                                                        "qOtherLimitMode":  "OTHER_GE_LIMIT",
+                                                                                                                                        "qForceBadValueKeeping":  true,
+                                                                                                                                        "qApplyEvenWhenPossiblyWrongResult":  true,
+                                                                                                                                        "qOtherSortMode":  "OTHER_SORT_DESCENDING",
+                                                                                                                                        "qTotalMode":  "TOTAL_OFF",
+                                                                                                                                        "qReferencedExpression":  {
+
+                                                                                                                                                                  }
+                                                                                                                                    },
+                                                                                                                "qOtherLabel":  {
+                                                                                                                                    "qv":  "Others"
+                                                                                                                                },
+                                                                                                                "qTotalLabel":  {
+
+                                                                                                                                },
+                                                                                                                "qCalcCond":  {
+
+                                                                                                                              },
+                                                                                                                "qAttributeExpressions":  [
+                                                                                                                                              {
+                                                                                                                                                  "qLibraryId":  "76acc94c-3470-42fa-9d9b-f8862a092a3d",
+                                                                                                                                                  "qAttribute":  true,
+                                                                                                                                                  "id":  "colorByAlternative",
+                                                                                                                                                  "matchMeasure":  0,
+                                                                                                                                                  "colorMapRef":  "76acc94c-3470-42fa-9d9b-f8862a092a3d"
+                                                                                                                                              }
+                                                                                                                                          ],
+                                                                                                                "qAttributeDimensions":  [
+
+                                                                                                                                         ],
+                                                                                                                "qCalcCondition":  {
+                                                                                                                                       "qCond":  {
+
+                                                                                                                                                 },
+                                                                                                                                       "qMsg":  {
+
+                                                                                                                                                }
+                                                                                                                                   }
+                                                                                                            }
+                                                                                                        ],
+                                                                                        "qMeasures":  [
+                                                                                                          {
+                                                                                                              "qLibraryId":  "76acc94c-3470-42fa-9d9b-f8862a092a3d",
+                                                                                                              "qDef":  {
+                                                                                                                           "qTags":  [
+
+                                                                                                                                     ],
+                                                                                                                           "qGrouping":  "N",
+                                                                                                                           "qAccumulate":  0,
+                                                                                                                           "qActiveExpression":  0,
+                                                                                                                           "qExpressions":  [
+
+                                                                                                                                            ],
+                                                                                                                           "autoSort":  false,
+                                                                                                                           "cId":  "HLmq",
+                                                                                                                           "numFormatFromTemplate":  true,
+                                                                                                                           "quarantine":  {
+                                                                                                                                              "qNumFormat":  {
+                                                                                                                                                                 "qType":  "U",
+                                                                                                                                                                 "qnDec":  10,
+                                                                                                                                                                 "qUseThou":  0,
+                                                                                                                                                                 "qFmt":  "",
+                                                                                                                                                                 "qDec":  "",
+                                                                                                                                                                 "qThou":  ""
+                                                                                                                                                             },
+                                                                                                                                              "isCustomFormatted":  false
+                                                                                                                                          }
+                                                                                                                       },
+                                                                                                              "qSortBy":  {
+                                                                                                                              "qSortByNumeric":  1,
+                                                                                                                              "qSortByLoadOrder":  1,
+                                                                                                                              "qExpression":  {
+
+                                                                                                                                              }
+                                                                                                                          },
+                                                                                                              "qAttributeExpressions":  [
+
+                                                                                                                                        ],
+                                                                                                              "qAttributeDimensions":  [
+
+                                                                                                                                       ],
+                                                                                                              "qCalcCond":  {
+
+                                                                                                                            },
+                                                                                                              "qCalcCondition":  {
+                                                                                                                                     "qCond":  {
+
+                                                                                                                                               },
+                                                                                                                                     "qMsg":  {
+
+                                                                                                                                              }
+                                                                                                                                 },
+                                                                                                              "qTrendLines":  [
+
+                                                                                                                              ],
+                                                                                                              "qMiniChartDef":  {
+                                                                                                                                    "qSortBy":  {
+                                                                                                                                                    "qExpression":  {
+
+                                                                                                                                                                    }
+                                                                                                                                                },
+                                                                                                                                    "qOtherTotalSpec":  {
+                                                                                                                                                            "qOtherMode":  "OTHER_OFF",
+                                                                                                                                                            "qOtherCounted":  {
+
+                                                                                                                                                                              },
+                                                                                                                                                            "qOtherLimit":  {
+
+                                                                                                                                                                            },
+                                                                                                                                                            "qOtherLimitMode":  "OTHER_GT_LIMIT",
+                                                                                                                                                            "qForceBadValueKeeping":  true,
+                                                                                                                                                            "qApplyEvenWhenPossiblyWrongResult":  true,
+                                                                                                                                                            "qOtherSortMode":  "OTHER_SORT_DESCENDING",
+                                                                                                                                                            "qTotalMode":  "TOTAL_OFF",
+                                                                                                                                                            "qReferencedExpression":  {
+
+                                                                                                                                                                                      }
+                                                                                                                                                        },
+                                                                                                                                    "qMaxNumberPoints":  -1,
+                                                                                                                                    "qAttributeExpressions":  [
+
+                                                                                                                                                              ]
+                                                                                                                                }
+                                                                                                          }
+                                                                                                      ],
+                                                                                        "qInterColumnSortOrder":  [
+                                                                                                                      1,
+                                                                                                                      0
+                                                                                                                  ],
+                                                                                        "qSuppressMissing":  true,
+                                                                                        "qInitialDataFetch":  [
+                                                                                                                  {
+                                                                                                                      "qLeft":  0,
+                                                                                                                      "qTop":  0,
+                                                                                                                      "qWidth":  17,
+                                                                                                                      "qHeight":  500
+                                                                                                                  }
+                                                                                                              ],
+                                                                                        "qReductionMode":  "N",
+                                                                                        "qMode":  "S",
+                                                                                        "qPseudoDimPos":  -1,
+                                                                                        "qNoOfLeftDims":  -1,
+                                                                                        "qMaxStackedCells":  5000,
+                                                                                        "qCalcCond":  {
+
+                                                                                                      },
+                                                                                        "qTitle":  {
+
+                                                                                                   },
+                                                                                        "qCalcCondition":  {
+                                                                                                               "qCond":  {
+
+                                                                                                                         },
+                                                                                                               "qMsg":  {
+
+                                                                                                                        }
+                                                                                                           },
+                                                                                        "qColumnOrder":  [
+                                                                                                             0,
+                                                                                                             1,
+                                                                                                             2
+                                                                                                         ],
+                                                                                        "qExpansionState":  [
+
+                                                                                                            ],
+                                                                                        "qLayoutExclude":  {
+                                                                                                               "qHyperCubeDef":  {
+                                                                                                                                     "qDimensions":  [
+                                                                                                                                                         {
+                                                                                                                                                             "qLibraryId":  "885b684a-4a8b-4123-ba49-d9fdd42da00b",
+                                                                                                                                                             "qDef":  {
+                                                                                                                                                                          "qGrouping":  "N",
+                                                                                                                                                                          "qFieldDefs":  [
+
+                                                                                                                                                                                         ],
+                                                                                                                                                                          "qFieldLabels":  [
+
+                                                                                                                                                                                           ],
+                                                                                                                                                                          "qSortCriterias":  [
+                                                                                                                                                                                                 {
+                                                                                                                                                                                                     "qSortByLoadOrder":  1,
+                                                                                                                                                                                                     "qExpression":  {
+
+                                                                                                                                                                                                                     }
+                                                                                                                                                                                                 }
+                                                                                                                                                                                             ],
+                                                                                                                                                                          "qNumberPresentations":  [
+
+                                                                                                                                                                                                   ],
+                                                                                                                                                                          "qActiveField":  0,
+                                                                                                                                                                          "autoSort":  true,
+                                                                                                                                                                          "cId":  "QyVmWUj",
+                                                                                                                                                                          "othersLabel":  "Others"
+                                                                                                                                                                      },
+                                                                                                                                                             "qOtherTotalSpec":  {
+                                                                                                                                                                                     "qOtherMode":  "OTHER_OFF",
+                                                                                                                                                                                     "qOtherCounted":  {
+                                                                                                                                                                                                           "qv":  "10"
+                                                                                                                                                                                                       },
+                                                                                                                                                                                     "qOtherLimit":  {
+                                                                                                                                                                                                         "qv":  "0"
+                                                                                                                                                                                                     },
+                                                                                                                                                                                     "qOtherLimitMode":  "OTHER_GE_LIMIT",
+                                                                                                                                                                                     "qForceBadValueKeeping":  true,
+                                                                                                                                                                                     "qApplyEvenWhenPossiblyWrongResult":  true,
+                                                                                                                                                                                     "qOtherSortMode":  "OTHER_SORT_DESCENDING",
+                                                                                                                                                                                     "qTotalMode":  "TOTAL_OFF",
+                                                                                                                                                                                     "qReferencedExpression":  {
+
+                                                                                                                                                                                                               }
+                                                                                                                                                                                 },
+                                                                                                                                                             "qOtherLabel":  {
+                                                                                                                                                                                 "qv":  "Others"
+                                                                                                                                                                             },
+                                                                                                                                                             "qTotalLabel":  {
+
+                                                                                                                                                                             },
+                                                                                                                                                             "qCalcCond":  {
+
+                                                                                                                                                                           },
+                                                                                                                                                             "qAttributeExpressions":  [
+
+                                                                                                                                                                                       ],
+                                                                                                                                                             "qAttributeDimensions":  [
+
+                                                                                                                                                                                      ],
+                                                                                                                                                             "qCalcCondition":  {
+                                                                                                                                                                                    "qCond":  {
+
+                                                                                                                                                                                              },
+                                                                                                                                                                                    "qMsg":  {
+
+                                                                                                                                                                                             }
+                                                                                                                                                                                }
+                                                                                                                                                         },
+                                                                                                                                                         {
+                                                                                                                                                             "qLibraryId":  "mJwPmpa",
+                                                                                                                                                             "qDef":  {
+                                                                                                                                                                          "qGrouping":  "N",
+                                                                                                                                                                          "qFieldDefs":  [
+
+                                                                                                                                                                                         ],
+                                                                                                                                                                          "qFieldLabels":  [
+
+                                                                                                                                                                                           ],
+                                                                                                                                                                          "qSortCriterias":  [
+                                                                                                                                                                                                 {
+                                                                                                                                                                                                     "qSortByLoadOrder":  1,
+                                                                                                                                                                                                     "qExpression":  {
+
+                                                                                                                                                                                                                     }
+                                                                                                                                                                                                 }
+                                                                                                                                                                                             ],
+                                                                                                                                                                          "qNumberPresentations":  [
+
+                                                                                                                                                                                                   ],
+                                                                                                                                                                          "qActiveField":  0,
+                                                                                                                                                                          "autoSort":  true,
+                                                                                                                                                                          "cId":  "aZEwvbN",
+                                                                                                                                                                          "othersLabel":  "Others"
+                                                                                                                                                                      },
+                                                                                                                                                             "qOtherTotalSpec":  {
+                                                                                                                                                                                     "qOtherMode":  "OTHER_OFF",
+                                                                                                                                                                                     "qOtherCounted":  {
+                                                                                                                                                                                                           "qv":  "10"
+                                                                                                                                                                                                       },
+                                                                                                                                                                                     "qOtherLimit":  {
+                                                                                                                                                                                                         "qv":  "0"
+                                                                                                                                                                                                     },
+                                                                                                                                                                                     "qOtherLimitMode":  "OTHER_GE_LIMIT",
+                                                                                                                                                                                     "qForceBadValueKeeping":  true,
+                                                                                                                                                                                     "qApplyEvenWhenPossiblyWrongResult":  true,
+                                                                                                                                                                                     "qOtherSortMode":  "OTHER_SORT_DESCENDING",
+                                                                                                                                                                                     "qTotalMode":  "TOTAL_OFF",
+                                                                                                                                                                                     "qReferencedExpression":  {
+
+                                                                                                                                                                                                               }
+                                                                                                                                                                                 },
+                                                                                                                                                             "qOtherLabel":  {
+                                                                                                                                                                                 "qv":  "Others"
+                                                                                                                                                                             },
+                                                                                                                                                             "qTotalLabel":  {
+
+                                                                                                                                                                             },
+                                                                                                                                                             "qCalcCond":  {
+
+                                                                                                                                                                           },
+                                                                                                                                                             "qAttributeExpressions":  [
+
+                                                                                                                                                                                       ],
+                                                                                                                                                             "qAttributeDimensions":  [
+
+                                                                                                                                                                                      ],
+                                                                                                                                                             "qCalcCondition":  {
+                                                                                                                                                                                    "qCond":  {
+
+                                                                                                                                                                                              },
+                                                                                                                                                                                    "qMsg":  {
+
+                                                                                                                                                                                             }
+                                                                                                                                                                                }
+                                                                                                                                                         }
+                                                                                                                                                     ],
+                                                                                                                                     "qMeasures":  [
+
+                                                                                                                                                   ],
+                                                                                                                                     "qInterColumnSortOrder":  [
+
+                                                                                                                                                               ],
+                                                                                                                                     "qInitialDataFetch":  [
+
+                                                                                                                                                           ],
+                                                                                                                                     "qReductionMode":  "N",
+                                                                                                                                     "qMode":  "S",
+                                                                                                                                     "qPseudoDimPos":  -1,
+                                                                                                                                     "qNoOfLeftDims":  -1,
+                                                                                                                                     "qMaxStackedCells":  5000,
+                                                                                                                                     "qCalcCond":  {
+
+                                                                                                                                                   },
+                                                                                                                                     "qTitle":  {
+
+                                                                                                                                                },
+                                                                                                                                     "qCalcCondition":  {
+                                                                                                                                                            "qCond":  {
+
+                                                                                                                                                                      },
+                                                                                                                                                            "qMsg":  {
+
+                                                                                                                                                                     }
+                                                                                                                                                        },
+                                                                                                                                     "qColumnOrder":  [
+
+                                                                                                                                                      ],
+                                                                                                                                     "qExpansionState":  [
+
+                                                                                                                                                         ]
+                                                                                                                                 }
+                                                                                                           }
+                                                                                    },
+                                                                  "refLine":  {
+                                                                                  "refLines":  [
+
+                                                                                               ],
+                                                                                  "dimRefLines":  [
+
+                                                                                                  ]
+                                                                              },
+                                                                  "showTitles":  true,
+                                                                  "title":  "Effective % by Community",
+                                                                  "subtitle":  "",
+                                                                  "footnote":  "",
+                                                                  "disableNavMenu":  false,
+                                                                  "showDetails":  true,
+                                                                  "showDisclaimer":  false,
+                                                                  "components":  [
+
+                                                                                 ],
+                                                                  "barGrouping":  {
+                                                                                      "grouping":  "grouped"
+                                                                                  },
+                                                                  "orientation":  "horizontal",
+                                                                  "scrollbar":  "none",
+                                                                  "scrollStartPos":  0,
+                                                                  "gridLine":  {
+                                                                                   "auto":  true,
+                                                                                   "spacing":  2
+                                                                               },
+                                                                  "dataPoint":  {
+                                                                                    "showLabels":  true,
+                                                                                    "showSegmentLabels":  false,
+                                                                                    "showTotalLabels":  true
+                                                                                },
+                                                                  "color":  {
+                                                                                "auto":  false,
+                                                                                "mode":  "byMeasure",
+                                                                                "formatting":  {
+                                                                                                   "numFormatFromTemplate":  true,
+                                                                                                   "quarantine":  {
+                                                                                                                      "qNumFormat":  {
+
+                                                                                                                                     },
+                                                                                                                      "isCustomFormatted":  false
+                                                                                                                  },
+                                                                                                   "qNumFormat":  null
+                                                                                               },
+                                                                                "useBaseColors":  "off",
+                                                                                "paletteColor":  {
+                                                                                                     "index":  6
+                                                                                                 },
+                                                                                "useDimColVal":  true,
+                                                                                "useMeasureGradient":  true,
+                                                                                "persistent":  true,
+                                                                                "expressionIsColor":  true,
+                                                                                "expressionLabel":  "",
+                                                                                "measureScheme":  "sg",
+                                                                                "reverseScheme":  false,
+                                                                                "dimensionScheme":  "12",
+                                                                                "autoMinMax":  true,
+                                                                                "measureMin":  0,
+                                                                                "measureMax":  10,
+                                                                                "altLabel":  "76acc94c-3470-42fa-9d9b-f8862a092a3d",
+                                                                                "byMeasureDef":  {
+                                                                                                     "label":  "76acc94c-3470-42fa-9d9b-f8862a092a3d",
+                                                                                                     "key":  "76acc94c-3470-42fa-9d9b-f8862a092a3d",
+                                                                                                     "type":  "libraryItem"
+                                                                                                 }
+                                                                            },
+                                                                  "legend":  {
+                                                                                 "show":  false,
+                                                                                 "dock":  "auto",
+                                                                                 "showTitle":  true
+                                                                             },
+                                                                  "dimensionAxis":  {
+                                                                                        "continuousAuto":  true,
+                                                                                        "show":  "labels",
+                                                                                        "label":  "auto",
+                                                                                        "dock":  "near",
+                                                                                        "axisDisplayMode":  "auto",
+                                                                                        "maxVisibleItems":  10
+                                                                                    },
+                                                                  "preferContinuousAxis":  true,
+                                                                  "measureAxis":  {
+                                                                                      "show":  "none",
+                                                                                      "dock":  "near",
+                                                                                      "spacing":  1,
+                                                                                      "autoMinMax":  true,
+                                                                                      "minMax":  "min",
+                                                                                      "min":  0,
+                                                                                      "max":  10
+                                                                                  },
+                                                                  "tooltip":  {
+                                                                                  "auto":  true,
+                                                                                  "hideBasic":  false,
+                                                                                  "data":  {
+
+                                                                                           }
+                                                                              },
+                                                                  "visualization":  "barchart",
+                                                                  "version":  "1.6.0",
+                                                                  "showMiniChartForContinuousAxis":  true,
+                                                                  "qLayoutExclude":  {
+                                                                                         "quarantine":  {
+
+                                                                                                        }
+                                                                                     },
+                                                                  "containerChildId":  "CnfUd"
+                                                              },
+                                                "qChildren":  [
+
+                                                              ]
+                                            }
+                                        ]
+                      }
+                  ]
+}

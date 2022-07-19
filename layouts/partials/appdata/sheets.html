@@ -1,0 +1,31 @@
+{{ if eq .Params.hasjson true }}
+{{$thisjson:= .Params.jsonvar}}
+{{$appsheets:= .Params.sheetsvar}}
+<h2 class="h3" id="sheets">Sheets and Objects</h2>
+{{range .Site.Data.Sheets.Test}}
+    {{if eq .qProperty.qInfo.qApp $thisjson}}
+    <dl>
+        <dt>{{.qProperty.qMetaDef.title}}</dt>
+        
+            {{range .qChildren}}
+            
+                {{if ne .qProperty.title ""}} {{if ne .qProperty.qInfo.qType "action-button"}}
+                <dd>{{.qProperty.title}} <span class="badge badge-info text-light bg-primary">{{.qProperty.qInfo.qType}}</span></dd>
+                {{end}} {{end}}
+            {{end}} </dl>
+    {{end}}
+{{end}}
+
+<h2 class="h3">Measures and Dimensions</h2>
+{{range .Site.Data.SalesManagement }}
+    {{if eq .App $thisjson}}
+    <dl>
+        <dt>{{.Label}}</dt>
+        <dd>{{.Description}}</dd>
+        <pre><code class="lang-bash">{{.Expression}}
+        </code></pre>
+      </dl>
+        
+    {{end}}
+{{end}}
+{{ end }}

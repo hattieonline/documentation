@@ -31,7 +31,8 @@
 				{{ partial "sidebar/docs-toc.html" . }}
 			</nav>
 			{{ end -}}
-			{{ .Content }}
+			{{ .Content }} 	{{ partial "appdata/sheets.html" . }}
+			{{ partial "appdata/dataload.html" . }}
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				{{ if .Site.Params.lastMod -}}
 					{{ partial "main/last-modified.html" . }}

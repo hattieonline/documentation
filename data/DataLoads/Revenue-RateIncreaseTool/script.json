@@ -1,0 +1,134 @@
+[
+    {
+        "App":  "Revenue-RateIncreaseTool",
+        "Section":  "Community",
+        "LoadScriptContent":  [
+                                  "///$tab Community",
+                                  "mstrCommunity:",
+                                  "LOAD",
+                                  "*",
+                                  "FROM [lib://DataShare/QVD Transform\\QVD_Transform_mstrCommunity.qvd]",
+                                  "(qvd);"
+                              ]
+    },
+    {
+        "App":  "Revenue-RateIncreaseTool",
+        "Section":  "dimDate",
+        "LoadScriptContent":  [
+                                  "///$tab dimDate",
+                                  "//\tload only the date field from our fact table. name it to a new field",
+                                  "temp:",
+                                  "load [%DateKey] as RangeDate\t//\tsource field should be the m/d/yyyy field from your fact table.",
+                                  "resident  FactTable;",
+                                  "",
+                                  "//\tMinMaxDate finds the lowest and highest dates from the dates.",
+                                  "//\tThis has been proven to work much faster than a typical group by on your transaction table.",
+                                  "MinMaxDate:  ",
+                                  "load min(RangeDate) as MinDate,  ",
+                                  "\tmax(RangeDate) as MaxDate;  ",
+                                  "load fieldvalue(\u0027RangeDate\u0027,iterno()) as RangeDate ",
+                                  "autogenerate(1) while not isnull(fieldvalue(\u0027RangeDate\u0027,iterno()));  ",
+                                  " ",
+                                  "drop table temp;\t//\tno need to retain",
+                                  "",
+                                  "let varMinDate=date(peek(\u0027MinDate\u0027,0,\u0027MinMaxDate\u0027));",
+                                  "let varMaxDate=date(peek(\u0027MaxDate\u0027,0,\u0027MinMaxDate\u0027));",
+                                  "",
+                                  "drop table MinMaxDate;\t//\tno need to retain",
+                                  "",
+                                  "dimDate:",
+                                  "LOAD",
+                                  "*",
+                                  "FROM [lib://DataShare/QVD Extract\\QVD_Extract_dimDate.qvd]",
+                                  "(qvd)where EffectiveDT \u003e=\u0027$(varMinDate)\u0027 and EffectiveDT \u003c=\u0027$(varMaxDate)\u0027;"
+                              ]
+    },
+    {
+        "App":  "Revenue-RateIncreaseTool",
+        "Section":  "Fact Table",
+        "LoadScriptContent":  [
+                                  "///$tab Fact Table",
+                                  "FactTable:",
+                                  "LOAD",
+                                  "*",
+                                  "FROM [lib://DataShare/QVD Transform\\QVD_Transform_NewRateIncrease.qvd]",
+                                  "(qvd);"
+                              ]
+    },
+    {
+        "App":  "Revenue-RateIncreaseTool",
+        "Section":  "Main",
+        "LoadScriptContent":  [
+                                  "///$tab Main",
+                                  "SET ThousandSep=\u0027,\u0027;",
+                                  "SET DecimalSep=\u0027.\u0027;",
+                                  "SET MoneyThousandSep=\u0027,\u0027;",
+                                  "SET MoneyDecimalSep=\u0027.\u0027;",
+                                  "SET MoneyFormat=\u0027$#,##0.00;($#,##0.00)\u0027;",
+                                  "SET TimeFormat=\u0027h:mm:ss TT\u0027;",
+                                  "SET DateFormat=\u0027M/D/YYYY\u0027;",
+                                  "SET TimestampFormat=\u0027M/D/YYYY h:mm:ss[.fff] TT\u0027;",
+                                  "SET FirstWeekDay=6;",
+                                  "SET BrokenWeeks=1;",
+                                  "SET ReferenceDay=0;",
+                                  "SET FirstMonthOfYear=1;",
+                                  "SET CollationLocale=\u0027en-US\u0027;",
+                                  "SET MonthNames=\u0027Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec\u0027;",
+                                  "SET LongMonthNames=\u0027January;February;March;April;May;June;July;August;September;October;November;December\u0027;",
+                                  "SET DayNames=\u0027Mon;Tue;Wed;Thu;Fri;Sat;Sun\u0027;",
+                                  "SET LongDayNames=\u0027Monday;Tuesday;Wednesday;Thursday;Friday;Saturday;Sunday\u0027;",
+                                  "SET DISABLE_INSIGHTS = 1;",
+                                  "",
+                                  "",
+                                  "",
+                                  "variables:",
+                                  "LOAD",
+                                  "    vDivReg",
+                                  "FROM [lib://DataShare/QVD Transform/QVD_Transform_variables.qvd]",
+                                  "(qvd);",
+                                  "",
+                                  "Let vDivReg = Peek(\u0027vDivReg\u0027,0,\u0027variables\u0027);",
+                                  "",
+                                  "Drop Table variables;"
+                              ]
+    },
+    {
+        "App":  "Revenue-RateIncreaseTool",
+        "Section":  "Section Access",
+        "LoadScriptContent":  [
+                                  "///$tab Section Access",
+                                  "SecurityTEMP:",
+                                  "LOAD",
+                                  "\"ACCESS\",",
+                                  "\"USERID\",",
+                                  "COMMUNITYNUMBER",
+                                  "FROM [lib://DataShare/QVD Transform\\QVD_Transform_SectionAccess.qvd]",
+                                  "(qvd);",
+                                  "",
+                                  "",
+                                  "Section Access;",
+                                  "",
+                                  "",
+                                  "Security:",
+                                  "NoConcatenate",
+                                  "LOAD",
+                                  "\"ACCESS\",",
+                                  "\"USERID\",",
+                                  "COMMUNITYNUMBER",
+                                  "Resident SecurityTEMP;",
+                                  "",
+                                  "",
+                                  "Section Application;",
+                                  "",
+                                  "",
+                                  "Drop Table SecurityTEMP;"
+                              ]
+    },
+    {
+        "App":  "Revenue-RateIncreaseTool",
+        "Section":  "tab_order.txt",
+        "LoadScriptContent":  [
+                                  "Main%tab_file_order_divider%Section Access%tab_file_order_divider%Community%tab_file_order_divider%Fact Table%tab_file_order_divider%dimDate"
+                              ]
+    }
+]
