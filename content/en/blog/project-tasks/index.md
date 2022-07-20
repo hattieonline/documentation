@@ -13,5 +13,3 @@ pinned: true
 homepage: false
 ---
 
-
-Text
