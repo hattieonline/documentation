@@ -15,3 +15,4 @@ hasjson: true
 jsonvar: Sales-PerformanceAnalytics
 ---
 
+## There is a known error with this page that prevents sheet objects from loading correctly.

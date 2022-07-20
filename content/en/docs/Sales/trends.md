@@ -14,3 +14,4 @@ toc: true
 hasjson: true
 jsonvar: Sales-Trends
 ---
+## There is a known error with this page that prevents sheet objects from loading correctly.
