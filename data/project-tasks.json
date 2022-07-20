@@ -29,10 +29,10 @@
         "resource_type" : "enum_option"
       } ],
       "enum_value" : {
-        "gid" : "1202630524786648",
-        "color" : "aqua",
+        "gid" : "1202630524786650",
+        "color" : "purple",
         "enabled" : true,
-        "name" : "Low",
+        "name" : "High",
         "resource_type" : "enum_option"
       },
       "name" : "Priority",
@@ -42,7 +42,7 @@
         "name" : "Hattie Sager",
         "resource_type" : "user"
       },
-      "display_value" : "Low",
+      "display_value" : "High",
       "resource_subtype" : "enum",
       "resource_type" : "custom_field",
       "type" : "enum"
@@ -132,6 +132,46 @@
       "resource_subtype" : "enum",
       "resource_type" : "custom_field",
       "type" : "enum"
+    }, {
+      "gid" : "1202638031029423",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1202638031029424",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Known issue",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029425",
+        "color" : "magenta",
+        "enabled" : true,
+        "name" : "Enhancement",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029430",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "Workflow Step",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1202638031029424",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Known issue",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Item Type",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      },
+      "display_value" : "Known issue",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "type" : "enum"
     } ],
     "due_at" : null,
     "due_on" : "2022-07-22",
@@ -147,7 +187,7 @@
     "memberships" : [ {
       "project" : {
         "gid" : "1202630524786642",
-        "name" : "Documentation, Standardization, and Versioning",
+        "name" : "Documentation and Standardization",
         "resource_type" : "project"
       },
       "section" : {
@@ -156,16 +196,16 @@
         "resource_type" : "section"
       }
     } ],
-    "modified_at" : "2022-07-19T20:20:53.947Z",
-    "name" : "Fix error with Sales Performance Analytics",
-    "notes" : "",
+    "modified_at" : "2022-07-20T14:42:44.945Z",
+    "name" : "Fix metadata error with Performance Analytics and Trends",
+    "notes" : "Current state: a sheet in Performance Analytics causes the PowerShell ETL scripts to fail. Thus, Sales Performance Analytics and Sales Trends (the only app loaded into PowerShell after Performance Analytics) have incomplete documentation pages.\nDesired state: Identify cause of issue and a workaround? I believe this is due to a hyphenated title.",
     "num_hearts" : 0,
     "num_likes" : 0,
     "parent" : null,
     "permalink_url" : "https://app.asana.com/0/1202630524786642/1202630524786659",
     "projects" : [ {
       "gid" : "1202630524786642",
-      "name" : "Documentation, Standardization, and Versioning",
+      "name" : "Documentation and Standardization",
       "resource_type" : "project"
     } ],
     "resource_type" : "task",
@@ -209,10 +249,10 @@
         "resource_type" : "enum_option"
       } ],
       "enum_value" : {
-        "gid" : "1202630524786648",
-        "color" : "aqua",
+        "gid" : "1202630524786650",
+        "color" : "purple",
         "enabled" : true,
-        "name" : "Low",
+        "name" : "High",
         "resource_type" : "enum_option"
       },
       "name" : "Priority",
@@ -222,7 +262,7 @@
         "name" : "Hattie Sager",
         "resource_type" : "user"
       },
-      "display_value" : "Low",
+      "display_value" : "High",
       "resource_subtype" : "enum",
       "resource_type" : "custom_field",
       "type" : "enum"
@@ -312,6 +352,46 @@
       "resource_subtype" : "enum",
       "resource_type" : "custom_field",
       "type" : "enum"
+    }, {
+      "gid" : "1202638031029423",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1202638031029424",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Known issue",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029425",
+        "color" : "magenta",
+        "enabled" : true,
+        "name" : "Enhancement",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029430",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "Workflow Step",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1202638031029425",
+        "color" : "magenta",
+        "enabled" : true,
+        "name" : "Enhancement",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Item Type",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      },
+      "display_value" : "Enhancement",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "type" : "enum"
     } ],
     "due_at" : null,
     "due_on" : null,
@@ -327,7 +407,7 @@
     "memberships" : [ {
       "project" : {
         "gid" : "1202630524786642",
-        "name" : "Documentation, Standardization, and Versioning",
+        "name" : "Documentation and Standardization",
         "resource_type" : "project"
       },
       "section" : {
@@ -336,376 +416,16 @@
         "resource_type" : "section"
       }
     } ],
-    "modified_at" : "2022-07-19T20:27:10.657Z",
-    "name" : "Searchable data",
-    "notes" : "https://github.com/nextapps-de/flexsearch#complex-documents\nAppend app JSON to index.js",
+    "modified_at" : "2022-07-20T14:43:21.284Z",
+    "name" : "Searchable App Contents",
+    "notes" : "Currently state: app and app descriptions are the only items searchable via site search bar. \nDesired state: measures, dimensions, load scripts, chart titles should also be searchable.\nTentative plan: Transform app JSON into format needed for FlexSearch.js and append logic to Index.js to access this JSON\nhttps://github.com/nextapps-de/flexsearch#complex-documents\n\n",
     "num_hearts" : 0,
     "num_likes" : 0,
     "parent" : null,
     "permalink_url" : "https://app.asana.com/0/1202630524786642/1202630524786688",
     "projects" : [ {
       "gid" : "1202630524786642",
-      "name" : "Documentation, Standardization, and Versioning",
-      "resource_type" : "project"
-    } ],
-    "resource_type" : "task",
-    "start_at" : null,
-    "start_on" : null,
-    "subtasks" : [ ],
-    "tags" : [ ],
-    "resource_subtype" : "default_task",
-    "workspace" : {
-      "gid" : "1198844661110694",
-      "name" : "Glennis Solutions",
-      "resource_type" : "workspace"
-    }
-  }, {
-    "gid" : "1202630524786737",
-    "assignee" : null,
-    "assignee_status" : "upcoming",
-    "completed" : false,
-    "completed_at" : null,
-    "created_at" : "2022-07-19T17:27:45.924Z",
-    "custom_fields" : [ {
-      "gid" : "1202630524786647",
-      "enabled" : true,
-      "enum_options" : [ {
-        "gid" : "1202630524786648",
-        "color" : "aqua",
-        "enabled" : true,
-        "name" : "Low",
-        "resource_type" : "enum_option"
-      }, {
-        "gid" : "1202630524786649",
-        "color" : "yellow-orange",
-        "enabled" : true,
-        "name" : "Medium",
-        "resource_type" : "enum_option"
-      }, {
-        "gid" : "1202630524786650",
-        "color" : "purple",
-        "enabled" : true,
-        "name" : "High",
-        "resource_type" : "enum_option"
-      } ],
-      "enum_value" : {
-        "gid" : "1202630524786649",
-        "color" : "yellow-orange",
-        "enabled" : true,
-        "name" : "Medium",
-        "resource_type" : "enum_option"
-      },
-      "name" : "Priority",
-      "description" : "Track the priority of each task.",
-      "created_by" : {
-        "gid" : "1202630384057720",
-        "name" : "Hattie Sager",
-        "resource_type" : "user"
-      },
-      "display_value" : "Medium",
-      "resource_subtype" : "enum",
-      "resource_type" : "custom_field",
-      "type" : "enum"
-    }, {
-      "gid" : "1202630524786669",
-      "enabled" : true,
-      "enum_options" : [ {
-        "gid" : "1202630524786670",
-        "color" : "green",
-        "enabled" : true,
-        "name" : "Documentation",
-        "resource_type" : "enum_option"
-      }, {
-        "gid" : "1202630524786671",
-        "color" : "blue",
-        "enabled" : true,
-        "name" : "Web development",
-        "resource_type" : "enum_option"
-      }, {
-        "gid" : "1202630524786672",
-        "color" : "yellow-orange",
-        "enabled" : true,
-        "name" : "PowerShell",
-        "resource_type" : "enum_option"
-      }, {
-        "gid" : "1202630524786673",
-        "color" : "orange",
-        "enabled" : true,
-        "name" : "GitHub",
-        "resource_type" : "enum_option"
-      } ],
-      "enum_value" : {
-        "gid" : "1202630524786673",
-        "color" : "orange",
-        "enabled" : true,
-        "name" : "GitHub",
-        "resource_type" : "enum_option"
-      },
-      "name" : "Effort Type",
-      "description" : "",
-      "created_by" : {
-        "gid" : "1202630384057720",
-        "name" : "Hattie Sager",
-        "resource_type" : "user"
-      },
-      "display_value" : "GitHub",
-      "resource_subtype" : "enum",
-      "resource_type" : "custom_field",
-      "type" : "enum"
-    }, {
-      "gid" : "1202630524786723",
-      "enabled" : true,
-      "enum_options" : [ {
-        "gid" : "1202630524786724",
-        "color" : "aqua",
-        "enabled" : true,
-        "name" : "Documentation",
-        "resource_type" : "enum_option"
-      }, {
-        "gid" : "1202630524786725",
-        "color" : "indigo",
-        "enabled" : true,
-        "name" : "JSON ETL",
-        "resource_type" : "enum_option"
-      }, {
-        "gid" : "1202630524786726",
-        "color" : "yellow-green",
-        "enabled" : true,
-        "name" : "Qlik & GitHub",
-        "resource_type" : "enum_option"
-      } ],
-      "enum_value" : {
-        "gid" : "1202630524786726",
-        "color" : "yellow-green",
-        "enabled" : true,
-        "name" : "Qlik & GitHub",
-        "resource_type" : "enum_option"
-      },
-      "name" : "Epic",
-      "description" : "",
-      "created_by" : {
-        "gid" : "1202630384057720",
-        "name" : "Hattie Sager",
-        "resource_type" : "user"
-      },
-      "display_value" : "Qlik & GitHub",
-      "resource_subtype" : "enum",
-      "resource_type" : "custom_field",
-      "type" : "enum"
-    } ],
-    "due_at" : null,
-    "due_on" : null,
-    "followers" : [ {
-      "gid" : "1202630384057720",
-      "name" : "Hattie Sager",
-      "resource_type" : "user"
-    } ],
-    "hearted" : false,
-    "hearts" : [ ],
-    "liked" : false,
-    "likes" : [ ],
-    "memberships" : [ {
-      "project" : {
-        "gid" : "1202630524786642",
-        "name" : "Documentation, Standardization, and Versioning",
-        "resource_type" : "project"
-      },
-      "section" : {
-        "gid" : "1202630524786643",
-        "name" : "To do",
-        "resource_type" : "section"
-      }
-    } ],
-    "modified_at" : "2022-07-19T17:30:45.032Z",
-    "name" : "Import app repos into Atria GitHub",
-    "notes" : "",
-    "num_hearts" : 0,
-    "num_likes" : 0,
-    "parent" : null,
-    "permalink_url" : "https://app.asana.com/0/1202630524786642/1202630524786737",
-    "projects" : [ {
-      "gid" : "1202630524786642",
-      "name" : "Documentation, Standardization, and Versioning",
-      "resource_type" : "project"
-    } ],
-    "resource_type" : "task",
-    "start_at" : null,
-    "start_on" : null,
-    "subtasks" : [ ],
-    "tags" : [ ],
-    "resource_subtype" : "default_task",
-    "workspace" : {
-      "gid" : "1198844661110694",
-      "name" : "Glennis Solutions",
-      "resource_type" : "workspace"
-    }
-  }, {
-    "gid" : "1202630524786739",
-    "assignee" : null,
-    "assignee_status" : "upcoming",
-    "completed" : false,
-    "completed_at" : null,
-    "created_at" : "2022-07-19T17:28:11.024Z",
-    "custom_fields" : [ {
-      "gid" : "1202630524786647",
-      "enabled" : true,
-      "enum_options" : [ {
-        "gid" : "1202630524786648",
-        "color" : "aqua",
-        "enabled" : true,
-        "name" : "Low",
-        "resource_type" : "enum_option"
-      }, {
-        "gid" : "1202630524786649",
-        "color" : "yellow-orange",
-        "enabled" : true,
-        "name" : "Medium",
-        "resource_type" : "enum_option"
-      }, {
-        "gid" : "1202630524786650",
-        "color" : "purple",
-        "enabled" : true,
-        "name" : "High",
-        "resource_type" : "enum_option"
-      } ],
-      "enum_value" : {
-        "gid" : "1202630524786650",
-        "color" : "purple",
-        "enabled" : true,
-        "name" : "High",
-        "resource_type" : "enum_option"
-      },
-      "name" : "Priority",
-      "description" : "Track the priority of each task.",
-      "created_by" : {
-        "gid" : "1202630384057720",
-        "name" : "Hattie Sager",
-        "resource_type" : "user"
-      },
-      "display_value" : "High",
-      "resource_subtype" : "enum",
-      "resource_type" : "custom_field",
-      "type" : "enum"
-    }, {
-      "gid" : "1202630524786669",
-      "enabled" : true,
-      "enum_options" : [ {
-        "gid" : "1202630524786670",
-        "color" : "green",
-        "enabled" : true,
-        "name" : "Documentation",
-        "resource_type" : "enum_option"
-      }, {
-        "gid" : "1202630524786671",
-        "color" : "blue",
-        "enabled" : true,
-        "name" : "Web development",
-        "resource_type" : "enum_option"
-      }, {
-        "gid" : "1202630524786672",
-        "color" : "yellow-orange",
-        "enabled" : true,
-        "name" : "PowerShell",
-        "resource_type" : "enum_option"
-      }, {
-        "gid" : "1202630524786673",
-        "color" : "orange",
-        "enabled" : true,
-        "name" : "GitHub",
-        "resource_type" : "enum_option"
-      } ],
-      "enum_value" : {
-        "gid" : "1202630524786673",
-        "color" : "orange",
-        "enabled" : true,
-        "name" : "GitHub",
-        "resource_type" : "enum_option"
-      },
-      "name" : "Effort Type",
-      "description" : "",
-      "created_by" : {
-        "gid" : "1202630384057720",
-        "name" : "Hattie Sager",
-        "resource_type" : "user"
-      },
-      "display_value" : "GitHub",
-      "resource_subtype" : "enum",
-      "resource_type" : "custom_field",
-      "type" : "enum"
-    }, {
-      "gid" : "1202630524786723",
-      "enabled" : true,
-      "enum_options" : [ {
-        "gid" : "1202630524786724",
-        "color" : "aqua",
-        "enabled" : true,
-        "name" : "Documentation",
-        "resource_type" : "enum_option"
-      }, {
-        "gid" : "1202630524786725",
-        "color" : "indigo",
-        "enabled" : true,
-        "name" : "JSON ETL",
-        "resource_type" : "enum_option"
-      }, {
-        "gid" : "1202630524786726",
-        "color" : "yellow-green",
-        "enabled" : true,
-        "name" : "Qlik & GitHub",
-        "resource_type" : "enum_option"
-      } ],
-      "enum_value" : {
-        "gid" : "1202630524786726",
-        "color" : "yellow-green",
-        "enabled" : true,
-        "name" : "Qlik & GitHub",
-        "resource_type" : "enum_option"
-      },
-      "name" : "Epic",
-      "description" : "",
-      "created_by" : {
-        "gid" : "1202630384057720",
-        "name" : "Hattie Sager",
-        "resource_type" : "user"
-      },
-      "display_value" : "Qlik & GitHub",
-      "resource_subtype" : "enum",
-      "resource_type" : "custom_field",
-      "type" : "enum"
-    } ],
-    "due_at" : null,
-    "due_on" : null,
-    "followers" : [ {
-      "gid" : "1202630384057720",
-      "name" : "Hattie Sager",
-      "resource_type" : "user"
-    } ],
-    "hearted" : false,
-    "hearts" : [ ],
-    "liked" : false,
-    "likes" : [ ],
-    "memberships" : [ {
-      "project" : {
-        "gid" : "1202630524786642",
-        "name" : "Documentation, Standardization, and Versioning",
-        "resource_type" : "project"
-      },
-      "section" : {
-        "gid" : "1202630524786643",
-        "name" : "To do",
-        "resource_type" : "section"
-      }
-    } ],
-    "modified_at" : "2022-07-19T17:28:38.009Z",
-    "name" : "Complete GitHub and GitToQlik documentation",
-    "notes" : "",
-    "num_hearts" : 0,
-    "num_likes" : 0,
-    "parent" : null,
-    "permalink_url" : "https://app.asana.com/0/1202630524786642/1202630524786739",
-    "projects" : [ {
-      "gid" : "1202630524786642",
-      "name" : "Documentation, Standardization, and Versioning",
+      "name" : "Documentation and Standardization",
       "resource_type" : "project"
     } ],
     "resource_type" : "task",
@@ -852,6 +572,46 @@
       "resource_subtype" : "enum",
       "resource_type" : "custom_field",
       "type" : "enum"
+    }, {
+      "gid" : "1202638031029423",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1202638031029424",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Known issue",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029425",
+        "color" : "magenta",
+        "enabled" : true,
+        "name" : "Enhancement",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029430",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "Workflow Step",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1202638031029425",
+        "color" : "magenta",
+        "enabled" : true,
+        "name" : "Enhancement",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Item Type",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      },
+      "display_value" : "Enhancement",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "type" : "enum"
     } ],
     "due_at" : null,
     "due_on" : null,
@@ -867,7 +627,7 @@
     "memberships" : [ {
       "project" : {
         "gid" : "1202630524786642",
-        "name" : "Documentation, Standardization, and Versioning",
+        "name" : "Documentation and Standardization",
         "resource_type" : "project"
       },
       "section" : {
@@ -876,16 +636,16 @@
         "resource_type" : "section"
       }
     } ],
-    "modified_at" : "2022-07-19T20:26:01.864Z",
+    "modified_at" : "2022-07-20T14:30:34.608Z",
     "name" : "TOC for templated data",
-    "notes" : "Working with front matter and sections",
+    "notes" : "Current state: table of contents is not populating for documentation page headers (sheet objects, measures and dimensions, load scripts). One must scroll to get to desired section.\nDesired state: TOC for one-click section navigation\n\nAction notes: Either a) working with front matter and sections (Hugo) or b) adjusting Index with logic to conditionally show. If B, this is a good opportunity to implement header logic — ex: not showing \"Sheet Objects\" on ETL apps. ",
     "num_hearts" : 0,
     "num_likes" : 0,
     "parent" : null,
     "permalink_url" : "https://app.asana.com/0/1202630524786642/1202630524786702",
     "projects" : [ {
       "gid" : "1202630524786642",
-      "name" : "Documentation, Standardization, and Versioning",
+      "name" : "Documentation and Standardization",
       "resource_type" : "project"
     } ],
     "resource_type" : "task",
@@ -929,10 +689,10 @@
         "resource_type" : "enum_option"
       } ],
       "enum_value" : {
-        "gid" : "1202630524786648",
-        "color" : "aqua",
+        "gid" : "1202630524786649",
+        "color" : "yellow-orange",
         "enabled" : true,
-        "name" : "Low",
+        "name" : "Medium",
         "resource_type" : "enum_option"
       },
       "name" : "Priority",
@@ -942,7 +702,7 @@
         "name" : "Hattie Sager",
         "resource_type" : "user"
       },
-      "display_value" : "Low",
+      "display_value" : "Medium",
       "resource_subtype" : "enum",
       "resource_type" : "custom_field",
       "type" : "enum"
@@ -1032,6 +792,46 @@
       "resource_subtype" : "enum",
       "resource_type" : "custom_field",
       "type" : "enum"
+    }, {
+      "gid" : "1202638031029423",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1202638031029424",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Known issue",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029425",
+        "color" : "magenta",
+        "enabled" : true,
+        "name" : "Enhancement",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029430",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "Workflow Step",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1202638031029430",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "Workflow Step",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Item Type",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      },
+      "display_value" : "Workflow Step",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "type" : "enum"
     } ],
     "due_at" : null,
     "due_on" : null,
@@ -1047,7 +847,7 @@
     "memberships" : [ {
       "project" : {
         "gid" : "1202630524786642",
-        "name" : "Documentation, Standardization, and Versioning",
+        "name" : "Documentation and Standardization",
         "resource_type" : "project"
       },
       "section" : {
@@ -1056,16 +856,16 @@
         "resource_type" : "section"
       }
     } ],
-    "modified_at" : "2022-07-19T20:20:29.125Z",
-    "name" : "Update JSON-ETL for specific use case",
-    "notes" : "",
+    "modified_at" : "2022-07-20T14:43:15.994Z",
+    "name" : "Update JSON-ETL",
+    "notes" : "Current state: JSON ETL loads repositories from a folder, runs through ETL scripts, deposits that data into documentation data store. This file paths are outdated and some steps are redundant.\nDesired state: Update file path for new workflow — adjust root directory, remove logic that creates folders, ensure file names use sheet ID and not name (or at least use a definitively unique identifier)",
     "num_hearts" : 0,
     "num_likes" : 0,
     "parent" : null,
     "permalink_url" : "https://app.asana.com/0/1202630524786642/1202633372809716",
     "projects" : [ {
       "gid" : "1202630524786642",
-      "name" : "Documentation, Standardization, and Versioning",
+      "name" : "Documentation and Standardization",
       "resource_type" : "project"
     } ],
     "resource_type" : "task",
@@ -1109,10 +909,10 @@
         "resource_type" : "enum_option"
       } ],
       "enum_value" : {
-        "gid" : "1202630524786650",
-        "color" : "purple",
+        "gid" : "1202630524786649",
+        "color" : "yellow-orange",
         "enabled" : true,
-        "name" : "High",
+        "name" : "Medium",
         "resource_type" : "enum_option"
       },
       "name" : "Priority",
@@ -1122,7 +922,7 @@
         "name" : "Hattie Sager",
         "resource_type" : "user"
       },
-      "display_value" : "High",
+      "display_value" : "Medium",
       "resource_subtype" : "enum",
       "resource_type" : "custom_field",
       "type" : "enum"
@@ -1212,6 +1012,46 @@
       "resource_subtype" : "enum",
       "resource_type" : "custom_field",
       "type" : "enum"
+    }, {
+      "gid" : "1202638031029423",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1202638031029424",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Known issue",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029425",
+        "color" : "magenta",
+        "enabled" : true,
+        "name" : "Enhancement",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029430",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "Workflow Step",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1202638031029425",
+        "color" : "magenta",
+        "enabled" : true,
+        "name" : "Enhancement",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Item Type",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      },
+      "display_value" : "Enhancement",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "type" : "enum"
     } ],
     "due_at" : null,
     "due_on" : null,
@@ -1227,7 +1067,7 @@
     "memberships" : [ {
       "project" : {
         "gid" : "1202630524786642",
-        "name" : "Documentation, Standardization, and Versioning",
+        "name" : "Documentation and Standardization",
         "resource_type" : "project"
       },
       "section" : {
@@ -1236,16 +1076,16 @@
         "resource_type" : "section"
       }
     } ],
-    "modified_at" : "2022-07-19T20:24:06.773Z",
-    "name" : "Landing page + CSS customizations",
-    "notes" : "",
+    "modified_at" : "2022-07-20T14:45:33.630Z",
+    "name" : "Front end UI customizations",
+    "notes" : "Customizations to documentation UI. \nCurrent state: uses default theme colors, font, navigation, footer.\nDesired state: customize SCSS variables, update font, \"Keep it stupid simple\" principles to any non-data pixels (remove clutter)",
     "num_hearts" : 0,
     "num_likes" : 0,
     "parent" : null,
     "permalink_url" : "https://app.asana.com/0/1202630524786642/1202633372809721",
     "projects" : [ {
       "gid" : "1202630524786642",
-      "name" : "Documentation, Standardization, and Versioning",
+      "name" : "Documentation and Standardization",
       "resource_type" : "project"
     } ],
     "resource_type" : "task",
@@ -1255,8 +1095,8 @@
       "gid" : "1202633372809723",
       "assignee" : null,
       "assignee_status" : "upcoming",
-      "completed" : false,
-      "completed_at" : null,
+      "completed" : true,
+      "completed_at" : "2022-07-20T14:34:28.100Z",
       "created_at" : "2022-07-19T20:21:51.162Z",
       "custom_fields" : [ {
         "gid" : "1202630524786647",
@@ -1366,6 +1206,40 @@
         "resource_subtype" : "enum",
         "resource_type" : "custom_field",
         "type" : "enum"
+      }, {
+        "gid" : "1202638031029423",
+        "enabled" : true,
+        "enum_options" : [ {
+          "gid" : "1202638031029424",
+          "color" : "yellow-green",
+          "enabled" : true,
+          "name" : "Known issue",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202638031029425",
+          "color" : "magenta",
+          "enabled" : true,
+          "name" : "Enhancement",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202638031029430",
+          "color" : "red",
+          "enabled" : true,
+          "name" : "Workflow Step",
+          "resource_type" : "enum_option"
+        } ],
+        "enum_value" : null,
+        "name" : "Item Type",
+        "description" : "",
+        "created_by" : {
+          "gid" : "1202630384057720",
+          "name" : "Hattie Sager",
+          "resource_type" : "user"
+        },
+        "display_value" : null,
+        "resource_subtype" : "enum",
+        "resource_type" : "custom_field",
+        "type" : "enum"
       } ],
       "due_at" : null,
       "due_on" : null,
@@ -1379,14 +1253,14 @@
       "liked" : false,
       "likes" : [ ],
       "memberships" : [ ],
-      "modified_at" : "2022-07-19T20:21:55.790Z",
+      "modified_at" : "2022-07-20T14:34:28.270Z",
       "name" : "update index.html",
       "notes" : "",
       "num_hearts" : 0,
       "num_likes" : 0,
       "parent" : {
         "gid" : "1202633372809721",
-        "name" : "Landing page + CSS customizations",
+        "name" : "Front end UI customizations",
         "resource_type" : "task"
       },
       "permalink_url" : "https://app.asana.com/0/1202633372809723/1202633372809723",
@@ -1517,6 +1391,40 @@
         "resource_subtype" : "enum",
         "resource_type" : "custom_field",
         "type" : "enum"
+      }, {
+        "gid" : "1202638031029423",
+        "enabled" : true,
+        "enum_options" : [ {
+          "gid" : "1202638031029424",
+          "color" : "yellow-green",
+          "enabled" : true,
+          "name" : "Known issue",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202638031029425",
+          "color" : "magenta",
+          "enabled" : true,
+          "name" : "Enhancement",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202638031029430",
+          "color" : "red",
+          "enabled" : true,
+          "name" : "Workflow Step",
+          "resource_type" : "enum_option"
+        } ],
+        "enum_value" : null,
+        "name" : "Item Type",
+        "description" : "",
+        "created_by" : {
+          "gid" : "1202630384057720",
+          "name" : "Hattie Sager",
+          "resource_type" : "user"
+        },
+        "display_value" : null,
+        "resource_subtype" : "enum",
+        "resource_type" : "custom_field",
+        "type" : "enum"
       } ],
       "due_at" : null,
       "due_on" : null,
@@ -1537,7 +1445,7 @@
       "num_likes" : 0,
       "parent" : {
         "gid" : "1202633372809721",
-        "name" : "Landing page + CSS customizations",
+        "name" : "Front end UI customizations",
         "resource_type" : "task"
       },
       "permalink_url" : "https://app.asana.com/0/1202633372809724/1202633372809724",
@@ -1668,6 +1576,40 @@
         "resource_subtype" : "enum",
         "resource_type" : "custom_field",
         "type" : "enum"
+      }, {
+        "gid" : "1202638031029423",
+        "enabled" : true,
+        "enum_options" : [ {
+          "gid" : "1202638031029424",
+          "color" : "yellow-green",
+          "enabled" : true,
+          "name" : "Known issue",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202638031029425",
+          "color" : "magenta",
+          "enabled" : true,
+          "name" : "Enhancement",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202638031029430",
+          "color" : "red",
+          "enabled" : true,
+          "name" : "Workflow Step",
+          "resource_type" : "enum_option"
+        } ],
+        "enum_value" : null,
+        "name" : "Item Type",
+        "description" : "",
+        "created_by" : {
+          "gid" : "1202630384057720",
+          "name" : "Hattie Sager",
+          "resource_type" : "user"
+        },
+        "display_value" : null,
+        "resource_subtype" : "enum",
+        "resource_type" : "custom_field",
+        "type" : "enum"
       } ],
       "due_at" : null,
       "due_on" : null,
@@ -1688,10 +1630,380 @@
       "num_likes" : 0,
       "parent" : {
         "gid" : "1202633372809721",
-        "name" : "Landing page + CSS customizations",
+        "name" : "Front end UI customizations",
         "resource_type" : "task"
       },
       "permalink_url" : "https://app.asana.com/0/1202633372809734/1202633372809734",
+      "projects" : [ ],
+      "resource_type" : "task",
+      "start_at" : null,
+      "start_on" : null,
+      "subtasks" : [ ],
+      "tags" : [ ],
+      "resource_subtype" : "default_task",
+      "workspace" : {
+        "gid" : "1198844661110694",
+        "name" : "Glennis Solutions",
+        "resource_type" : "workspace"
+      }
+    }, {
+      "gid" : "1202638031029442",
+      "assignee" : null,
+      "assignee_status" : "upcoming",
+      "completed" : false,
+      "completed_at" : null,
+      "created_at" : "2022-07-20T14:45:23.513Z",
+      "custom_fields" : [ {
+        "gid" : "1202630524786647",
+        "enabled" : true,
+        "enum_options" : [ {
+          "gid" : "1202630524786648",
+          "color" : "aqua",
+          "enabled" : true,
+          "name" : "Low",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202630524786649",
+          "color" : "yellow-orange",
+          "enabled" : true,
+          "name" : "Medium",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202630524786650",
+          "color" : "purple",
+          "enabled" : true,
+          "name" : "High",
+          "resource_type" : "enum_option"
+        } ],
+        "enum_value" : null,
+        "name" : "Priority",
+        "description" : "Track the priority of each task.",
+        "created_by" : {
+          "gid" : "1202630384057720",
+          "name" : "Hattie Sager",
+          "resource_type" : "user"
+        },
+        "display_value" : null,
+        "resource_subtype" : "enum",
+        "resource_type" : "custom_field",
+        "type" : "enum"
+      }, {
+        "gid" : "1202630524786669",
+        "enabled" : true,
+        "enum_options" : [ {
+          "gid" : "1202630524786670",
+          "color" : "green",
+          "enabled" : true,
+          "name" : "Documentation",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202630524786671",
+          "color" : "blue",
+          "enabled" : true,
+          "name" : "Web development",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202630524786672",
+          "color" : "yellow-orange",
+          "enabled" : true,
+          "name" : "PowerShell",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202630524786673",
+          "color" : "orange",
+          "enabled" : true,
+          "name" : "GitHub",
+          "resource_type" : "enum_option"
+        } ],
+        "enum_value" : null,
+        "name" : "Effort Type",
+        "description" : "",
+        "created_by" : {
+          "gid" : "1202630384057720",
+          "name" : "Hattie Sager",
+          "resource_type" : "user"
+        },
+        "display_value" : null,
+        "resource_subtype" : "enum",
+        "resource_type" : "custom_field",
+        "type" : "enum"
+      }, {
+        "gid" : "1202630524786723",
+        "enabled" : true,
+        "enum_options" : [ {
+          "gid" : "1202630524786724",
+          "color" : "aqua",
+          "enabled" : true,
+          "name" : "Documentation",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202630524786725",
+          "color" : "indigo",
+          "enabled" : true,
+          "name" : "JSON ETL",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202630524786726",
+          "color" : "yellow-green",
+          "enabled" : true,
+          "name" : "Qlik & GitHub",
+          "resource_type" : "enum_option"
+        } ],
+        "enum_value" : null,
+        "name" : "Epic",
+        "description" : "",
+        "created_by" : {
+          "gid" : "1202630384057720",
+          "name" : "Hattie Sager",
+          "resource_type" : "user"
+        },
+        "display_value" : null,
+        "resource_subtype" : "enum",
+        "resource_type" : "custom_field",
+        "type" : "enum"
+      }, {
+        "gid" : "1202638031029423",
+        "enabled" : true,
+        "enum_options" : [ {
+          "gid" : "1202638031029424",
+          "color" : "yellow-green",
+          "enabled" : true,
+          "name" : "Known issue",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202638031029425",
+          "color" : "magenta",
+          "enabled" : true,
+          "name" : "Enhancement",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202638031029430",
+          "color" : "red",
+          "enabled" : true,
+          "name" : "Workflow Step",
+          "resource_type" : "enum_option"
+        } ],
+        "enum_value" : null,
+        "name" : "Item Type",
+        "description" : "",
+        "created_by" : {
+          "gid" : "1202630384057720",
+          "name" : "Hattie Sager",
+          "resource_type" : "user"
+        },
+        "display_value" : null,
+        "resource_subtype" : "enum",
+        "resource_type" : "custom_field",
+        "type" : "enum"
+      } ],
+      "due_at" : null,
+      "due_on" : null,
+      "followers" : [ {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      } ],
+      "hearted" : false,
+      "hearts" : [ ],
+      "liked" : false,
+      "likes" : [ ],
+      "memberships" : [ ],
+      "modified_at" : "2022-07-20T14:45:30.262Z",
+      "name" : "remove footer",
+      "notes" : "",
+      "num_hearts" : 0,
+      "num_likes" : 0,
+      "parent" : {
+        "gid" : "1202633372809721",
+        "name" : "Front end UI customizations",
+        "resource_type" : "task"
+      },
+      "permalink_url" : "https://app.asana.com/0/1202638031029442/1202638031029442",
+      "projects" : [ ],
+      "resource_type" : "task",
+      "start_at" : null,
+      "start_on" : null,
+      "subtasks" : [ ],
+      "tags" : [ ],
+      "resource_subtype" : "default_task",
+      "workspace" : {
+        "gid" : "1198844661110694",
+        "name" : "Glennis Solutions",
+        "resource_type" : "workspace"
+      }
+    }, {
+      "gid" : "1202638031029443",
+      "assignee" : null,
+      "assignee_status" : "upcoming",
+      "completed" : false,
+      "completed_at" : null,
+      "created_at" : "2022-07-20T14:45:33.302Z",
+      "custom_fields" : [ {
+        "gid" : "1202630524786647",
+        "enabled" : true,
+        "enum_options" : [ {
+          "gid" : "1202630524786648",
+          "color" : "aqua",
+          "enabled" : true,
+          "name" : "Low",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202630524786649",
+          "color" : "yellow-orange",
+          "enabled" : true,
+          "name" : "Medium",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202630524786650",
+          "color" : "purple",
+          "enabled" : true,
+          "name" : "High",
+          "resource_type" : "enum_option"
+        } ],
+        "enum_value" : null,
+        "name" : "Priority",
+        "description" : "Track the priority of each task.",
+        "created_by" : {
+          "gid" : "1202630384057720",
+          "name" : "Hattie Sager",
+          "resource_type" : "user"
+        },
+        "display_value" : null,
+        "resource_subtype" : "enum",
+        "resource_type" : "custom_field",
+        "type" : "enum"
+      }, {
+        "gid" : "1202630524786669",
+        "enabled" : true,
+        "enum_options" : [ {
+          "gid" : "1202630524786670",
+          "color" : "green",
+          "enabled" : true,
+          "name" : "Documentation",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202630524786671",
+          "color" : "blue",
+          "enabled" : true,
+          "name" : "Web development",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202630524786672",
+          "color" : "yellow-orange",
+          "enabled" : true,
+          "name" : "PowerShell",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202630524786673",
+          "color" : "orange",
+          "enabled" : true,
+          "name" : "GitHub",
+          "resource_type" : "enum_option"
+        } ],
+        "enum_value" : null,
+        "name" : "Effort Type",
+        "description" : "",
+        "created_by" : {
+          "gid" : "1202630384057720",
+          "name" : "Hattie Sager",
+          "resource_type" : "user"
+        },
+        "display_value" : null,
+        "resource_subtype" : "enum",
+        "resource_type" : "custom_field",
+        "type" : "enum"
+      }, {
+        "gid" : "1202630524786723",
+        "enabled" : true,
+        "enum_options" : [ {
+          "gid" : "1202630524786724",
+          "color" : "aqua",
+          "enabled" : true,
+          "name" : "Documentation",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202630524786725",
+          "color" : "indigo",
+          "enabled" : true,
+          "name" : "JSON ETL",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202630524786726",
+          "color" : "yellow-green",
+          "enabled" : true,
+          "name" : "Qlik & GitHub",
+          "resource_type" : "enum_option"
+        } ],
+        "enum_value" : null,
+        "name" : "Epic",
+        "description" : "",
+        "created_by" : {
+          "gid" : "1202630384057720",
+          "name" : "Hattie Sager",
+          "resource_type" : "user"
+        },
+        "display_value" : null,
+        "resource_subtype" : "enum",
+        "resource_type" : "custom_field",
+        "type" : "enum"
+      }, {
+        "gid" : "1202638031029423",
+        "enabled" : true,
+        "enum_options" : [ {
+          "gid" : "1202638031029424",
+          "color" : "yellow-green",
+          "enabled" : true,
+          "name" : "Known issue",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202638031029425",
+          "color" : "magenta",
+          "enabled" : true,
+          "name" : "Enhancement",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202638031029430",
+          "color" : "red",
+          "enabled" : true,
+          "name" : "Workflow Step",
+          "resource_type" : "enum_option"
+        } ],
+        "enum_value" : null,
+        "name" : "Item Type",
+        "description" : "",
+        "created_by" : {
+          "gid" : "1202630384057720",
+          "name" : "Hattie Sager",
+          "resource_type" : "user"
+        },
+        "display_value" : null,
+        "resource_subtype" : "enum",
+        "resource_type" : "custom_field",
+        "type" : "enum"
+      } ],
+      "due_at" : null,
+      "due_on" : null,
+      "followers" : [ {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      } ],
+      "hearted" : false,
+      "hearts" : [ ],
+      "liked" : false,
+      "likes" : [ ],
+      "memberships" : [ ],
+      "modified_at" : "2022-07-20T14:45:48.294Z",
+      "name" : "remove twitter icon and github (for now)",
+      "notes" : "",
+      "num_hearts" : 0,
+      "num_likes" : 0,
+      "parent" : {
+        "gid" : "1202633372809721",
+        "name" : "Front end UI customizations",
+        "resource_type" : "task"
+      },
+      "permalink_url" : "https://app.asana.com/0/1202638031029443/1202638031029443",
       "projects" : [ ],
       "resource_type" : "task",
       "start_at" : null,
@@ -1845,6 +2157,46 @@
       "resource_subtype" : "enum",
       "resource_type" : "custom_field",
       "type" : "enum"
+    }, {
+      "gid" : "1202638031029423",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1202638031029424",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Known issue",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029425",
+        "color" : "magenta",
+        "enabled" : true,
+        "name" : "Enhancement",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029430",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "Workflow Step",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1202638031029424",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Known issue",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Item Type",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      },
+      "display_value" : "Known issue",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "type" : "enum"
     } ],
     "due_at" : null,
     "due_on" : null,
@@ -1860,7 +2212,7 @@
     "memberships" : [ {
       "project" : {
         "gid" : "1202630524786642",
-        "name" : "Documentation, Standardization, and Versioning",
+        "name" : "Documentation and Standardization",
         "resource_type" : "project"
       },
       "section" : {
@@ -1869,16 +2221,16 @@
         "resource_type" : "section"
       }
     } ],
-    "modified_at" : "2022-07-19T20:23:46.159Z",
-    "name" : "Logic to app data partials",
-    "notes" : "only show headers if data exists\n\n",
+    "modified_at" : "2022-07-20T14:37:23.614Z",
+    "name" : "Append heading logic to AppData partials",
+    "notes" : "Current state: Even if an app has no sheets, there are still page headers for measures/dimensions and sheet objects.\nDesired state: only show headers if data exists\n\n",
     "num_hearts" : 0,
     "num_likes" : 0,
     "parent" : null,
     "permalink_url" : "https://app.asana.com/0/1202630524786642/1202633372809726",
     "projects" : [ {
       "gid" : "1202630524786642",
-      "name" : "Documentation, Standardization, and Versioning",
+      "name" : "Documentation and Standardization",
       "resource_type" : "project"
     } ],
     "resource_type" : "task",
@@ -2025,6 +2377,46 @@
       "resource_subtype" : "enum",
       "resource_type" : "custom_field",
       "type" : "enum"
+    }, {
+      "gid" : "1202638031029423",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1202638031029424",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Known issue",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029425",
+        "color" : "magenta",
+        "enabled" : true,
+        "name" : "Enhancement",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029430",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "Workflow Step",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1202638031029425",
+        "color" : "magenta",
+        "enabled" : true,
+        "name" : "Enhancement",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Item Type",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      },
+      "display_value" : "Enhancement",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "type" : "enum"
     } ],
     "due_at" : null,
     "due_on" : null,
@@ -2040,7 +2432,7 @@
     "memberships" : [ {
       "project" : {
         "gid" : "1202630524786642",
-        "name" : "Documentation, Standardization, and Versioning",
+        "name" : "Documentation and Standardization",
         "resource_type" : "project"
       },
       "section" : {
@@ -2049,16 +2441,16 @@
         "resource_type" : "section"
       }
     } ],
-    "modified_at" : "2022-07-19T20:24:42.676Z",
-    "name" : "implement WYSWIG with GitHub",
-    "notes" : "",
+    "modified_at" : "2022-07-20T14:38:30.509Z",
+    "name" : "Implement WYSWIG with GitHub",
+    "notes" : "Current state: static content updated in VSCode\nDesired state: add \"Edit\" button to documentation pages that directs user to the corresponding file in GitHub repository",
     "num_hearts" : 0,
     "num_likes" : 0,
     "parent" : null,
     "permalink_url" : "https://app.asana.com/0/1202630524786642/1202633372809736",
     "projects" : [ {
       "gid" : "1202630524786642",
-      "name" : "Documentation, Standardization, and Versioning",
+      "name" : "Documentation and Standardization",
       "resource_type" : "project"
     } ],
     "resource_type" : "task",
@@ -2205,6 +2597,46 @@
       "resource_subtype" : "enum",
       "resource_type" : "custom_field",
       "type" : "enum"
+    }, {
+      "gid" : "1202638031029423",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1202638031029424",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Known issue",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029425",
+        "color" : "magenta",
+        "enabled" : true,
+        "name" : "Enhancement",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029430",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "Workflow Step",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1202638031029424",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Known issue",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Item Type",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      },
+      "display_value" : "Known issue",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "type" : "enum"
     } ],
     "due_at" : null,
     "due_on" : null,
@@ -2220,7 +2652,7 @@
     "memberships" : [ {
       "project" : {
         "gid" : "1202630524786642",
-        "name" : "Documentation, Standardization, and Versioning",
+        "name" : "Documentation and Standardization",
         "resource_type" : "project"
       },
       "section" : {
@@ -2229,16 +2661,676 @@
         "resource_type" : "section"
       }
     } ],
-    "modified_at" : "2022-07-19T20:25:23.621Z",
+    "modified_at" : "2022-07-20T14:40:56.459Z",
     "name" : "Readable format for charts titled with expressions",
-    "notes" : "",
+    "notes" : "Current state: Charts that use expressions in titles are shown in documentation within a nested array and are not very readable\nDesired state: Implement logic in PowerShell ETL that displays expression titles in a comprehensible format. ",
     "num_hearts" : 0,
     "num_likes" : 0,
     "parent" : null,
     "permalink_url" : "https://app.asana.com/0/1202630524786642/1202633372809743",
     "projects" : [ {
       "gid" : "1202630524786642",
-      "name" : "Documentation, Standardization, and Versioning",
+      "name" : "Documentation and Standardization",
+      "resource_type" : "project"
+    } ],
+    "resource_type" : "task",
+    "start_at" : null,
+    "start_on" : null,
+    "subtasks" : [ ],
+    "tags" : [ ],
+    "resource_subtype" : "default_task",
+    "workspace" : {
+      "gid" : "1198844661110694",
+      "name" : "Glennis Solutions",
+      "resource_type" : "workspace"
+    }
+  }, {
+    "gid" : "1202638031029436",
+    "assignee" : null,
+    "assignee_status" : "upcoming",
+    "completed" : false,
+    "completed_at" : null,
+    "created_at" : "2022-07-20T14:43:01.098Z",
+    "custom_fields" : [ {
+      "gid" : "1202630524786647",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1202630524786648",
+        "color" : "aqua",
+        "enabled" : true,
+        "name" : "Low",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202630524786649",
+        "color" : "yellow-orange",
+        "enabled" : true,
+        "name" : "Medium",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202630524786650",
+        "color" : "purple",
+        "enabled" : true,
+        "name" : "High",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1202630524786650",
+        "color" : "purple",
+        "enabled" : true,
+        "name" : "High",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Priority",
+      "description" : "Track the priority of each task.",
+      "created_by" : {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      },
+      "display_value" : "High",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "type" : "enum"
+    }, {
+      "gid" : "1202630524786669",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1202630524786670",
+        "color" : "green",
+        "enabled" : true,
+        "name" : "Documentation",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202630524786671",
+        "color" : "blue",
+        "enabled" : true,
+        "name" : "Web development",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202630524786672",
+        "color" : "yellow-orange",
+        "enabled" : true,
+        "name" : "PowerShell",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202630524786673",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "GitHub",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1202630524786671",
+        "color" : "blue",
+        "enabled" : true,
+        "name" : "Web development",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Effort Type",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      },
+      "display_value" : "Web development",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "type" : "enum"
+    }, {
+      "gid" : "1202630524786723",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1202630524786724",
+        "color" : "aqua",
+        "enabled" : true,
+        "name" : "Documentation",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202630524786725",
+        "color" : "indigo",
+        "enabled" : true,
+        "name" : "JSON ETL",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202630524786726",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Qlik & GitHub",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1202630524786724",
+        "color" : "aqua",
+        "enabled" : true,
+        "name" : "Documentation",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Epic",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      },
+      "display_value" : "Documentation",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "type" : "enum"
+    }, {
+      "gid" : "1202638031029423",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1202638031029424",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Known issue",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029425",
+        "color" : "magenta",
+        "enabled" : true,
+        "name" : "Enhancement",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029430",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "Workflow Step",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1202638031029424",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Known issue",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Item Type",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      },
+      "display_value" : "Known issue",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "type" : "enum"
+    } ],
+    "due_at" : null,
+    "due_on" : null,
+    "followers" : [ {
+      "gid" : "1202630384057720",
+      "name" : "Hattie Sager",
+      "resource_type" : "user"
+    } ],
+    "hearted" : false,
+    "hearts" : [ ],
+    "liked" : false,
+    "likes" : [ ],
+    "memberships" : [ {
+      "project" : {
+        "gid" : "1202630524786642",
+        "name" : "Documentation and Standardization",
+        "resource_type" : "project"
+      },
+      "section" : {
+        "gid" : "1202630524786643",
+        "name" : "To do",
+        "resource_type" : "section"
+      }
+    } ],
+    "modified_at" : "2022-07-20T14:46:24.515Z",
+    "name" : "Site navigation and menu bug",
+    "notes" : "Current state: When navigating published site, deleted menu items are still present in navigation bar and old versions of the site are displayed.\nDesired state: published site has cohesive navigation & definitively identify the cause of this and a solution",
+    "num_hearts" : 0,
+    "num_likes" : 0,
+    "parent" : null,
+    "permalink_url" : "https://app.asana.com/0/1202630524786642/1202638031029436",
+    "projects" : [ {
+      "gid" : "1202630524786642",
+      "name" : "Documentation and Standardization",
+      "resource_type" : "project"
+    } ],
+    "resource_type" : "task",
+    "start_at" : null,
+    "start_on" : null,
+    "subtasks" : [ ],
+    "tags" : [ ],
+    "resource_subtype" : "default_task",
+    "workspace" : {
+      "gid" : "1198844661110694",
+      "name" : "Glennis Solutions",
+      "resource_type" : "workspace"
+    }
+  }, {
+    "gid" : "1202638031029446",
+    "assignee" : null,
+    "assignee_status" : "upcoming",
+    "completed" : false,
+    "completed_at" : null,
+    "created_at" : "2022-07-20T14:49:52.818Z",
+    "custom_fields" : [ {
+      "gid" : "1202630524786647",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1202630524786648",
+        "color" : "aqua",
+        "enabled" : true,
+        "name" : "Low",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202630524786649",
+        "color" : "yellow-orange",
+        "enabled" : true,
+        "name" : "Medium",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202630524786650",
+        "color" : "purple",
+        "enabled" : true,
+        "name" : "High",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1202630524786650",
+        "color" : "purple",
+        "enabled" : true,
+        "name" : "High",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Priority",
+      "description" : "Track the priority of each task.",
+      "created_by" : {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      },
+      "display_value" : "High",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "type" : "enum"
+    }, {
+      "gid" : "1202630524786669",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1202630524786670",
+        "color" : "green",
+        "enabled" : true,
+        "name" : "Documentation",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202630524786671",
+        "color" : "blue",
+        "enabled" : true,
+        "name" : "Web development",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202630524786672",
+        "color" : "yellow-orange",
+        "enabled" : true,
+        "name" : "PowerShell",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202630524786673",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "GitHub",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1202630524786671",
+        "color" : "blue",
+        "enabled" : true,
+        "name" : "Web development",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Effort Type",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      },
+      "display_value" : "Web development",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "type" : "enum"
+    }, {
+      "gid" : "1202630524786723",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1202630524786724",
+        "color" : "aqua",
+        "enabled" : true,
+        "name" : "Documentation",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202630524786725",
+        "color" : "indigo",
+        "enabled" : true,
+        "name" : "JSON ETL",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202630524786726",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Qlik & GitHub",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1202630524786724",
+        "color" : "aqua",
+        "enabled" : true,
+        "name" : "Documentation",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Epic",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      },
+      "display_value" : "Documentation",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "type" : "enum"
+    }, {
+      "gid" : "1202638031029423",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1202638031029424",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Known issue",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029425",
+        "color" : "magenta",
+        "enabled" : true,
+        "name" : "Enhancement",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029430",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "Workflow Step",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1202638031029425",
+        "color" : "magenta",
+        "enabled" : true,
+        "name" : "Enhancement",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Item Type",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      },
+      "display_value" : "Enhancement",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "type" : "enum"
+    } ],
+    "due_at" : null,
+    "due_on" : null,
+    "followers" : [ {
+      "gid" : "1202630384057720",
+      "name" : "Hattie Sager",
+      "resource_type" : "user"
+    } ],
+    "hearted" : false,
+    "hearts" : [ ],
+    "liked" : false,
+    "likes" : [ ],
+    "memberships" : [ {
+      "project" : {
+        "gid" : "1202630524786642",
+        "name" : "Documentation and Standardization",
+        "resource_type" : "project"
+      },
+      "section" : {
+        "gid" : "1202630524786643",
+        "name" : "To do",
+        "resource_type" : "section"
+      }
+    } ],
+    "modified_at" : "2022-07-20T14:52:48.203Z",
+    "name" : "Temp: search of load scripts",
+    "notes" : "An important part about this documentation is that it should inform analysts which apps load which fields from which tables.\nCurrent state: load scripts are partitioned by app and are not currently searchable via search bar.\nDesired state: Until searchable scripts are implemented, add a page which contains all app load scripts so that we may CTRL F to search.",
+    "num_hearts" : 0,
+    "num_likes" : 0,
+    "parent" : null,
+    "permalink_url" : "https://app.asana.com/0/1202630524786642/1202638031029446",
+    "projects" : [ {
+      "gid" : "1202630524786642",
+      "name" : "Documentation and Standardization",
+      "resource_type" : "project"
+    } ],
+    "resource_type" : "task",
+    "start_at" : null,
+    "start_on" : null,
+    "subtasks" : [ ],
+    "tags" : [ ],
+    "resource_subtype" : "default_task",
+    "workspace" : {
+      "gid" : "1198844661110694",
+      "name" : "Glennis Solutions",
+      "resource_type" : "workspace"
+    }
+  }, {
+    "gid" : "1202638031029452",
+    "assignee" : null,
+    "assignee_status" : "upcoming",
+    "completed" : false,
+    "completed_at" : null,
+    "created_at" : "2022-07-20T14:52:55.548Z",
+    "custom_fields" : [ {
+      "gid" : "1202630524786647",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1202630524786648",
+        "color" : "aqua",
+        "enabled" : true,
+        "name" : "Low",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202630524786649",
+        "color" : "yellow-orange",
+        "enabled" : true,
+        "name" : "Medium",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202630524786650",
+        "color" : "purple",
+        "enabled" : true,
+        "name" : "High",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1202630524786650",
+        "color" : "purple",
+        "enabled" : true,
+        "name" : "High",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Priority",
+      "description" : "Track the priority of each task.",
+      "created_by" : {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      },
+      "display_value" : "High",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "type" : "enum"
+    }, {
+      "gid" : "1202630524786669",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1202630524786670",
+        "color" : "green",
+        "enabled" : true,
+        "name" : "Documentation",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202630524786671",
+        "color" : "blue",
+        "enabled" : true,
+        "name" : "Web development",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202630524786672",
+        "color" : "yellow-orange",
+        "enabled" : true,
+        "name" : "PowerShell",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202630524786673",
+        "color" : "orange",
+        "enabled" : true,
+        "name" : "GitHub",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1202630524786671",
+        "color" : "blue",
+        "enabled" : true,
+        "name" : "Web development",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Effort Type",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      },
+      "display_value" : "Web development",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "type" : "enum"
+    }, {
+      "gid" : "1202630524786723",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1202630524786724",
+        "color" : "aqua",
+        "enabled" : true,
+        "name" : "Documentation",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202630524786725",
+        "color" : "indigo",
+        "enabled" : true,
+        "name" : "JSON ETL",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202630524786726",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Qlik & GitHub",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1202630524786724",
+        "color" : "aqua",
+        "enabled" : true,
+        "name" : "Documentation",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Epic",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      },
+      "display_value" : "Documentation",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "type" : "enum"
+    }, {
+      "gid" : "1202638031029423",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1202638031029424",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Known issue",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029425",
+        "color" : "magenta",
+        "enabled" : true,
+        "name" : "Enhancement",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029430",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "Workflow Step",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : {
+        "gid" : "1202638031029425",
+        "color" : "magenta",
+        "enabled" : true,
+        "name" : "Enhancement",
+        "resource_type" : "enum_option"
+      },
+      "name" : "Item Type",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      },
+      "display_value" : "Enhancement",
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "type" : "enum"
+    } ],
+    "due_at" : null,
+    "due_on" : null,
+    "followers" : [ {
+      "gid" : "1202630384057720",
+      "name" : "Hattie Sager",
+      "resource_type" : "user"
+    } ],
+    "hearted" : false,
+    "hearts" : [ ],
+    "liked" : false,
+    "likes" : [ ],
+    "memberships" : [ {
+      "project" : {
+        "gid" : "1202630524786642",
+        "name" : "Documentation and Standardization",
+        "resource_type" : "project"
+      },
+      "section" : {
+        "gid" : "1202630524786643",
+        "name" : "To do",
+        "resource_type" : "section"
+      }
+    } ],
+    "modified_at" : "2022-07-20T14:53:59.829Z",
+    "name" : "Temp: search of measures",
+    "notes" : "Until searchable measures and dimensions are implemented, create a new page  that contains all measures, by app, so that they may be searched in the interim",
+    "num_hearts" : 0,
+    "num_likes" : 0,
+    "parent" : null,
+    "permalink_url" : "https://app.asana.com/0/1202630524786642/1202638031029452",
+    "projects" : [ {
+      "gid" : "1202630524786642",
+      "name" : "Documentation and Standardization",
       "resource_type" : "project"
     } ],
     "resource_type" : "task",
@@ -2385,6 +3477,40 @@
       "resource_subtype" : "enum",
       "resource_type" : "custom_field",
       "type" : "enum"
+    }, {
+      "gid" : "1202638031029423",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1202638031029424",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Known issue",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029425",
+        "color" : "magenta",
+        "enabled" : true,
+        "name" : "Enhancement",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029430",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "Workflow Step",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : null,
+      "name" : "Item Type",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "type" : "enum"
     } ],
     "due_at" : null,
     "due_on" : "2022-07-21",
@@ -2400,7 +3526,7 @@
     "memberships" : [ {
       "project" : {
         "gid" : "1202630524786642",
-        "name" : "Documentation, Standardization, and Versioning",
+        "name" : "Documentation and Standardization",
         "resource_type" : "project"
       },
       "section" : {
@@ -2418,7 +3544,7 @@
     "permalink_url" : "https://app.asana.com/0/1202630524786642/1202630524786657",
     "projects" : [ {
       "gid" : "1202630524786642",
-      "name" : "Documentation, Standardization, and Versioning",
+      "name" : "Documentation and Standardization",
       "resource_type" : "project"
     } ],
     "resource_type" : "task",
@@ -2529,6 +3655,40 @@
         } ],
         "enum_value" : null,
         "name" : "Epic",
+        "description" : "",
+        "created_by" : {
+          "gid" : "1202630384057720",
+          "name" : "Hattie Sager",
+          "resource_type" : "user"
+        },
+        "display_value" : null,
+        "resource_subtype" : "enum",
+        "resource_type" : "custom_field",
+        "type" : "enum"
+      }, {
+        "gid" : "1202638031029423",
+        "enabled" : true,
+        "enum_options" : [ {
+          "gid" : "1202638031029424",
+          "color" : "yellow-green",
+          "enabled" : true,
+          "name" : "Known issue",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202638031029425",
+          "color" : "magenta",
+          "enabled" : true,
+          "name" : "Enhancement",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202638031029430",
+          "color" : "red",
+          "enabled" : true,
+          "name" : "Workflow Step",
+          "resource_type" : "enum_option"
+        } ],
+        "enum_value" : null,
+        "name" : "Item Type",
         "description" : "",
         "created_by" : {
           "gid" : "1202630384057720",
@@ -2680,6 +3840,40 @@
         } ],
         "enum_value" : null,
         "name" : "Epic",
+        "description" : "",
+        "created_by" : {
+          "gid" : "1202630384057720",
+          "name" : "Hattie Sager",
+          "resource_type" : "user"
+        },
+        "display_value" : null,
+        "resource_subtype" : "enum",
+        "resource_type" : "custom_field",
+        "type" : "enum"
+      }, {
+        "gid" : "1202638031029423",
+        "enabled" : true,
+        "enum_options" : [ {
+          "gid" : "1202638031029424",
+          "color" : "yellow-green",
+          "enabled" : true,
+          "name" : "Known issue",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202638031029425",
+          "color" : "magenta",
+          "enabled" : true,
+          "name" : "Enhancement",
+          "resource_type" : "enum_option"
+        }, {
+          "gid" : "1202638031029430",
+          "color" : "red",
+          "enabled" : true,
+          "name" : "Workflow Step",
+          "resource_type" : "enum_option"
+        } ],
+        "enum_value" : null,
+        "name" : "Item Type",
         "description" : "",
         "created_by" : {
           "gid" : "1202630384057720",
@@ -2867,6 +4061,40 @@
       "resource_subtype" : "enum",
       "resource_type" : "custom_field",
       "type" : "enum"
+    }, {
+      "gid" : "1202638031029423",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1202638031029424",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Known issue",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029425",
+        "color" : "magenta",
+        "enabled" : true,
+        "name" : "Enhancement",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029430",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "Workflow Step",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : null,
+      "name" : "Item Type",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "type" : "enum"
     } ],
     "due_at" : null,
     "due_on" : "2022-07-25",
@@ -2882,7 +4110,7 @@
     "memberships" : [ {
       "project" : {
         "gid" : "1202630524786642",
-        "name" : "Documentation, Standardization, and Versioning",
+        "name" : "Documentation and Standardization",
         "resource_type" : "project"
       },
       "section" : {
@@ -2900,7 +4128,7 @@
     "permalink_url" : "https://app.asana.com/0/1202630524786642/1202630524786661",
     "projects" : [ {
       "gid" : "1202630524786642",
-      "name" : "Documentation, Standardization, and Versioning",
+      "name" : "Documentation and Standardization",
       "resource_type" : "project"
     } ],
     "resource_type" : "task",
@@ -3047,6 +4275,40 @@
       "resource_subtype" : "enum",
       "resource_type" : "custom_field",
       "type" : "enum"
+    }, {
+      "gid" : "1202638031029423",
+      "enabled" : true,
+      "enum_options" : [ {
+        "gid" : "1202638031029424",
+        "color" : "yellow-green",
+        "enabled" : true,
+        "name" : "Known issue",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029425",
+        "color" : "magenta",
+        "enabled" : true,
+        "name" : "Enhancement",
+        "resource_type" : "enum_option"
+      }, {
+        "gid" : "1202638031029430",
+        "color" : "red",
+        "enabled" : true,
+        "name" : "Workflow Step",
+        "resource_type" : "enum_option"
+      } ],
+      "enum_value" : null,
+      "name" : "Item Type",
+      "description" : "",
+      "created_by" : {
+        "gid" : "1202630384057720",
+        "name" : "Hattie Sager",
+        "resource_type" : "user"
+      },
+      "display_value" : null,
+      "resource_subtype" : "enum",
+      "resource_type" : "custom_field",
+      "type" : "enum"
     } ],
     "due_at" : null,
     "due_on" : null,
@@ -3062,7 +4324,7 @@
     "memberships" : [ {
       "project" : {
         "gid" : "1202630524786642",
-        "name" : "Documentation, Standardization, and Versioning",
+        "name" : "Documentation and Standardization",
         "resource_type" : "project"
       },
       "section" : {
@@ -3080,7 +4342,7 @@
     "permalink_url" : "https://app.asana.com/0/1202630524786642/1202630524786682",
     "projects" : [ {
       "gid" : "1202630524786642",
-      "name" : "Documentation, Standardization, and Versioning",
+      "name" : "Documentation and Standardization",
       "resource_type" : "project"
     } ],
     "resource_type" : "task",

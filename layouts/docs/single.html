@@ -15,6 +15,7 @@
 		{{ else -}}
 		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto">
 		{{ end -}}
+		
 			{{ if .Site.Params.options.breadCrumb -}}
 				<!-- https://discourse.gohugo.io/t/breadcrumb-navigation-for-highly-nested-content/27359/6 -->
 				<nav aria-label="breadcrumb">
@@ -31,6 +32,7 @@
 				{{ partial "sidebar/docs-toc.html" . }}
 			</nav>
 			{{ end -}}
+			
 			{{ .Content }} 	{{ partial "appdata/sheets.html" . }}
 			{{ partial "appdata/dataload.html" . }}
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
