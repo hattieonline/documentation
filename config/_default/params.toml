@@ -37,7 +37,7 @@ schemaImageHeight = 640
 schemaTwitter = "https://twitter.com/getdoks"
 schemaLinkedIn = ""
 schemaGitHub = "https://github.com/h-enk/doks"
-schemaSection = "blog"
+
 
 ## Sitelinks Search Box
 siteLinksSearchBox = false
