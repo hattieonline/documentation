@@ -33,7 +33,15 @@
 			</nav>
 			{{ end -}}
 			
-			{{ .Content }} 	{{ partial "appdata/sheets.html" . }}
+			{{ .Content }} 	
+			
+			
+			{{if eq .Params.Atria true}}
+    		{{ partial "appdata/atriasheets.html" . }}
+			{{else }}
+			{{ partial "appdata/sheets.html" . }}
+			{{end}}
+
 			{{ partial "appdata/dataload.html" . }}
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				{{ if .Site.Params.lastMod -}}

@@ -1,8 +1,11 @@
 {{ if eq .Params.hasjson true }}
 {{$thisjson:= .Params.jsonvar}}
 {{$appsheets:= .Params.sheetsvar}}
-<h2 class="h3" id="sheets">Sheets and Objects</h2>
-{{range .Site.Data.Sheets.Test}}
+
+
+    <h2 class="h3" id="sheets">Sheets and Objects</h2>
+    {{range  .Site.Data.Sheets.Test}}
+    
     {{if eq .qProperty.qInfo.qApp $thisjson}}
     <dl>
         <dt>{{.qProperty.qMetaDef.title}}</dt>
@@ -16,9 +19,12 @@
     {{end}}
 {{end}}
 
-<h2 class="h3">Measures and Dimensions</h2>
-{{range .Site.Data.SalesManagement }}
+
+
+    {{range .Site.Data.InsightsObjects }}
+
     {{if eq .App $thisjson}}
+    <h2 class="h3">Measures and Dimensions</h2>
     <dl>
         <dt>{{.Label}}</dt>
         <dd>{{.Description}}</dd>

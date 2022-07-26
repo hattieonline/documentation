@@ -5,7 +5,6 @@
     <p class="lead">Hover over snippet to copy the load script, or expand to view entire script.</p>
     {{range .Site.Data.DataLoads.script}}
         {{if eq .App $thisjson}}
-  
           <div class="card border-0 mt-0">
             <div class="card-body">
               <h5 class="card-title mt-0">{{.Section}}</h5>
@@ -19,5 +18,21 @@
           </div>
           <hr>
         {{end}}
+      {{end}}
+    {{range .Site.Data.Atria.Loads.script}}
+      {{if eq .App $thisjson}}
+        <div class="card border-0 mt-0">
+      <div class="card-body">
+        <h5 class="card-title mt-0">{{.Section}}</h5>
+        
+        <pre class="card-text"><code>{{delimit .LoadScriptContent  "<br>" }}</code></pre>
+        <details class="border-0">
+          <summary class="border-0">  View script  </summary>
+          <dd class="bg-light"> <code>{{delimit .LoadScriptContent  "<br>" }} </code></dd>
+        </details>
+      </div>
+        </div>
+         <hr>
+      {{end}}
     {{end}}
 {{ end }}
