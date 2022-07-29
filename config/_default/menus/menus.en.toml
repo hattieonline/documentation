@@ -1,8 +1,14 @@
 
 [[main]]
-  name = "Docs"
+  name = "Apps"
   url = "/docs/"
   weight = 10
+
+
+[[main]]
+  name = "Processes"
+  url = "/processes/"
+  weight = 11
 
 
 

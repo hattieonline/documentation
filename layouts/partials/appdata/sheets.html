@@ -18,13 +18,13 @@
             {{end}} </dl>
     {{end}}
 {{end}}
-
+<h2 class="h3">Measures and Dimensions</h2>
 
 
     {{range .Site.Data.InsightsObjects }}
 
     {{if eq .App $thisjson}}
-    <h2 class="h3">Measures and Dimensions</h2>
+
     <dl>
         <dt>{{.Label}}</dt>
         <dd>{{.Description}}</dd>
