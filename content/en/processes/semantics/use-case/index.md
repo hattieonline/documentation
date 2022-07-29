@@ -43,17 +43,16 @@ Be careful to avoid the technical details of what the system is doing. It’s no
 Approach first from dashboard-level perspective. Each sheet has its own workflows and use cases, but they work together, cohesively, in one dashboard that serves a greater purpose. Given that sheets contain a set of related visualization objects, use-cases will typically align with sheets naturally, with room for overlap and commonalities (see characteristic 5).
 ### Define the purpose and scope
 1. Identify stakeholders. These are the people in the organization who care about the outcome of the process. They may not be users in the process described by the use case, but the system acts to satisfy their interests.
-2. Define what is in and out of scope. Specifically identify the system that is being evaluated, and leave out elements that are not part of this system. It may be helpful to create an In/Out list. First, list any topic at all that may relate to the system. Then, categorize each item in the list as "in" or "out". If it doesn't happen in the system at hand, it needn't be included. System, here, could refer either to a dashboard or a sheet, depending on the scope of your use case. 
-3. Write a goal statement for each actor.
+2. Define what is in and out of scope. Identify the system (dashboard, sheet) that is being evaluated, and leave out elements that are not part of this system. It may be helpful to create an In/Out list. List any topic at all that may relate to the system, then categorize each item in the list as "in" or "out". If it doesn't happen in the system at hand, it needn't be included. 
 ### Write the use case steps
-1. Define all actors/end users.
+1. Define all actors/end user roles that will interact with the system.
 2. Define how each actor will use the technology or process-- what goals could they want to accomplish? Each thing the user does becomes a separate use case. For example, in Care - Tasks, one use case may be analyzing resource allocation, another may be identifying residents in need of reassessment. 
 3. Name each use case and write a brief description.
 4. Describe the normal course of action taken within the dashboard to reach that goal. Outline everything the user does and how the process responds to those actions.
 5. Consider every alternate course of events, and extend the use case. Alternate flows and exception flows are written to describe the actions when there are obstacles to the goal.
 6. Repeat steps 1-6 for all other dashboard users.
 
-## Tips for Ideation
+## Brainstorming idea!
 Start by thinking about why businesses implement BI and what their goals are, then consider how your dashboard or sheet helps the business to reach that goal.
 
 **1. Early warning on business problems by tracking and analysis of KPIs**  
