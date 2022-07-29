@@ -1,6 +1,6 @@
 ---
 title: "Git-to-Qlik"
-lead: "Insights dashboard versioning using the extension Git to Qlik."
+lead: "WORK IN PROGRESS: Insights dashboard versioning using the extension Git to Qlik."
 date: 2020-10-06T08:50:45+00:00
 lastmod: 2020-10-06T08:50:45+00:00
 draft: false
@@ -27,7 +27,7 @@ Say hello to **John**, **Adam**, and **Eve**.‌ **John** is a Qlik Sense Data A
 3.  **The team has decided to use GitHub** to track the client’s requirements and to version control the application source code.‌  
 |
 |:--:|
-| ![space-1.jpg](https://miro.medium.com/max/250/1*406fwZyeMCyNYH76WF16VQ.png)
+| ![](https://miro.medium.com/max/250/1*406fwZyeMCyNYH76WF16VQ.png)
 
 
 
