@@ -1,12 +1,14 @@
 ---
 title: "Dashboard Use Cases"
-lead: "Documenting useful workflows for end users using Insights dashboards."
+lead: "TLDR: Identify the user. Identify the user's goals. Write down actions for that goal."
 date: 2020-10-06T08:50:45+00:00
 lastmod: 2020-10-06T08:50:45+00:00
 draft: false
 images: []
 weight: 20
 ---
+
+
 ## Overview
 A use case describes a specific business goal to be satisfied by, in this case, Insights dashboards. It outlines, from a user’s point of view, a related sequence of steps (a
 scenario), for the purpose of completing a single business task. Each use case is represented as a sequence of simple steps, beginning with a user's goal and ending when that goal is fulfilled.  
