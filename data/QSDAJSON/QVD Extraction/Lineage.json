@@ -1,0 +1,82 @@
+[
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DimensionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Dimension Syntax Error",
+        "Description":  "The dimension failed validation. The error is:\\n Bad field name(s) \"[RVP]\" .",
+        "Impact":  "0",
+        "RefObjectType":  "MasterDimensionMeta",
+        "RefMetaId":  "9473"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DimensionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Dimension Syntax Error",
+        "Description":  "The dimension failed validation. The error is:\\n Bad field name(s) \"[CampusName]\" .",
+        "Impact":  "0",
+        "RefObjectType":  "MasterDimensionMeta",
+        "RefMetaId":  "9544"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DimensionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Dimension Syntax Error",
+        "Description":  "The dimension failed validation. The error is:\\n Bad field name(s) \"CareType\" \"CareType\" \"CareType\" .",
+        "Impact":  "0",
+        "RefObjectType":  "MasterDimensionMeta",
+        "RefMetaId":  "9584"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DimensionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Dimension Syntax Error",
+        "Description":  "The dimension failed validation. The error is:\\n Bad field name(s) \"[SVP]\" .",
+        "Impact":  "0",
+        "RefObjectType":  "MasterDimensionMeta",
+        "RefMetaId":  "9613"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DimensionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Dimension Syntax Error",
+        "Description":  "The dimension failed validation. The error is:\\n Bad field name(s) \"[RSM]\" .",
+        "Impact":  "0",
+        "RefObjectType":  "MasterDimensionMeta",
+        "RefMetaId":  "9772"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Expression Syntax Error",
+        "Description":  "The expression failed validation. The error is:\\n Bad field name(s) \"[%CustomerIDKey]\" \"InquiryStatusDate\" .",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "10218"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Expression Syntax Error",
+        "Description":  "The expression failed validation. The error is:\\n Bad field name(s) \"[isOccupiedFlg]\" .",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "10219"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Expression Syntax Error",
+        "Description":  "The expression failed validation. The error is:\\n Bad field name(s) \"[%CustomerIDKey]\" .",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "10221"
+    }
+]

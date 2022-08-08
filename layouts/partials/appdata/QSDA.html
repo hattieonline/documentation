@@ -1,0 +1,55 @@
+<h3>Expressions</h3>
+{{range .Site.Data.QSDAJSON.Incident.Expressions}}
+{{if or  (ne .Def "") (ne .Label "")}}
+<div class="card border-0 my-2">
+
+   
+    <div class="card-header  my-0 bg-white">
+        <p class="card-title h5 mb-0">{{.Label}} </p>
+        <div class="d-flex justify-content-stretch py-1 mb-1">
+
+            <span class="small badge badge-info text-primary bg-light mr-2">Occurrences: {{.UseCount}}</span>
+            <span class="small badge badge-info text-info bg-light mx-2">{{.PropertyLocation}}</span>
+            
+                {{if eq .IsMasterMeasure "True"}}
+                <span class="small badge badge-info text-primary bg-light mx-2">Master measure</span>
+                {{end}}
+                
+        </div>
+
+        <p class="my-0 py-0 ">{{.Description}}</p>
+    </div>
+    <div class="my-0 py-0">
+        <pre class="py-0 my-0">   <code >{{ .DefExpanded }} </code></pre>
+    </div>
+
+</div>
+
+{{end}}
+{{end}}
+<h3>Dimensions</h3>
+{{range .Site.Data.QSDAJSON.Incident.Dimensions}}
+<div class="card border-0 my-2">
+
+    {{if ne .Label " "}}
+    <div class="card-header  my-0 bg-white">
+        <p class="card-title h5 mb-0">{{.Label}} </p>
+        <div class="d-flex justify-content-stretch py-1 mb-1 ">
+
+            <span class="small badge badge-info text-primary bg-light mr-4 ml-0">Occurrences: {{.UseCount}}</span>
+            <span class="small badge badge-info text-info bg-light mx-2 ml-4">{{.DimensionType}}</span>
+           
+                {{if eq .IsMasterDimension "True"}}
+                <span class="small badge badge-info text-primary bg-light">Master dimension</span>
+                {{end}}
+        </div>
+
+        <p class="my-0 py-0 ">{{.Description}}</p>
+    </div>
+    <div class="my-0 py-0">
+        <pre class="py-0 my-0">   <code >{{ .Def }} </code></pre>
+    </div>
+
+</div>
+{{end}}
+{{end}}

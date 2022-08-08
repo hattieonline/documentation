@@ -1,0 +1,32 @@
+[
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "c0e55220-281c-4142-84e6-7b3b8e66fcb6",
+        "Name":  "Performance Variances",
+        "Description":  "",
+        "Rank":  "0.75",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "cb14ece6-aa19-4a31-b1d7-129ef906d202",
+        "Name":  "PTC Dashboard",
+        "Description":  "",
+        "Rank":  "0.5",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "e4c000c5-63bd-419e-8732-8d0f12b640ae",
+        "Name":  "QE Summary",
+        "Description":  "",
+        "Rank":  "0",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    }
+]

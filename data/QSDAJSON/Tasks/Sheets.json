@@ -1,0 +1,42 @@
+[
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "64052088-104a-4985-8207-4399ceb1599d",
+        "Name":  "Assignment Management",
+        "Description":  "Analyzes the concentration of daily task time across resource roles, hour of the day, and resident. View how daily task time has changed across a 20-day period of time.",
+        "Rank":  "2.015625",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "7eb894b7-322a-4f5d-a9f8-44eadb95c7ec",
+        "Name":  "Task Details",
+        "Description":  "Drilldown from analysis to detail. Toggle between a resident level overview of ADL metrics-- tasks complete/incomplete, percent ad-hoc and additional, average daily minutes-- and a table with task-level details.",
+        "Rank":  "3.2617188",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "cfaf3787-8457-4f85-9066-4c259d8bfe3a",
+        "Name":  "Additional and Ad-Hoc Task Summary",
+        "Description":  "Analysis and details about ad-hoc and additional tasks on a community and resident level.",
+        "Rank":  "1.84375",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "d5088ff9-4991-439e-8956-c2c32e080892",
+        "Name":  "ADL Overview",
+        "Description":  "Provides a high-level overview of ADL task completion-- the number of incomplete tasks, the average amount of daily minutes, and the percentage of tasks marked as complete using mobile.",
+        "Rank":  "0.84375",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    }
+]

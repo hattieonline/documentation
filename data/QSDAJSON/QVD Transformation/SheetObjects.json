@@ -1,0 +1,4026 @@
+[
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "BilledCareTEMP:"
+    },
+    {
+        "Discriminator":  "LOAD ResidentCarePrimaryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     CommunityID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Date(Floor(EffectiveDT)) as EffectiveDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CustomerID as [%CustomerIDKey]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CareID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CareLevel as BilledCareLevel",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CareTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Coalesce(CareTypeCode",
+        "Statement":  "CareType) as BilledCareType"
+    },
+    {
+        "Discriminator":  "//     \"\"Rate\"\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     CreateDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     CreateBY",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     ModifyDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     ModifyBY",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     ActiveFlg;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Where Ranking = 1;SQL SELECT ResidentCarePrimaryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     CommunityID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "EffectiveDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CustomerID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "tblResidentCarePrimary.CareID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CareLevel",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "luCare.CareTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CareType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Code as CareTypeCode",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ActiveFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Rank() OVER\t(PARTITION BY CustomerID order by CustomerID",
+        "Statement":  "EffectiveDT desc"
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ARM.tblResidentCarePrimary tblResidentCarePrimary",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Left Join \t(Select",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CareID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "CareLevel"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "CareTypeID"
+    },
+    {
+        "Discriminator":  "FROM\tBusinessData_Stage.ARM.luCare) luCare",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ON\t\t\tluCare.CareID = tblResidentCarePrimary.CareID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Left Join \t(Select",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CareTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "CareType"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "Code"
+    },
+    {
+        "Discriminator":  "FROM\tBusinessData_Stage.ARM.luCareType) luCareType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ON\t\t\tluCareType.CareTypeID = luCare.CareTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Where ActiveFlg=1\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "Concatenate (wrkCareVariance)"
+    },
+    {
+        "Discriminator":  "LOAD CustomerID as \"\"%CustomerIDKey\"\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Date(Floor(AssessedEffectiveDT)) as AssessedEffectiveDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ApplyMap(\u0027map_series\u0027",
+        "Statement":  "AssessedSeriesID) as AssessedSeries"
+    },
+    {
+        "Discriminator":  "ApplyMap(\u0027map_ancillary_care\u0027",
+        "Statement":  "AssessedAncillaryCareID) as AssessedAncillaryCare"
+    },
+    {
+        "Discriminator":  "AssessedRate",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Date(Floor(BilledEffectiveDT)) as BilledEffectiveDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ApplyMap(\u0027map_series\u0027",
+        "Statement":  "BilledSeriesID) as BilledSeries"
+    },
+    {
+        "Discriminator":  "ApplyMap(\u0027map_ancillary_care\u0027",
+        "Statement":  "BilledAncillaryCareID) as BilledAncillaryCare"
+    },
+    {
+        "Discriminator":  "BilledRate",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "VarianceFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\u0027Ancillary\u0027 as Type;SQL SELECT * FROM BusinessData_Stage.ARM.wrkResidentAncillaryCareVariance where ActiveFlg = 1\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "Inner Join (TEMPInquiryHistoryMostEffective)"
+    },
+    {
+        "Discriminator":  "LOAD CommunityID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CommunityNumber as [%CommunityKey];SQL SELECT CommunityID",
+        "Statement":  "CommunityNumber"
+    },
+    {
+        "Discriminator":  "FROM DemoDW.Master.mstrCommunity\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "Inner Join (TEMPInquiryHistoryMostEffective)"
+    },
+    {
+        "Discriminator":  "LOAD ResidentStatusID as StatusID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ResidentStatus as Status;SQL SELECT ResidentStatusID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ResidentStatus",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ARM.luResidentStatus\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "LEFT JOIN(fact_ADL)"
+    },
+    {
+        "Discriminator":  "LOAD ADLID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "IF(WildMatch(ADLID",
+        "Statement":  "\u0027*7*\u0027)"
+    },
+    {
+        "Discriminator":  "Capitalize(Replace(EmplUserName",
+        "Statement":  "\u0027"
+    },
+    {
+        "Discriminator":  "Title as TaskTitleTemp",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Date(Floor(ProcessDT)) as ProcessDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Date(Floor(ProcessLastDT)) as ProcessLastDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Date(Floor(ExpireDT)) as TaskExpireDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHERE Exists(ADLID);SQL SELECT ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ResidentADLID AS ADLID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Title",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ProcessDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ProcessLastDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ExpireDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ApplicationID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "EmplUserName",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ACM.tblResidentADL",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHERE CAST(ADLDT AS DATE) \u003e=\u00275/2/2022\u0027 and CAST(ADLDT AS DATE) \u003c=\u00275/23/2022\u0027 and ActiveFlg = 1",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "UNION",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "SELECT ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ResidentADLID AS ADLID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Title",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ProcessDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ProcessLastDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ExpireDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ApplicationID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "EmplUserName",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ACM.trnResidentADL",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHERE CAST(ADLDT AS DATE) \u003e=\u00275/2/2022\u0027 and CAST(ADLDT AS DATE) \u003c=\u00275/23/2022\u0027 and ActiveFlg = 1\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "LOAD ResidentStatus as ActiveStatusList;SQL SELECT luResidentStatus.ResidentStatusID,"
+    },
+    {
+        "Discriminator":  "ResidentStatus",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "luResidentStatus.ActiveFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ARM.luResidentStatus",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Inner Join (Select ResidentStatusID FROM BusinessData_Stage.Core.lnkResidentStatusToCategory where ActiveFlg=1 and ResidentStatusCategoryID=3) lnkResidentStatusToCategory",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "on lnkResidentStatusToCategory.ResidentStatusID = luResidentStatus.ResidentStatusID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Where luResidentStatus.ActiveFlg=1",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "Left Join (TEMPKEYfactRevenueByMoveIn)"
+    },
+    {
+        "Discriminator":  "LOAD //MoveInRevenueID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CustomerID as [%CustomerIDKey]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Date(Floor(MoveInDT)) as %DateKey",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "SUM(AmountAtMaturity) as AutomatedMoveInChargeDetail",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Group By CustomerID",
+        "Statement":  "MoveInDT;SQL SELECT tblMoveInRevenue.MoveInRevenueID"
+    },
+    {
+        "Discriminator":  "CustomerID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "MoveInDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RevenueEntryTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AmountAtMaturity",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "LedgerEntryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ActiveFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.BonusPlan.tblMoveInRevenueDetail",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Inner Join (Select MoveInRevenueID",
+        "Statement":  "MoveInDT FROM BusinessData_Stage.BonusPlan.tblMoveInRevenue where MoveInDT\u003e=\u00271/1/2019\u0027) tblMoveInRevenue"
+    },
+    {
+        "Discriminator":  "ON tblMoveInRevenue.MoveInRevenueID = tblMoveInRevenueDetail.MoveInRevenueID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Where \t\tActiveFlg=1",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AND\t\t\tRevenueEntryTypeID IN (5)",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AND\t\t\tLedgerEntryID IN (7",
+        "Statement":  "58"
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "Left Join (TEMPKEYfactRevenueByMoveIn)"
+    },
+    {
+        "Discriminator":  "LOAD //MoveInRevenueID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CustomerID as [%CustomerIDKey]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Date(Floor(MoveInDT)) as %DateKey",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "SUM(AmountAtMaturity) as FoodTaxChargeDetail",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Group By CustomerID",
+        "Statement":  "MoveInDT;SQL SELECT tblMoveInRevenue.MoveInRevenueID"
+    },
+    {
+        "Discriminator":  "CustomerID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "MoveInDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RevenueEntryTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AmountAtMaturity",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "LedgerEntryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ActiveFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.BonusPlan.tblMoveInRevenueDetail",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Inner Join (Select MoveInRevenueID",
+        "Statement":  "MoveInDT FROM BusinessData_Stage.BonusPlan.tblMoveInRevenue where MoveInDT\u003e=\u00271/1/2019\u0027) tblMoveInRevenue"
+    },
+    {
+        "Discriminator":  "ON tblMoveInRevenue.MoveInRevenueID = tblMoveInRevenueDetail.MoveInRevenueID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Where \t\tActiveFlg=1",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AND\t\t\tRevenueEntryTypeID IN (3)",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AND\t\t\tLedgerEntryID IN (60",
+        "Statement":  "61)\""
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "Left Join (TEMPKEYfactRevenueByMoveIn)"
+    },
+    {
+        "Discriminator":  "LOAD //MoveInRevenueID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CustomerID as [%CustomerIDKey]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Date(Floor(MoveInDT)) as %DateKey",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "SUM(AmountAtMaturity) as HospitalityDetail",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Group By CustomerID",
+        "Statement":  "MoveInDT;SQL SELECT tblMoveInRevenue.MoveInRevenueID"
+    },
+    {
+        "Discriminator":  "CustomerID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "MoveInDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RevenueEntryTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AmountAtMaturity",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "LedgerEntryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ActiveFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.BonusPlan.tblMoveInRevenueDetail",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Inner Join (Select MoveInRevenueID",
+        "Statement":  "MoveInDT FROM BusinessData_Stage.BonusPlan.tblMoveInRevenue where MoveInDT\u003e=\u00271/1/2019\u0027) tblMoveInRevenue"
+    },
+    {
+        "Discriminator":  "ON tblMoveInRevenue.MoveInRevenueID = tblMoveInRevenueDetail.MoveInRevenueID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Where \t\tActiveFlg=1",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AND\t\t\tRevenueEntryTypeID IN (3)",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AND\t\t\tLedgerEntryID IN (65",
+        "Statement":  "66"
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "Left Join (TEMPKEYfactRevenueByMoveIn)"
+    },
+    {
+        "Discriminator":  "LOAD //MoveInRevenueID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CustomerID as [%CustomerIDKey]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Date(Floor(MoveInDT)) as %DateKey",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "SUM(AmountAtMaturity) as M_AMCConcessionDetail",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Group By CustomerID",
+        "Statement":  "MoveInDT;SQL SELECT tblMoveInRevenue.MoveInRevenueID"
+    },
+    {
+        "Discriminator":  "CustomerID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "MoveInDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RevenueEntryTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AmountAtMaturity",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "LedgerEntryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ActiveFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.BonusPlan.tblMoveInRevenueDetail",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Inner Join (Select MoveInRevenueID",
+        "Statement":  "MoveInDT FROM BusinessData_Stage.BonusPlan.tblMoveInRevenue where MoveInDT\u003e=\u00271/1/2019\u0027) tblMoveInRevenue"
+    },
+    {
+        "Discriminator":  "ON tblMoveInRevenue.MoveInRevenueID = tblMoveInRevenueDetail.MoveInRevenueID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Where \t\tActiveFlg=1",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AND\t\t\tRevenueEntryTypeID IN (5)",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AND\t\t\tLedgerEntryID IN (33",
+        "Statement":  "59"
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "Left Join (TEMPfactRevenueByMoveIn)"
+    },
+    {
+        "Discriminator":  "LOAD ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CustomerID as [%CustomerIDKey]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CommunityNumber as [%CommunityKey]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     RateLockID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "if(Status = \u0027Active\u0027 and RateLockEndDT\u003c Date(today())",
+        "Statement":  "\u0027End\u0027"
+    },
+    {
+        "Discriminator":  "//     RoomRate",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     RoomNumber",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Date(floor(RateLockStartDT)) as RateLockStartDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Date(floor(RateLockStartDT)) as [%DateKey]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "if(Status = \u0027End\u0027 and RateLockEndDT \u003e Date(today())",
+        "Statement":  "Date(floor(ModifyDT))"
+    },
+    {
+        "Discriminator":  "Where RateLockRank = 1;SQL SELECT factResidentRateLockID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CustomerID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CommunityNumber",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "factResidentRateLock.RateLockID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Status",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RoomRate",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RoomNumber",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RateLockStartDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RateLockEndDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ModifyDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Rank() Over (partition by CommunityNumber",
+        "Statement":  "CustomerID order by factResidentRateLock.RateLockID desc) as RateLockRank"
+    },
+    {
+        "Discriminator":  "FROM DemoDW.Resident.factResidentRateLock",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "left join (SELECT RateLockID",
+        "Statement":  "ModifyDT FROM BusinessData_Stage.ARM.tblRateLock) tblRateLock"
+    },
+    {
+        "Discriminator":  "on tblRateLock.RateLockID = factResidentRateLock.RateLockID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "Left Join(Detail)"
+    },
+    {
+        "Discriminator":  "LOAD IndicatorID as CurrentIndicatorID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Indicator as [CurrentIndicatorDept];SQL SELECT IndicatorID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Indicator\"\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.QMS.luScoreIndicator\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "Left Join(Detail)"
+    },
+    {
+        "Discriminator":  "LOAD QuestionID as ReviewQuestionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "IndicatorID as CurrentIndicatorID;SQL SELECT tblQuestionExtension.QuestionExtensionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "QuestionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "SurveyID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "IndicatorID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.QMS.tblQuestionExtension",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "left join (",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Select \tQuestionExtensionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "IndicatorID ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.QMS.lnkScoreIndicatorToQuestion) lnkScoreIndicatorToQuestion",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ON lnkScoreIndicatorToQuestion.QuestionExtensionID = tblQuestionExtension.QuestionExtensionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "Left Join(Detail)"
+    },
+    {
+        "Discriminator":  "LOAD QuestionID as ReviewQuestionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "SectionID as CurrentSectionID;SQL SELECT tblQuestionExtension.QuestionExtensionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "QuestionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "SurveyID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "SectionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.QMS.tblQuestionExtension",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "left join (",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Select\tQuestionExtensionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "SectionExtensionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM\tBusinessData_Stage.QMS.lnkQuestionToSection) lnkQuestionToSection",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ON lnkQuestionToSection.QuestionExtensionID = tblQuestionExtension.QuestionExtensionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "left join (",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Select \tSectionExtensionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "SectionID ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.QMS.tblSectionExtension) tblSectionExtension",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ON tblSectionExtension.SectionExtensionID = lnkQuestionToSection.SectionExtensionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "Left Join(Detail)"
+    },
+    {
+        "Discriminator":  "LOAD SectionID as CurrentSectionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "SectionName as CurrentReviewSection;SQL SELECT SectionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "SectionName",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.QMS.tblSection\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "Left Join(JournalActivity)"
+    },
+    {
+        "Discriminator":  "LOAD distinct InquiryJournalID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DATE(FLOOR(CreateDT)) as JournalCreateDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Capitalize(CreateBy) as JournalCreateBy",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DATE(FLOOR(ModifyDT)) as JournalModifyDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Capitalize(ModifyBy) as JournalModifyBy;SQL SELECT InquiryJournalID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CreateDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CreateBy",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ModifyDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ModifyBy",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.CRM.tblInquiryJournal\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "Left Join(Security)"
+    },
+    {
+        "Discriminator":  "Load UserID",
+        "Statement":  "Num#(CommunityNumber) as COMMUNITYNUMBER;SELECT"
+    },
+    {
+        "Discriminator":  "UserID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CommunityNumber ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM DemoDW.Master.mstrUserToCommunity\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "Left Join(factInquiryByReferral)"
+    },
+    {
+        "Discriminator":  "LOAD CommunityNumber as [%CommunityKey]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "InquiryID as [%InquiryID]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CustomerID as [%CustomerIDKey]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "IF(EmailCount \u003e CustomerCount",
+        "Statement":  "\u0027Email\u0027) \u0026 IF(EmailCount \u003e CustomerCount AND PhoneCount \u003e CustomerCount"
+    },
+    {
+        "Discriminator":  ";SQL Select Division",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "Region"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "CommunityName as Community"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "factInquiryByReferral.CommunityNumber"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "factInquiryByReferral.InquiryID"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "CustomerID"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "Inquiry"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "Status"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "CustomerCount"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "EmailCount"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "PhoneCount"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "factInquiryByReferral.Email"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "factInquiryByReferral.PhoneCell"
+    },
+    {
+        "Discriminator":  "FROM DemoDW.Sales.factInquiryByReferral",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Left Join\t(Select CommunityNumber",
+        "Statement":  "CommunityName"
+    },
+    {
+        "Discriminator":  "on\t\t\tmstrCommunity.CommunityNumber = factInquiryByReferral.CommunityNumber",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Left Join\t(Select InquiryID",
+        "Statement":  "Count(*) as CustomerCount from DemoDW.Sales.factInquiryByReferral where Status not in (\u0027Moved In\u0027"
+    },
+    {
+        "Discriminator":  "on\t\t\tCustomer.InquiryID = factInquiryByReferral.InquiryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Left Join\t(Select Email",
+        "Statement":  "Count(*) as EmailCount from DemoDW.Sales.factInquiryByReferral where LEN(Email) \u003e 0 and Status not in (\u0027Moved In\u0027"
+    },
+    {
+        "Discriminator":  "group by Email) Email",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "on\t\t\tEmail.Email = factInquiryByReferral.Email",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Left Join\t(Select PhoneCell",
+        "Statement":  "Count(*) as PhoneCount from DemoDW.Sales.factInquiryByReferral where LEN(PhoneCell) \u003e 0 and Status not in (\u0027Moved In\u0027"
+    },
+    {
+        "Discriminator":  "and PhoneCell not like \u0027% 555-%\u0027 and PhoneCell not in (Select distinct PhoneNumber1 FROM BusinessData_Stage.ARM.tblCommunity where LEN(PhoneNumber1) \u003e 0) group by PhoneCell) Phone",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "on\t\t\tPhone.PhoneCell = factInquiryByReferral.PhoneCell",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "where\t\tStatus not in (\u0027Moved In\u0027",
+        "Statement":  "\u0027Moved Back\u0027"
+    },
+    {
+        "Discriminator":  "and\t\t\t(EmailCount \u003e CustomerCount or PhoneCount \u003e CustomerCount)\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "ProductPricing:"
+    },
+    {
+        "Discriminator":  "LOAD factProductPricingID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CommunityNumber",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ProductInventoryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "EffectiveDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "PayorID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Payor",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "PriceBase",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "PriceGross",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "PriceSpecial",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "PriceMinimum",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "PriceMaximum",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "IsExistFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ReplicatDT;SELECT *",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM DemoDW.Pricing.factProductPricing",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "where EffectiveDT\u003e=\u00271/1/2020\u0027\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SELECT"
+    },
+    {
+        "Discriminator":  "UserID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CommunityNumber ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM DemoDW.Master.mstrUserToCommunity\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SELECT"
+    },
+    {
+        "Discriminator":  "mstrUser.UserID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "mstrUser.UserName",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM DemoDW.Master.mstrUser",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SELECT *"
+    },
+    {
+        "Discriminator":  "FROM DemoDW.Pricing.factProductPricing",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "where EffectiveDT\u003e=\u00271/1/2020\u0027\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT"
+    },
+    {
+        "Discriminator":  "ResidentADLProcessReasonID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ResidentADLProcessReason",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.CareManagement.luResidentADLProcessReason",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHERE ActiveFlg = 1\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT "
+    },
+    {
+        "Discriminator":  "ResidentADLID AS ADLID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Title",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ProcessDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ProcessLastDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ExpireDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ApplicationID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "EmplUserName",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ACM.tblResidentADL",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHERE CAST(ADLDT AS DATE) \u003e=\u00275/2/2022\u0027 and CAST(ADLDT AS DATE) \u003c=\u00275/23/2022\u0027 and ActiveFlg = 1",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "UNION",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "SELECT ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ResidentADLID AS ADLID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Title",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ProcessDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ProcessLastDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ExpireDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ApplicationID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "EmplUserName",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ACM.trnResidentADL",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHERE CAST(ADLDT AS DATE) \u003e=\u00275/2/2022\u0027 and CAST(ADLDT AS DATE) \u003c=\u00275/23/2022\u0027 and ActiveFlg = 1\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT * FROM BusinessData_Stage.ACM.luServiceCode Where ActiveFlg = 1"
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT * FROM BusinessData_Stage.ARM.wrkResidentAncillaryCareVariance where ActiveFlg = 1"
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT * FROM BusinessData_Stage.ARM.wrkResidentCareVariance WHERE ActiveFlg = 1"
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT * FROM DemoDW.Care.factResidentDiagnosis"
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT CareAncillaryID, CareAncillary FROM BusinessData_Stage.ARM.luCareAncillary"
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT CareID, CareLevel FROM BusinessData_Stage.ARM.luCare"
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT CommunityID, CommunityNumber"
+    },
+    {
+        "Discriminator":  "FROM DemoDW.Master.mstrCommunity\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT CommunityNumber,"
+    },
+    {
+        "Discriminator":  "EffectiveDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "LedgerEntryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ActualCost",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "MonthlyCost",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ActiveFLG",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CustomerID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ProcessFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ARM.tblGeneralLedger",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Left Join (Select CommunityNumber",
+        "Statement":  "CommunityID from BusinessData_Stage.ARM.tblCommunity) tblCommunity"
+    },
+    {
+        "Discriminator":  "ON tblCommunity.CommunityID = tblGeneralLedger.CommunityID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Where ActiveFLG=1",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT CustomerID as \"%CustomerIDKey\","
+    },
+    {
+        "Discriminator":  "HasCaneFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "HasWheelchairFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "HasWalkerFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "HasScooterFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "HasMobilityOtherFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "MobilityOther",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ACM.tblResidentPersonalCareData\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT CustomerID as \"%CustomerIDKey\", "
+    },
+    {
+        "Discriminator":  "AssessmentNextDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AssessmentDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AssessmentType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ACM.tblResidentAssessment a",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "left join BusinessData_Stage.ACM.luAssessmentType l on a.AssessmentTypeID = l.AssessmentTypeID ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "where a.ActiveFlg = 1\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT CustomerID as \"%CustomerIDKey\", "
+    },
+    {
+        "Discriminator":  "CreateDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "PendingFlg ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ACM.wrkResidentAssessment",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "where ActiveFlg = 1\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT CustomerID as \"%CustomerIDKey\", "
+    },
+    {
+        "Discriminator":  "ServiceCodeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Min(ADLDT) as FirstOccurrenceDT ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ACM.tblResidentADL",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHERE ADLTypeID = 2",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "GROUP BY CustomerID",
+        "Statement":  "ServiceCodeID\""
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT DISTINCT"
+    },
+    {
+        "Discriminator":  "ResidentADLID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "tblResidentADL.CustomerID AS \"\"%CustomerIDKey\"\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "tblResidentADL.CommunityID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "tblResidentADL.Description",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ADLDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "tblResidentADL.CreateBy",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "tblResidentADL.CreateDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ExpireDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "tblResidentADL.ADLTime",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ResidentADLProcessReasonID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ADLTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ADLStatusID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "tblResidentADL.ServiceCodeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "tblResidentADL.CommunityResourceRoleID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CASE \tWHEN BusinessData_Stage.ACM.tblResidentADL.ADLTypeID = 1 THEN \u0027Resident Assessed Task\u0027 ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHEN BusinessData_Stage.ACM.tblResidentADL.ADLTypeID = 2 AND BusinessData_Stage.ACM.tblResidentADL.CustomScheduleADLID IS NULL THEN \u0027Resident Ad-Hoc Task\u0027 ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHEN BusinessData_Stage.ACM.tblResidentADL.ADLTypeID = 2 AND BusinessData_Stage.ACM.tblResidentADL.CustomScheduleADLID IS NOT NULL THEN \u0027Resident Additional Task\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ELSE \u0027Community Task\u0027 END AS ADLType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CASE\tWHEN CAST(ADLDT AS TIME) BETWEEN \u002707:00:00.0000000\u0027 AND \u002714:45:00.0000000\u0027 AND tblCommunityResourceRole.ResourceRole IS NULL AND tblResidentADL.CommunityResourceRoleID IS NOT NULL AND tblResidentScheduleADL.ResourceRole IS NOT NULL THEN tblResidentScheduleADL.ResourceRole + \u0027 Days\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHEN CAST(ADLDT AS TIME) BETWEEN \u002715:00:00.0000000\u0027 AND \u002722:45:00.0000000\u0027 AND tblCommunityResourceRole.ResourceRole IS NULL AND tblResidentADL.CommunityResourceRoleID IS NOT NULL AND tblResidentScheduleADL.ResourceRole IS NOT NULL THEN tblResidentScheduleADL.ResourceRole + \u0027 Evenings\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHEN (CAST(ADLDT AS TIME) BETWEEN \u002723:00:00.0000000\u0027 AND \u002723:45:00.0000000\u0027 OR CAST(ADLDT AS TIME) BETWEEN \u002700:00:00.0000000\u0027 AND \u002706:45:00.0000000\u0027) AND tblCommunityResourceRole.ResourceRole IS NULL AND tblResidentADL.CommunityResourceRoleID IS NOT NULL AND tblResidentScheduleADL.ResourceRole IS NOT NULL THEN tblResidentScheduleADL.ResourceRole + \u0027 Nights\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHEN tblCommunityResourceRole.ResourceRole IS NULL AND tblResidentScheduleADL.ResourceRole IS NULL THEN \u0027Unassigned\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ELSE tblCommunityResourceRole.ResourceRole END AS CommunityResourceRole",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ACM.tblResidentADL",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "LEFT JOIN\tBusinessData_Stage.ACM.tblCommunityResourceRole tblCommunityResourceRole",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ON\t\t\ttblCommunityResourceRole.CommunityResourceRoleID = tblResidentADL.CommunityResourceRoleID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "LEFT JOIN\tBusinessData_Stage.ACM.trnResidentScheduleADL tblResidentScheduleADL",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ON\t\t\ttblResidentScheduleADL.ResidentScheduleID = tblResidentADL.ResidentScheduleID AND tblResidentScheduleADL.ModelQuestionID = tblResidentADL.ModelQuestionID AND tblResidentScheduleADL.ModelAnswerID = tblResidentADL.ModelAnswerID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "LEFT JOIN   BusinessData_Stage.ACM.luResourceRole",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ON\t\t\tluResourceRole.ResourceRoleID = tblCommunityResourceRole.ResourceRoleID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHERE CAST(ADLDT AS DATE) \u003e=\u00275/2/2022\u0027 and CAST(ADLDT AS DATE) \u003c=\u00275/23/2022\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AND tblResidentADL.ActiveFlg = 1",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "UNION",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "SELECT DISTINCT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ResidentADLID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "trnResidentADL.CustomerID AS \"\"%CustomerIDKey\"\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "trnResidentADL.CommunityID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "trnResidentADL.Description",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ADLDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "trnResidentADL.CreateBy",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "trnResidentADL.CreateDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ExpireDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "trnResidentADL.ADLTime",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ResidentADLProcessReasonID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ADLTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ADLStatusID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "trnResidentADL.ServiceCodeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "trnResidentADL.CommunityResourceRoleID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CASE \tWHEN BusinessData_Stage.ACM.trnResidentADL.ADLTypeID = 1 THEN \u0027Resident Assessed Task\u0027 ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHEN BusinessData_Stage.ACM.trnResidentADL.ADLTypeID = 2 AND BusinessData_Stage.ACM.trnResidentADL.CustomScheduleADLID IS NULL THEN \u0027Resident Ad-Hoc Task\u0027 ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHEN BusinessData_Stage.ACM.trnResidentADL.ADLTypeID = 2 AND BusinessData_Stage.ACM.trnResidentADL.CustomScheduleADLID IS NOT NULL THEN \u0027Resident Additional Task\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ELSE \u0027Community Task\u0027 END AS ADLType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CASE\tWHEN CAST(ADLDT AS TIME) BETWEEN \u002707:00:00.0000000\u0027 AND \u002714:45:00.0000000\u0027 AND tblCommunityResourceRole.ResourceRole IS NULL AND trnResidentADL.CommunityResourceRoleID IS NOT NULL AND tblResidentScheduleADL.ResourceRole IS NOT NULL THEN tblResidentScheduleADL.ResourceRole + \u0027 Days\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHEN CAST(ADLDT AS TIME) BETWEEN \u002715:00:00.0000000\u0027 AND \u002722:45:00.0000000\u0027 AND tblCommunityResourceRole.ResourceRole IS NULL AND trnResidentADL.CommunityResourceRoleID IS NOT NULL AND tblResidentScheduleADL.ResourceRole IS NOT NULL THEN tblResidentScheduleADL.ResourceRole + \u0027 Evenings\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHEN (CAST(ADLDT AS TIME) BETWEEN \u002723:00:00.0000000\u0027 AND \u002723:45:00.0000000\u0027 OR CAST(ADLDT AS TIME) BETWEEN \u002700:00:00.0000000\u0027 AND \u002706:45:00.0000000\u0027) AND tblCommunityResourceRole.ResourceRole IS NULL AND trnResidentADL.CommunityResourceRoleID IS NOT NULL AND tblResidentScheduleADL.ResourceRole IS NOT NULL THEN tblResidentScheduleADL.ResourceRole + \u0027 Nights\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHEN tblCommunityResourceRole.ResourceRole IS NULL AND tblResidentScheduleADL.ResourceRole IS NULL THEN \u0027Unassigned\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ELSE tblCommunityResourceRole.ResourceRole END AS CommunityResourceRole",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ACM.trnResidentADL",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "LEFT JOIN\tBusinessData_Stage.ACM.tblCommunityResourceRole tblCommunityResourceRole",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ON\t\t\ttblCommunityResourceRole.CommunityResourceRoleID = trnResidentADL.CommunityResourceRoleID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "LEFT JOIN\tBusinessData_Stage.ACM.trnResidentScheduleADL tblResidentScheduleADL",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ON\t\t\ttblResidentScheduleADL.ResidentScheduleID = trnResidentADL.ResidentScheduleID AND tblResidentScheduleADL.ModelQuestionID = trnResidentADL.ModelQuestionID AND tblResidentScheduleADL.ModelAnswerID = trnResidentADL.ModelAnswerID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "LEFT JOIN   BusinessData_Stage.ACM.luResourceRole",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ON\t\t\tluResourceRole.ResourceRoleID = tblCommunityResourceRole.ResourceRoleID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHERE CAST(ADLDT AS DATE) \u003e=\u00275/2/2022\u0027 and CAST(ADLDT AS DATE) \u003c=\u00275/23/2022\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AND trnResidentADL.ActiveFlg = 1\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT IndicatorID,"
+    },
+    {
+        "Discriminator":  "Indicator\"\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.QMS.luScoreIndicator\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT InquiryHistoryID,"
+    },
+    {
+        "Discriminator":  "InquiryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CommunityID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CustomerID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "EffectiveDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "StatusID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CreateDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Rank() OVER",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(PARTITION BY CommunityID",
+        "Statement":  "InquiryID"
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.CRM.tblInquiryHistory\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT InquiryJournalID,"
+    },
+    {
+        "Discriminator":  "CreateDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CreateBy",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ModifyDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ModifyBy",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.CRM.tblInquiryJournal\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT ResidentCarePrimaryID,"
+    },
+    {
+        "Discriminator":  "//     CommunityID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "EffectiveDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CustomerID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "tblResidentCarePrimary.CareID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CareLevel",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "luCare.CareTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CareType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Code as CareTypeCode",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ActiveFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Rank() OVER\t(PARTITION BY CustomerID order by CustomerID",
+        "Statement":  "EffectiveDT desc"
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ARM.tblResidentCarePrimary tblResidentCarePrimary",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Left Join \t(Select",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CareID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "CareLevel"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "CareTypeID"
+    },
+    {
+        "Discriminator":  "FROM\tBusinessData_Stage.ARM.luCare) luCare",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ON\t\t\tluCare.CareID = tblResidentCarePrimary.CareID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Left Join \t(Select",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CareTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "CareType"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "Code"
+    },
+    {
+        "Discriminator":  "FROM\tBusinessData_Stage.ARM.luCareType) luCareType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ON\t\t\tluCareType.CareTypeID = luCare.CareTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Where ActiveFlg=1\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT ResidentStatusID,"
+    },
+    {
+        "Discriminator":  "ResidentStatus",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ARM.luResidentStatus\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT SectionID,"
+    },
+    {
+        "Discriminator":  "SectionName",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.QMS.tblSection\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT SeriesID, Series FROM BusinessData_Stage.ARM.luSeries"
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT ServiceID, Service FROM BusinessData_Stage.ARM.luService"
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT distinct CreateBy FROM BusinessData_Stage.CRM.tblInquiryJournal where ELeadFlg = 1"
+    },
+    {
+        "Discriminator":  "UNION",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "SELECT distinct CreateBy FROM BusinessData_Stage.CRM.tblInquiry where ELeadFlg = 1\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT factResidentRateLockID,"
+    },
+    {
+        "Discriminator":  "CustomerID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CommunityNumber",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "factResidentRateLock.RateLockID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Status",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RoomRate",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RoomNumber",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RateLockStartDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RateLockEndDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ModifyDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Rank() Over (partition by CommunityNumber",
+        "Statement":  "CustomerID order by factResidentRateLock.RateLockID desc) as RateLockRank"
+    },
+    {
+        "Discriminator":  "FROM DemoDW.Resident.factResidentRateLock",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "left join (SELECT RateLockID",
+        "Statement":  "ModifyDT FROM BusinessData_Stage.ARM.tblRateLock) tblRateLock"
+    },
+    {
+        "Discriminator":  "on tblRateLock.RateLockID = factResidentRateLock.RateLockID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT luResidentStatus.ResidentStatusID,"
+    },
+    {
+        "Discriminator":  "ResidentStatus",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "luResidentStatus.ActiveFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ARM.luResidentStatus",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Inner Join (Select ResidentStatusID FROM BusinessData_Stage.Core.lnkResidentStatusToCategory where ActiveFlg=1 and ResidentStatusCategoryID=3) lnkResidentStatusToCategory",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "on lnkResidentStatusToCategory.ResidentStatusID = luResidentStatus.ResidentStatusID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Where luResidentStatus.ActiveFlg=1",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT tblMoveInRevenue.MoveInRevenueID,"
+    },
+    {
+        "Discriminator":  "CustomerID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "MoveInDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RevenueEntryTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AmountAtMaturity",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "LedgerEntryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ActiveFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.BonusPlan.tblMoveInRevenueDetail",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Inner Join (Select MoveInRevenueID",
+        "Statement":  "MoveInDT FROM BusinessData_Stage.BonusPlan.tblMoveInRevenue where MoveInDT\u003e=\u00271/1/2019\u0027) tblMoveInRevenue"
+    },
+    {
+        "Discriminator":  "ON tblMoveInRevenue.MoveInRevenueID = tblMoveInRevenueDetail.MoveInRevenueID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Where \t\tActiveFlg=1",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AND\t\t\tRevenueEntryTypeID IN (3)",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AND\t\t\tLedgerEntryID IN (60",
+        "Statement":  "61)\""
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT tblMoveInRevenue.MoveInRevenueID,"
+    },
+    {
+        "Discriminator":  "CustomerID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "MoveInDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RevenueEntryTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AmountAtMaturity",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "LedgerEntryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ActiveFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.BonusPlan.tblMoveInRevenueDetail",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Inner Join (Select MoveInRevenueID",
+        "Statement":  "MoveInDT FROM BusinessData_Stage.BonusPlan.tblMoveInRevenue where MoveInDT\u003e=\u00271/1/2019\u0027) tblMoveInRevenue"
+    },
+    {
+        "Discriminator":  "ON tblMoveInRevenue.MoveInRevenueID = tblMoveInRevenueDetail.MoveInRevenueID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Where \t\tActiveFlg=1",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AND\t\t\tRevenueEntryTypeID IN (3)",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AND\t\t\tLedgerEntryID IN (65",
+        "Statement":  "66"
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT tblMoveInRevenue.MoveInRevenueID,"
+    },
+    {
+        "Discriminator":  "CustomerID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "MoveInDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RevenueEntryTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AmountAtMaturity",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "LedgerEntryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ActiveFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.BonusPlan.tblMoveInRevenueDetail",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Inner Join (Select MoveInRevenueID",
+        "Statement":  "MoveInDT FROM BusinessData_Stage.BonusPlan.tblMoveInRevenue where MoveInDT\u003e=\u00271/1/2019\u0027) tblMoveInRevenue"
+    },
+    {
+        "Discriminator":  "ON tblMoveInRevenue.MoveInRevenueID = tblMoveInRevenueDetail.MoveInRevenueID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Where \t\tActiveFlg=1",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AND\t\t\tRevenueEntryTypeID IN (5)",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AND\t\t\tLedgerEntryID IN (33",
+        "Statement":  "59"
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT tblMoveInRevenue.MoveInRevenueID,"
+    },
+    {
+        "Discriminator":  "CustomerID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "MoveInDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RevenueEntryTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AmountAtMaturity",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "LedgerEntryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ActiveFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.BonusPlan.tblMoveInRevenueDetail",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Inner Join (Select MoveInRevenueID",
+        "Statement":  "MoveInDT FROM BusinessData_Stage.BonusPlan.tblMoveInRevenue where MoveInDT\u003e=\u00271/1/2019\u0027) tblMoveInRevenue"
+    },
+    {
+        "Discriminator":  "ON tblMoveInRevenue.MoveInRevenueID = tblMoveInRevenueDetail.MoveInRevenueID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Where \t\tActiveFlg=1",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AND\t\t\tRevenueEntryTypeID IN (5)",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AND\t\t\tLedgerEntryID IN (7",
+        "Statement":  "58"
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT tblQuestionExtension.QuestionExtensionID,"
+    },
+    {
+        "Discriminator":  "QuestionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "SurveyID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "IndicatorID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.QMS.tblQuestionExtension",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "left join (",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Select \tQuestionExtensionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "IndicatorID ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.QMS.lnkScoreIndicatorToQuestion) lnkScoreIndicatorToQuestion",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ON lnkScoreIndicatorToQuestion.QuestionExtensionID = tblQuestionExtension.QuestionExtensionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL SELECT tblQuestionExtension.QuestionExtensionID,"
+    },
+    {
+        "Discriminator":  "QuestionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "SurveyID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "SectionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.QMS.tblQuestionExtension",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "left join (",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Select\tQuestionExtensionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "SectionExtensionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM\tBusinessData_Stage.QMS.lnkQuestionToSection) lnkQuestionToSection",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ON lnkQuestionToSection.QuestionExtensionID = tblQuestionExtension.QuestionExtensionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "left join (",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Select \tSectionExtensionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "SectionID ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.QMS.tblSectionExtension) tblSectionExtension",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ON tblSectionExtension.SectionExtensionID = lnkQuestionToSection.SectionExtensionID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "SQL Select Division"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "Region"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "CommunityName as Community"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "factInquiryByReferral.CommunityNumber"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "factInquiryByReferral.InquiryID"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "CustomerID"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "Inquiry"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "Status"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "CustomerCount"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "EmailCount"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "PhoneCount"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "factInquiryByReferral.Email"
+    },
+    {
+        "Discriminator":  "",
+        "Statement":  "factInquiryByReferral.PhoneCell"
+    },
+    {
+        "Discriminator":  "FROM DemoDW.Sales.factInquiryByReferral",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Left Join\t(Select CommunityNumber",
+        "Statement":  "CommunityName"
+    },
+    {
+        "Discriminator":  "on\t\t\tmstrCommunity.CommunityNumber = factInquiryByReferral.CommunityNumber",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Left Join\t(Select InquiryID",
+        "Statement":  "Count(*) as CustomerCount from DemoDW.Sales.factInquiryByReferral where Status not in (\u0027Moved In\u0027"
+    },
+    {
+        "Discriminator":  "on\t\t\tCustomer.InquiryID = factInquiryByReferral.InquiryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Left Join\t(Select Email",
+        "Statement":  "Count(*) as EmailCount from DemoDW.Sales.factInquiryByReferral where LEN(Email) \u003e 0 and Status not in (\u0027Moved In\u0027"
+    },
+    {
+        "Discriminator":  "group by Email) Email",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "on\t\t\tEmail.Email = factInquiryByReferral.Email",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Left Join\t(Select PhoneCell",
+        "Statement":  "Count(*) as PhoneCount from DemoDW.Sales.factInquiryByReferral where LEN(PhoneCell) \u003e 0 and Status not in (\u0027Moved In\u0027"
+    },
+    {
+        "Discriminator":  "and PhoneCell not like \u0027% 555-%\u0027 and PhoneCell not in (Select distinct PhoneNumber1 FROM BusinessData_Stage.ARM.tblCommunity where LEN(PhoneNumber1) \u003e 0) group by PhoneCell) Phone",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "on\t\t\tPhone.PhoneCell = factInquiryByReferral.PhoneCell",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "where\t\tStatus not in (\u0027Moved In\u0027",
+        "Statement":  "\u0027Moved Back\u0027"
+    },
+    {
+        "Discriminator":  "and\t\t\t(EmailCount \u003e CustomerCount or PhoneCount \u003e CustomerCount)\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "Security:"
+    },
+    {
+        "Discriminator":  "//Loading all users in customer\u0027s User Directory",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Load \u0027USER\u0027 as ACCESS",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "UserID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "UserName",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\u0027USE1-MS02\\\u0027 \u0026 Upper(UserName) as USERID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  ";SELECT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "mstrUser.UserID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "mstrUser.UserName",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM DemoDW.Master.mstrUser",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "TEMPGeneralLedger:"
+    },
+    {
+        "Discriminator":  "LOAD CommunityNumber as [%CommunityKey]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Date(Floor(EffectiveDT)) as EffectiveDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "LedgerEntryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ActualCost",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "MonthlyCost",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CustomerID as [%CustomerIDKey]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ProcessFlg;SQL SELECT CommunityNumber",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "EffectiveDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "LedgerEntryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ActualCost",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "MonthlyCost",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ActiveFLG",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CustomerID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ProcessFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ARM.tblGeneralLedger",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Left Join (Select CommunityNumber",
+        "Statement":  "CommunityID from BusinessData_Stage.ARM.tblCommunity) tblCommunity"
+    },
+    {
+        "Discriminator":  "ON tblCommunity.CommunityID = tblGeneralLedger.CommunityID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Where ActiveFLG=1",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "TEMPInquiryHistoryMostEffective:"
+    },
+    {
+        "Discriminator":  "LOAD ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "InquiryID as %InquiryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CommunityID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CustomerID as %CustomerIDKey",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Date(Floor(EffectiveDT)) as EffectiveDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "StatusID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Date(CreateDT) as CreateDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "InquiryHistoryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Where Ranking=1;SQL SELECT InquiryHistoryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "InquiryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CommunityID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CustomerID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "EffectiveDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "StatusID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CreateDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Rank() OVER",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(PARTITION BY CommunityID",
+        "Statement":  "InquiryID"
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.CRM.tblInquiryHistory\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "eLeadOrganization:"
+    },
+    {
+        "Discriminator":  "LOAD distinct CreateBy as eLeadOrganizationList;SQL SELECT distinct CreateBy FROM BusinessData_Stage.CRM.tblInquiryJournal where ELeadFlg = 1",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "UNION",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "SELECT distinct CreateBy FROM BusinessData_Stage.CRM.tblInquiry where ELeadFlg = 1\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "factResidentDiagnosis:"
+    },
+    {
+        "Discriminator":  "LOAD ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CommunityNumber as %CommunityKey",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CustomerID as %CustomerIDKey",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Date(Floor(EffectiveDT)) as %DateKey",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Type\"\" as DiagnosisType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Diagnosis",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHERE NOT Match(Diagnosis",
+        "Statement":  "\u0027No known diagnosis\u0027);SQL SELECT * FROM DemoDW.Care.factResidentDiagnosis\""
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "factUnassessedTaskStartDT:"
+    },
+    {
+        "Discriminator":  "LOAD %CustomerIDKey",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ApplyMap(\u0027map_service_code\u0027",
+        "Statement":  "ServiceCodeID) as ServiceCodeDescription"
+    },
+    {
+        "Discriminator":  "Date(Floor(FirstOccurrenceDT)) as FirstOccurrenceDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHERE Exists(%CustomerIDKey);SQL SELECT CustomerID as \"\"%CustomerIDKey\"\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ServiceCodeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Min(ADLDT) as FirstOccurrenceDT ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ACM.tblResidentADL",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHERE ADLTypeID = 2",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "GROUP BY CustomerID",
+        "Statement":  "ServiceCodeID\""
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "fact_ADL:"
+    },
+    {
+        "Discriminator":  "LOAD  ResidentADLID as ADLID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "%CustomerIDKey",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Description as TaskDescription",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Date(Floor(ADLDT)) as %DateKey",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Hour(TimeStamp(ADLDT)) as ADLHour",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Trim(Timestamp(ADLDT",
+        "Statement":  "\u0027h:00 TT\u0027)) as TaskHour"
+    },
+    {
+        "Discriminator":  "ADLDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Date(Floor(CreateDT)) as ADLTaskCreateDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ADLTime",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Date(Floor(ExpireDT)) as ADLTaskExpireDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ADLTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ApplyMap(\u0027map_service_code\u0027",
+        "Statement":  "ServiceCodeID) as ServiceCodeDescription"
+    },
+    {
+        "Discriminator":  "ApplyMap(\u0027map_process_reason\u0027",
+        "Statement":  "ResidentADLProcessReasonID) as ResidentADLProcessReason"
+    },
+    {
+        "Discriminator":  "IF(ADLDT \u003e Now()",
+        "Statement":  "1"
+    },
+    {
+        "Discriminator":  "IF(WeekStart(Date(ADLDT)) = WeekStart(Today())",
+        "Statement":  "1"
+    },
+    {
+        "Discriminator":  "ADLStatusID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ADLType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ServiceCodeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CommunityResourceRoleID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "IF(IsNull(CommunityResourceRoleID)",
+        "Statement":  "1"
+    },
+    {
+        "Discriminator":  "IF(Date(Floor(ADLDT)) = Today()",
+        "Statement":  "1"
+    },
+    {
+        "Discriminator":  "IF(HOUR(ADLDT) \u003e= 7 AND HOUR(ADLDT) \u003c= 14",
+        "Statement":  "\u0027Day\u0027"
+    },
+    {
+        "Discriminator":  "IF(HOUR(ADLDT) \u003e= 15 AND HOUR(ADLDT) \u003c= 22",
+        "Statement":  "\u0027Evening\u0027"
+    },
+    {
+        "Discriminator":  "IF(HOUR(ADLDT) \u003e= 23 OR HOUR(ADLDT) \u003c= 6",
+        "Statement":  "\u0027Night\u0027"
+    },
+    {
+        "Discriminator":  "CommunityResourceRole ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHERE not isNull(ResidentADLID);SQL SELECT DISTINCT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ResidentADLID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "tblResidentADL.CustomerID AS \"\"%CustomerIDKey\"\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "tblResidentADL.CommunityID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "tblResidentADL.Description",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ADLDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "tblResidentADL.CreateBy",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "tblResidentADL.CreateDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ExpireDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "tblResidentADL.ADLTime",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ResidentADLProcessReasonID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ADLTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ADLStatusID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "tblResidentADL.ServiceCodeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "tblResidentADL.CommunityResourceRoleID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CASE \tWHEN BusinessData_Stage.ACM.tblResidentADL.ADLTypeID = 1 THEN \u0027Resident Assessed Task\u0027 ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHEN BusinessData_Stage.ACM.tblResidentADL.ADLTypeID = 2 AND BusinessData_Stage.ACM.tblResidentADL.CustomScheduleADLID IS NULL THEN \u0027Resident Ad-Hoc Task\u0027 ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHEN BusinessData_Stage.ACM.tblResidentADL.ADLTypeID = 2 AND BusinessData_Stage.ACM.tblResidentADL.CustomScheduleADLID IS NOT NULL THEN \u0027Resident Additional Task\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ELSE \u0027Community Task\u0027 END AS ADLType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CASE\tWHEN CAST(ADLDT AS TIME) BETWEEN \u002707:00:00.0000000\u0027 AND \u002714:45:00.0000000\u0027 AND tblCommunityResourceRole.ResourceRole IS NULL AND tblResidentADL.CommunityResourceRoleID IS NOT NULL AND tblResidentScheduleADL.ResourceRole IS NOT NULL THEN tblResidentScheduleADL.ResourceRole + \u0027 Days\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHEN CAST(ADLDT AS TIME) BETWEEN \u002715:00:00.0000000\u0027 AND \u002722:45:00.0000000\u0027 AND tblCommunityResourceRole.ResourceRole IS NULL AND tblResidentADL.CommunityResourceRoleID IS NOT NULL AND tblResidentScheduleADL.ResourceRole IS NOT NULL THEN tblResidentScheduleADL.ResourceRole + \u0027 Evenings\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHEN (CAST(ADLDT AS TIME) BETWEEN \u002723:00:00.0000000\u0027 AND \u002723:45:00.0000000\u0027 OR CAST(ADLDT AS TIME) BETWEEN \u002700:00:00.0000000\u0027 AND \u002706:45:00.0000000\u0027) AND tblCommunityResourceRole.ResourceRole IS NULL AND tblResidentADL.CommunityResourceRoleID IS NOT NULL AND tblResidentScheduleADL.ResourceRole IS NOT NULL THEN tblResidentScheduleADL.ResourceRole + \u0027 Nights\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHEN tblCommunityResourceRole.ResourceRole IS NULL AND tblResidentScheduleADL.ResourceRole IS NULL THEN \u0027Unassigned\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ELSE tblCommunityResourceRole.ResourceRole END AS CommunityResourceRole",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ACM.tblResidentADL",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "LEFT JOIN\tBusinessData_Stage.ACM.tblCommunityResourceRole tblCommunityResourceRole",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ON\t\t\ttblCommunityResourceRole.CommunityResourceRoleID = tblResidentADL.CommunityResourceRoleID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "LEFT JOIN\tBusinessData_Stage.ACM.trnResidentScheduleADL tblResidentScheduleADL",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ON\t\t\ttblResidentScheduleADL.ResidentScheduleID = tblResidentADL.ResidentScheduleID AND tblResidentScheduleADL.ModelQuestionID = tblResidentADL.ModelQuestionID AND tblResidentScheduleADL.ModelAnswerID = tblResidentADL.ModelAnswerID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "LEFT JOIN   BusinessData_Stage.ACM.luResourceRole",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ON\t\t\tluResourceRole.ResourceRoleID = tblCommunityResourceRole.ResourceRoleID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHERE CAST(ADLDT AS DATE) \u003e=\u00275/2/2022\u0027 and CAST(ADLDT AS DATE) \u003c=\u00275/23/2022\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AND tblResidentADL.ActiveFlg = 1",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "UNION",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "SELECT DISTINCT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ResidentADLID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "trnResidentADL.CustomerID AS \"\"%CustomerIDKey\"\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "trnResidentADL.CommunityID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "trnResidentADL.Description",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ADLDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "trnResidentADL.CreateBy",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "trnResidentADL.CreateDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ExpireDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "trnResidentADL.ADLTime",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ResidentADLProcessReasonID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ADLTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ADLStatusID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "trnResidentADL.ServiceCodeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "trnResidentADL.CommunityResourceRoleID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CASE \tWHEN BusinessData_Stage.ACM.trnResidentADL.ADLTypeID = 1 THEN \u0027Resident Assessed Task\u0027 ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHEN BusinessData_Stage.ACM.trnResidentADL.ADLTypeID = 2 AND BusinessData_Stage.ACM.trnResidentADL.CustomScheduleADLID IS NULL THEN \u0027Resident Ad-Hoc Task\u0027 ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHEN BusinessData_Stage.ACM.trnResidentADL.ADLTypeID = 2 AND BusinessData_Stage.ACM.trnResidentADL.CustomScheduleADLID IS NOT NULL THEN \u0027Resident Additional Task\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ELSE \u0027Community Task\u0027 END AS ADLType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CASE\tWHEN CAST(ADLDT AS TIME) BETWEEN \u002707:00:00.0000000\u0027 AND \u002714:45:00.0000000\u0027 AND tblCommunityResourceRole.ResourceRole IS NULL AND trnResidentADL.CommunityResourceRoleID IS NOT NULL AND tblResidentScheduleADL.ResourceRole IS NOT NULL THEN tblResidentScheduleADL.ResourceRole + \u0027 Days\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHEN CAST(ADLDT AS TIME) BETWEEN \u002715:00:00.0000000\u0027 AND \u002722:45:00.0000000\u0027 AND tblCommunityResourceRole.ResourceRole IS NULL AND trnResidentADL.CommunityResourceRoleID IS NOT NULL AND tblResidentScheduleADL.ResourceRole IS NOT NULL THEN tblResidentScheduleADL.ResourceRole + \u0027 Evenings\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHEN (CAST(ADLDT AS TIME) BETWEEN \u002723:00:00.0000000\u0027 AND \u002723:45:00.0000000\u0027 OR CAST(ADLDT AS TIME) BETWEEN \u002700:00:00.0000000\u0027 AND \u002706:45:00.0000000\u0027) AND tblCommunityResourceRole.ResourceRole IS NULL AND trnResidentADL.CommunityResourceRoleID IS NOT NULL AND tblResidentScheduleADL.ResourceRole IS NOT NULL THEN tblResidentScheduleADL.ResourceRole + \u0027 Nights\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHEN tblCommunityResourceRole.ResourceRole IS NULL AND tblResidentScheduleADL.ResourceRole IS NULL THEN \u0027Unassigned\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ELSE tblCommunityResourceRole.ResourceRole END AS CommunityResourceRole",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ACM.trnResidentADL",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "LEFT JOIN\tBusinessData_Stage.ACM.tblCommunityResourceRole tblCommunityResourceRole",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ON\t\t\ttblCommunityResourceRole.CommunityResourceRoleID = trnResidentADL.CommunityResourceRoleID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "LEFT JOIN\tBusinessData_Stage.ACM.trnResidentScheduleADL tblResidentScheduleADL",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ON\t\t\ttblResidentScheduleADL.ResidentScheduleID = trnResidentADL.ResidentScheduleID AND tblResidentScheduleADL.ModelQuestionID = trnResidentADL.ModelQuestionID AND tblResidentScheduleADL.ModelAnswerID = trnResidentADL.ModelAnswerID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "LEFT JOIN   BusinessData_Stage.ACM.luResourceRole",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ON\t\t\tluResourceRole.ResourceRoleID = tblCommunityResourceRole.ResourceRoleID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHERE CAST(ADLDT AS DATE) \u003e=\u00275/2/2022\u0027 and CAST(ADLDT AS DATE) \u003c=\u00275/23/2022\u0027",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AND trnResidentADL.ActiveFlg = 1\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "init_mobility:"
+    },
+    {
+        "Discriminator":  "CrossTable (MobilityDevice",
+        "Statement":  "MobilityValue)"
+    },
+    {
+        "Discriminator":  "LOAD %CustomerIDKey",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "HasCaneFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "HasWheelchairFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "HasWalkerFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "HasScooterFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "HasMobilityOtherFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "MobilityOther",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHERE Exists(%CustomerIDKey);SQL SELECT CustomerID as \"\"%CustomerIDKey\"\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "HasCaneFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "HasWheelchairFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "HasWalkerFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "HasScooterFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "HasMobilityOtherFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "MobilityOther",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ACM.tblResidentPersonalCareData\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "left join (tempResidentCare)"
+    },
+    {
+        "Discriminator":  "LOAD ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "[%CustomerIDKey]\u0026\u0027 | \u0027\u0026Num(Date(Floor(AssessmentDT))) as %AssessmentKey",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Date(Floor(AssessmentNextDT)) as AssessmentNextDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AssessmentType;SQL SELECT CustomerID as \"\"%CustomerIDKey\"\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AssessmentNextDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AssessmentDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AssessmentType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ACM.tblResidentAssessment a",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "left join BusinessData_Stage.ACM.luAssessmentType l on a.AssessmentTypeID = l.AssessmentTypeID ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "where a.ActiveFlg = 1\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "left join (tempResidentCare)"
+    },
+    {
+        "Discriminator":  "LOAD ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "[%CustomerIDKey]\u0026\u0027 | \u0027\u0026Num(Date(Floor(CreateDT))) as %AssessmentKey",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "PendingFlg;SQL SELECT CustomerID as \"\"%CustomerIDKey\"\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CreateDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "PendingFlg ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.ACM.wrkResidentAssessment",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "where ActiveFlg = 1\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "map_ancillary_care: mapping LOAD *;SQL SELECT CareAncillaryID, CareAncillary FROM BusinessData_Stage.ARM.luCareAncillary"
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "map_care: mapping LOAD *;SQL SELECT CareID, CareLevel FROM BusinessData_Stage.ARM.luCare"
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "map_process_reason: mapping LOAD ResidentADLProcessReasonID, ResidentADLProcessReason;SQL SELECT"
+    },
+    {
+        "Discriminator":  "ResidentADLProcessReasonID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ResidentADLProcessReason",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData_Stage.CareManagement.luResidentADLProcessReason",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "WHERE ActiveFlg = 1\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "map_series: mapping LOAD *;SQL SELECT SeriesID, Series FROM BusinessData_Stage.ARM.luSeries"
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "map_service: mapping LOAD *;SQL SELECT ServiceID, Service FROM BusinessData_Stage.ARM.luService"
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "map_service_code: mapping LOAD ServiceCodeID, Description as ServiceCodeDescription;SQL SELECT * FROM BusinessData_Stage.ACM.luServiceCode Where ActiveFlg = 1"
+    },
+    {
+        "Discriminator":  "DemoDW;",
+        "Statement":  "wrkCareVariance: "
+    },
+    {
+        "Discriminator":  "LOAD CustomerID as \"\"%CustomerIDKey\"\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Date(Floor(AssessedEffectiveDT)) as AssessedEffectiveDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ApplyMap(\u0027map_service\u0027",
+        "Statement":  "AssessedServiceID) as AssessedService"
+    },
+    {
+        "Discriminator":  "ApplyMap(\u0027map_care\u0027",
+        "Statement":  "AssessedCareID) as AssessedCare"
+    },
+    {
+        "Discriminator":  "AssessedRate",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Date(Floor(BilledEffectiveDT)) as BilledEffectiveDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ApplyMap(\u0027map_service\u0027",
+        "Statement":  "BilledServiceID) as BilledService"
+    },
+    {
+        "Discriminator":  "ApplyMap(\u0027map_care\u0027",
+        "Statement":  "BilledCareID) as BilledCare"
+    },
+    {
+        "Discriminator":  "BilledRate",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "VarianceFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\u0027Primary\u0027 as Type;SQL SELECT * FROM BusinessData_Stage.ARM.wrkResidentCareVariance WHERE ActiveFlg = 1\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "INLINE;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT BilledCareTEMP;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT GlennisUserList;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT JournalActivity;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT KeyTable;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT KeyTableDups;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT MedManagement;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT NinetyDaysPriorStatus;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT OneWeekPriorStatus;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT ReservationTEMP;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT Security;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT TEMP2KeyTable;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT TEMP2factRevenueByMoveIn;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT TEMP3KeyTable;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT TEMPGeneralLedger;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT TEMPGeneralLedger2;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT TEMPInquiryHistoryMostEffective;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT TEMPJournal;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT TEMPJournal2;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT TEMPKEYfactRevenueByMoveIn;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT TEMPvwCurrentResidents;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT ThirtyDaysPriorStatus;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT factContactJournalActivity;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT factResidentMoveOutTEMP;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT initResidentCare;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT init_mobility;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT tempResidentCare;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT temp_assessment;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT tempfirst;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT wrkCareVariance;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Extract\\QVD_Extract_ActiveStatus.qvd](qvd)};",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Extract\\QVD_Extract_factProductPricing.qvd](qvd)};",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform/QVD_Transform_SectionAccess.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_DetailWithReviewRound.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_FirstJournalActivity.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_InquiryHistoryMostEffective.qvd](qvd)};",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_JournalActivity.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_LastJournalActivity.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_NextB2BActivity.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_NextJournalActivity.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_ReservationKeys.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_ScoresWithDates.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_TEMPfactInquiryByReferral.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_TEMPfactRevenueByMoveIn.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_factCareVariance.qvd](qvd)};",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_factCommunityReview.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_factCommunityTripDetailwithType.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_factCommunityTripReport.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_factCommunityTripReportPOC.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_factContactJournalActivity.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_factELeadCreationJournalActivity.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_factInquiryByReferral.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_factInquiryTourActivity.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_factReservation.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_factResidentADL.qvd](qvd)};",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_factResidentADLStart.qvd](qvd)};",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_factResidentAssessment.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_factResidentCurrentAssessedCareType.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_factResidentCurrentAssessedMed.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_factResidentDiagnosis.qvd](qvd)};",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_factResidentMobilityDevice.qvd](qvd)};",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_factResidentMoveOut.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_factResidentMoveOutSchedule.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_factRevenueByMoveIn.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_factScoreCard.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_factUnitOccupancyByMonth.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_mstrCommunity.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_mstrContact.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_mstrCorporation.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_mstrIncident.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_mstrProductInventory.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_mstrRentRoll.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_mstrSTL.qvd]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "(qvd)};\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\.xls library\\demoglennis users.xlsx;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\.xls library\\sales\\inquiry status rank.xlsx;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_autoapply.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_businessdata_tblreservation.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_factcommunityreview.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_factcommunityreviewdetail.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_factcommunityreviewpoc.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_factcommunityreviewscore.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_factcommunitytripreport.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_factcommunitytripreportdetail.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_factcommunitytripreportpoc.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_factcontactjournalactivity.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_facteleadcreationjournalactivity.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_factinquirybyreferral.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_factinquiryjournalactivity.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_factinquirytouractivity.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_factleasesegment.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_factproductpricing.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_factreservation.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_factresidentcareancillary.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_factresidentcareprimary.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_factresidentmoveout.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_factresidentmoveoutschedule.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_factresidentroom.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_factrevenuebymovein.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_factscorecard.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_factunitoccupancybymonth.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_mstrcommunity.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_mstrcontact.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_mstrcorporation.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_mstrcustomer.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_mstrincident.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_mstrinquiry.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_mstrproductinventory.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_mstrstl.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_mstruser.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_qelnkquestiontochoicetype.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_qeluplanofcorrectionresponsestatus.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_qetblquestion.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_residentassessmentbycustomercommunity.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_factcommunityreview.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_factcommunitytripreport.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_factinquirybyreferral.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_factresidentcurrentassessedcaretype.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_factresidentcurrentassessedmed.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_inquiryhistorymosteffective.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_mstrcommunity.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_mstrcontact.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_mstrcorporation.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_reservationkeys.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_tempfactinquirybyreferral.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_tempfactrevenuebymovein.qvd;",
+        "Statement":  null
+    }
+]

@@ -1,0 +1,1402 @@
+[
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ZeroRowTable",
+        "Category":  "Resource",
+        "Label":  "0-row table",
+        "Description":  "Table \"mstrCommunity\" contains zero rows. It could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "TableMeta",
+        "RefMetaId":  "909"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ZeroRowTable",
+        "Category":  "Resource",
+        "Label":  "0-row table",
+        "Description":  "Table \"mstrRentRoll\" contains zero rows. It could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "TableMeta",
+        "RefMetaId":  "910"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ZeroRowTable",
+        "Category":  "Resource",
+        "Label":  "0-row table",
+        "Description":  "Table \"fact_ADL\" contains zero rows. It could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "TableMeta",
+        "RefMetaId":  "913"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ZeroRowTable",
+        "Category":  "Resource",
+        "Label":  "0-row table",
+        "Description":  "Table \"dim_date\" contains zero rows. It could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "TableMeta",
+        "RefMetaId":  "915"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "SyntheticKeyTable",
+        "Category":  "Practice",
+        "Label":  "Synthetic Key table",
+        "Description":  "Synthetic keys generally represent a data quality problem or trap. Redundant fields should be removed. When multiple fields are required to make a link, they should be replaced with compound keys. ",
+        "Impact":  "0",
+        "RefObjectType":  "TableMeta",
+        "RefMetaId":  "916"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MissingKeyValue",
+        "Category":  "Quality",
+        "Label":  "Missing Key value",
+        "Description":  "\"TableField: mstrCommunity; %CommunityKey\" is a Primary Key with a subset ratio of less than 100%.  This indicates a likely missing Dimension value.",
+        "Impact":  "0",
+        "RefObjectType":  "TableFieldMeta",
+        "RefMetaId":  "819"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MissingKeyValue",
+        "Category":  "Quality",
+        "Label":  "Missing Key value",
+        "Description":  "\"TableField: fact_ADL; ADLStatusID\" is a Primary Key with a subset ratio of less than 100%.  This indicates a likely missing Dimension value.",
+        "Impact":  "0",
+        "RefObjectType":  "TableFieldMeta",
+        "RefMetaId":  "867"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "OuterJoinTables",
+        "Category":  "Performance",
+        "Label":  "Tables can be Outer Joined",
+        "Description":  "Tables \"adl_status \u0026 fact_ADL\" have one-to-one relationship. Consider outer joining.",
+        "Impact":  "0",
+        "RefObjectType":  "TableFieldMeta",
+        "RefMetaId":  "863"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Owner\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "632"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Portfolio\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "633"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Brand\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "634"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"SVP\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "635"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"RVP\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "637"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"CommunityState\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "638"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"CommunityCountry\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "639"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"NoOfResidents\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "640"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"CMSResidentDashboard\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "642"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"RMSLeaseManagement\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "643"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"RoomNumber\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "645"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"PayorType\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "646"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"CurrentRent\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "647"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"RoomTypeStyleCode\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "648"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"AssessedMedRate\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "649"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"IsPhysicalPresentFlg\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "650"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"AssessedCareLevel\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "652"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"AssessedMedLevel\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "653"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Status\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "654"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"NewMoveInFlg\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "656"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Gender\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "658"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"BilledCareType\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "663"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"BilledCareLevel\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "664"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"AgeGroup\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "665"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"ShortTermLeaveID\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 76 bytes.",
+        "Impact":  "76",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "666"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"DepartureDT\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 39 bytes.",
+        "Impact":  "39",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "667"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"ExpectedReturnDT\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 76 bytes.",
+        "Impact":  "76",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "668"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"OutboundLocation\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 164 bytes.",
+        "Impact":  "164",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "669"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"ADLTaskCreateDT\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "681"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"ADLTaskExpireDT\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "683"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"ResidentADLProcessReason\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "685"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"TaskCurrentWeekFlg\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "687"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"ServiceCodeID\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "689"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"CommunityResourceRoleID\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "690"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"UnassignedFlg\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "691"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"TaskTodayFlg\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "692"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"TaskShift\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "693"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"TaskTitleTemp\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "697"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"ProcessDT\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "698"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"ProcessLastDT\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "699"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"TaskExpireDT\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "700"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"QuarterStart\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "705"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"TodayFlg\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "707"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"CurrentWeekFlg\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "708"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"CommunityID\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "629"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"CommunityName\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "630"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"Division\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "631"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"Owner\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "632"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"Portfolio\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "633"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"Brand\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "634"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"SVP\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "635"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"Region\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "636"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"RVP\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "637"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"CommunityState\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "638"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"CommunityCountry\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "639"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"NoOfResidents\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "640"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"CMSResidentDashboard\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "642"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"RMSLeaseManagement\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "643"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"ResidentName\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "644"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"RoomNumber\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "645"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"PayorType\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "646"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"CurrentRent\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "647"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"RoomTypeStyleCode\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "648"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"AssessedMedRate\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "649"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"IsPhysicalPresentFlg\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "650"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"AssessedCareType\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "651"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"AssessedCareLevel\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "652"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"AssessedMedLevel\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "653"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"Status\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "654"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"MoveInDT\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "655"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"NewMoveInFlg\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "656"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"ScheduledMoveOutDT\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "657"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"Gender\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "658"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"UpcomingBirthdayFlg\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "659"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"Age\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "660"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"ActiveFlg\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "661"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"DOB\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "662"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"BilledCareType\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "663"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"BilledCareLevel\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "664"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"AgeGroup\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "665"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"%DateKey\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "674"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"ADLID\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "676"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"TaskDescription\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "677"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"ADLHour\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "678"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"TaskHour\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "679"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"ADLDT\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "680"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"ADLTaskCreateDT\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "681"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"ADLTime\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "682"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"ADLTaskExpireDT\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "683"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"ADLTypeID\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "684"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"ResidentADLProcessReason\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "685"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"UpcomingTaskFlg\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "686"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"TaskCurrentWeekFlg\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "687"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"ADLType\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "688"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"ServiceCodeID\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "689"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"CommunityResourceRoleID\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "690"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"UnassignedFlg\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "691"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"TaskTodayFlg\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "692"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"TaskShift\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "693"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"CommunityResourceRole\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "694"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"Application\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "695"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"Employee\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "696"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"TaskTitleTemp\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "697"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"ProcessDT\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "698"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"ProcessLastDT\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "699"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"TaskExpireDT\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "700"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"TaskExcludeFlg\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "701"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"MonthYear\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "703"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"WeekStart\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "704"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"QuarterStart\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "705"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"DayName\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "706"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"TodayFlg\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "707"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"CurrentWeekFlg\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "708"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "AutoNumberKey",
+        "Category":  "Resource",
+        "Label":  "Key can be Autonumbered",
+        "Description":  "This key field \"%CommunityKey\" was not found in any charts. Consider autonumbering to save 45 bytes of RAM.",
+        "Impact":  "45",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "628"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DimensionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Dimension Syntax Error",
+        "Description":  "The dimension failed validation. The error is:\\n Bad field name(s) \"[IncidentHour]\" .",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectDimensionMeta",
+        "RefMetaId":  "969"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MasterMeasDuplicateDef",
+        "Category":  "Practice",
+        "Label":  "Master Measure Duplicate Definition",
+        "Description":  "Two or more Master Measures contain the same effective definition but use different names.  This may create ambiguity for Developers or Users. The Measures are: \"# Upcoming Assessments, Upcoming Assessments\"",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "746"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MasterMeasDuplicateDef",
+        "Category":  "Practice",
+        "Label":  "Master Measure Duplicate Definition",
+        "Description":  "Two or more Master Measures contain the same effective definition but use different names.  This may create ambiguity for Developers or Users. The Measures are: \"# of Tasks Total Incomplete, # of Tasks Mobile\"",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "749"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Expression Syntax Error",
+        "Description":  "The expression failed validation. The error is:\\n Bad field name(s) \"AssessmentNextDT\" .",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "742"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Expression Syntax Error",
+        "Description":  "The expression failed validation. The error is:\\n Bad field name(s) \"VarianceFlg\" \"AssessedEffectiveDT\" \"BilledEffectiveDT\" .",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "751"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Expression Syntax Error",
+        "Description":  "The expression failed validation. The error is:\\n Bad field name(s) \"[Avg Unassessed Task Time]\" .",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "1023"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MultiTableExpression",
+        "Category":  "Performance",
+        "Label":  "Multi Table Expression",
+        "Description":  "The  Expression  \"Average Daily ADL Time per Resident\" contains an aggregation function that uses fields from 2 tables.  This requires Qlik calculation to perform an extra step of creating a temp table of field combinations. This extra step may have a negative impact on performance.",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "974"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MultiTableExpression",
+        "Category":  "Performance",
+        "Label":  "Multi Table Expression",
+        "Description":  "The  Expression  \"Average Daily ADL Time per Resident\" contains an aggregation function that uses fields from 2 tables.  This requires Qlik calculation to perform an extra step of creating a temp table of field combinations. This extra step may have a negative impact on performance.",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "990"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MultiTableExpression",
+        "Category":  "Performance",
+        "Label":  "Multi Table Expression",
+        "Description":  "The  Expression  \"Avg Addtl by Service \u0026 DateKey\" contains an aggregation function that uses fields from 2 tables.  This requires Qlik calculation to perform an extra step of creating a temp table of field combinations. This extra step may have a negative impact on performance.",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "998"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MultiTableExpression",
+        "Category":  "Performance",
+        "Label":  "Multi Table Expression",
+        "Description":  "The  Expression  \"Avg per Day / Service PIVOT\" contains an aggregation function that uses fields from 2 tables.  This requires Qlik calculation to perform an extra step of creating a temp table of field combinations. This extra step may have a negative impact on performance.",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "1014"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MultiTableExpression",
+        "Category":  "Performance",
+        "Label":  "Multi Table Expression",
+        "Description":  "The  Expression  \"Avg Addtl \u0026 Ad-Hoc Daily Minutes per Resident\" contains an aggregation function that uses fields from 2 tables.  This requires Qlik calculation to perform an extra step of creating a temp table of field combinations. This extra step may have a negative impact on performance.",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "1021"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MultiTableExpression",
+        "Category":  "Performance",
+        "Label":  "Multi Table Expression",
+        "Description":  "The  Expression  \"Avg Addtl \u0026 Ad-Hoc Daily Minutes per Resident\" contains an aggregation function that uses fields from 2 tables.  This requires Qlik calculation to perform an extra step of creating a temp table of field combinations. This extra step may have a negative impact on performance.",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "1024"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MultiTableExpression",
+        "Category":  "Performance",
+        "Label":  "Multi Table Expression",
+        "Description":  "The  Expression  \"Avg Addtl \u0026 Ad-Hoc Daily Minutes per Resident\" contains an aggregation function that uses fields from 2 tables.  This requires Qlik calculation to perform an extra step of creating a temp table of field combinations. This extra step may have a negative impact on performance.",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "755"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MultiTableExpression",
+        "Category":  "Performance",
+        "Label":  "Multi Table Expression",
+        "Description":  "The  Expression  \"Avg per Day / Service PIVOT\" contains an aggregation function that uses fields from 2 tables.  This requires Qlik calculation to perform an extra step of creating a temp table of field combinations. This extra step may have a negative impact on performance.",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "769"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MultiTableExpression",
+        "Category":  "Performance",
+        "Label":  "Multi Table Expression",
+        "Description":  "The  Expression  \"Average Daily ADL Time per Resident\" contains an aggregation function that uses fields from 2 tables.  This requires Qlik calculation to perform an extra step of creating a temp table of field combinations. This extra step may have a negative impact on performance.",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "771"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MultiTableExpression",
+        "Category":  "Performance",
+        "Label":  "Multi Table Expression",
+        "Description":  "The  Expression  \"Avg Addtl by Service \u0026 DateKey\" contains an aggregation function that uses fields from 2 tables.  This requires Qlik calculation to perform an extra step of creating a temp table of field combinations. This extra step may have a negative impact on performance.",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "772"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MissingMasterMeasure",
+        "Category":  "Quality",
+        "Label":  "Missing Master Measure",
+        "Description":  "Measure in object \\\"Viz: barchart / # of Incidents by Hour (Master Library) (Id:57ef21d2-681b-4d0a-ba15-2614dc19b456)\\\" references non-existent Master Measure \"ewduFvJ\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "1062"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MissingExtension",
+        "Category":  "Quality",
+        "Label":  "Missing Extension",
+        "Description":  "The Extension named \"x-kpi-double\"  is missing for visualization \"Viz: x-kpi-double / Tasks Completed (Master Library) (Id:a6e50324-464c-4618-8fb5-2b1fb46a28ed)\".",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectMeta",
+        "RefMetaId":  "1115"
+    }
+]

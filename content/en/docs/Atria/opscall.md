@@ -12,7 +12,7 @@ menu:
 weight: 14
 toc: true
 hasjson: true
-jsonvar: "Atria-OpsCall"
+jsonvar: "Atria-CommunityOperations-OpsCall"
 Atria: true
 hasobjects: true
 ---

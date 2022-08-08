@@ -1,0 +1,330 @@
+[
+    {
+        "Discriminator":  "AtriaDW;",
+        "Statement":  "Join (FactTableTemp) "
+    },
+    {
+        "Discriminator":  "LOAD RentReadyTaskTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RentReadyTaskType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "if(RentReadyTaskTypeID = 1",
+        "Statement":  "\u0027Paint\u0027"
+    },
+    {
+        "Discriminator":  "if(RentReadyTaskTypeID = 2",
+        "Statement":  "\u0027Carpet\u0027"
+    },
+    {
+        "Discriminator":  "if(RentReadyTaskTypeID = 3",
+        "Statement":  "\u0027HVAC\u0027"
+    },
+    {
+        "Discriminator":  "if(RentReadyTaskTypeID = 4",
+        "Statement":  "\u0027Kitchen Appliances\u0027"
+    },
+    {
+        "Discriminator":  "if(RentReadyTaskTypeID = 5",
+        "Statement":  "\u0027Ecall\u0027"
+    },
+    {
+        "Discriminator":  "if(RentReadyTaskTypeID = 6",
+        "Statement":  "\u0027Apartment Cleaned\u0027"
+    },
+    {
+        "Discriminator":  "if(RentReadyTaskTypeID = 7",
+        "Statement":  "\u0027Belongings Removed\u0027"
+    },
+    {
+        "Discriminator":  "TaskOrder;SQL SELECT RentReadyTaskTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RentReadyTaskType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ActiveFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "TaskOrder",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData.INV.luRentReadyTaskType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Where ActiveFlg =1 \"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AtriaDW;",
+        "Statement":  "Left Join (FactTableTemp)"
+    },
+    {
+        "Discriminator":  "LOAD",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RoomRentReadyTaskID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RentReadyTaskTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ProductInventoryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     EffectiveDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     TaskNote",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     CreateBy",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     CreateDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     ModifyBy",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     ModifyDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ActiveFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     ApplicationID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     TurnID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DueDate;SQL SELECT RoomRentReadyTaskID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RentReadyTaskTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ProductInventoryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "EffectiveDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "TaskNote",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CreateBy",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CreateDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ModifyBy",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ModifyDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ActiveFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ApplicationID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "TurnID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DueDate",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData.INV.tblRoomRentReadyTask",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AtriaDW;",
+        "Statement":  "Left Join (FactTableTemp)"
+    },
+    {
+        "Discriminator":  "LOAD ProductInventoryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Date(Floor(ExpectedReadyDate)) as ExpectedReadyDate",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RoomReadyNote",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "IF(LEN(TRIM(RoomReadyNote))\u003e0",
+        "Statement":  "\u0027Yes\u0027"
+    },
+    {
+        "Discriminator":  "Where NoteRank=1;SQL SELECT ProductInventoryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ExpectedReadyDate",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RoomReadyNote",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RANK() OVER (Partition By ProductInventoryID ORDER BY CreateDT DESC",
+        "Statement":  "ModifyDT DESC) as NoteRank"
+    },
+    {
+        "Discriminator":  "FROM BusinessData.INV.tblProductExpectedReady\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AtriaDW;",
+        "Statement":  "SQL SELECT ProductInventoryID,"
+    },
+    {
+        "Discriminator":  "ExpectedReadyDate",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RoomReadyNote",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RANK() OVER (Partition By ProductInventoryID ORDER BY CreateDT DESC",
+        "Statement":  "ModifyDT DESC) as NoteRank"
+    },
+    {
+        "Discriminator":  "FROM BusinessData.INV.tblProductExpectedReady\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AtriaDW;",
+        "Statement":  "SQL SELECT RentReadyTaskTypeID,"
+    },
+    {
+        "Discriminator":  "RentReadyTaskType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ActiveFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "TaskOrder",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData.INV.luRentReadyTaskType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Where ActiveFlg =1 \"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AtriaDW;",
+        "Statement":  "SQL SELECT RoomRentReadyTaskID,"
+    },
+    {
+        "Discriminator":  "RentReadyTaskTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ProductInventoryID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "EffectiveDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "TaskNote",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CreateBy",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CreateDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ModifyBy",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ModifyDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ActiveFlg",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "ApplicationID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "TurnID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "DueDate",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM BusinessData.INV.tblRoomRentReadyTask",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT FactTableTemp;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\qlik.atriacom.com\\datashare\\qvd transform\\qvd_transform_mstrcommunity.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\qlik.atriacom.com\\datashare\\qvd transform\\qvd_transform_mstrproductinventory.qvd;",
+        "Statement":  null
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "QsdaVersion":  "2.1.0",
+        "MetaId":  "4068",
+        "Name":  "FactTable",
+        "NoOfRows":  "347326",
+        "NoOfFields":  "26",
+        "KeyCount":  "1",
+        "NonKeyUseCount":  "122",
+        "IsIsland":  "False",
+        "IsDirectDiscovery":  "False",
+        "Comment":  "",
+        "IsSynthetic":  "False",
+        "IsLoose":  "False",
+        "RowPointerBits":  "162",
+        "TotalBytes":  "7033352"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "MetaId":  "4067",
+        "Name":  "mstrCommunity",
+        "NoOfRows":  "408",
+        "NoOfFields":  "34",
+        "KeyCount":  "1",
+        "NonKeyUseCount":  "38",
+        "IsIsland":  "False",
+        "IsDirectDiscovery":  "False",
+        "Comment":  "",
+        "IsSynthetic":  "False",
+        "IsLoose":  "False",
+        "RowPointerBits":  "202",
+        "TotalBytes":  "10302"
+    }
+]

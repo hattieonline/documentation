@@ -1,0 +1,52 @@
+[
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "NsFkyr",
+        "Name":  "Details",
+        "Description":  "",
+        "Rank":  "17",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "d93f30e6-a73c-4111-b463-b4101c39858d",
+        "Name":  "Not Qualified",
+        "Description":  "",
+        "Rank":  "14.5",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "6db029cb-5a8e-40ac-8f34-27c5e585f38c",
+        "Name":  "Lost to Competitor",
+        "Description":  "",
+        "Rank":  "16.5",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "3706ab3a-9164-402b-98ae-bb93396a43f5",
+        "Name":  "Trend Analysis",
+        "Description":  "",
+        "Rank":  "12.5",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "42e9c71b-973e-4594-b91a-9ec0ae40449d",
+        "Name":  "Year over Year Metrics",
+        "Description":  "",
+        "Rank":  "-2.8703594",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    }
+]

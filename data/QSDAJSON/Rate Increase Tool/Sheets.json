@@ -1,0 +1,32 @@
+[
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "c8428024-6bdd-4ecf-b04e-552154baaf74",
+        "Name":  "Rate Increase Outlook",
+        "Description":  "",
+        "Rank":  "5",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "138a2da4-0f99-4117-95fe-3580995efef1",
+        "Name":  "Rate Increase Leaderboard",
+        "Description":  "",
+        "Rank":  "4",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "9fa066c0-b973-4e3b-bd50-ff17bccc1aef",
+        "Name":  "Resident Level Detail",
+        "Description":  "",
+        "Rank":  "6",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    }
+]

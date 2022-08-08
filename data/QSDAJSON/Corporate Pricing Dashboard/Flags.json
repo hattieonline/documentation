@@ -1,0 +1,702 @@
+[
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MissingKeyValue",
+        "Category":  "Quality",
+        "Label":  "Missing Key value",
+        "Description":  "\"TableField: mstrCommunity; %CommunityKey\" is a Primary Key with a subset ratio of less than 100%.  This indicates a likely missing Dimension value.",
+        "Impact":  "0",
+        "RefObjectType":  "TableFieldMeta",
+        "RefMetaId":  "5700"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MissingKeyValue",
+        "Category":  "Quality",
+        "Label":  "Missing Key value",
+        "Description":  "\"TableField: dimdate; %DateKey\" is a Primary Key with a subset ratio of less than 100%.  This indicates a likely missing Dimension value.",
+        "Impact":  "0",
+        "RefObjectType":  "TableFieldMeta",
+        "RefMetaId":  "5799"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"COMMUNITYNUMBER\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 7,039 bytes.",
+        "Impact":  "7039",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4746"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Brand\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 277 bytes.",
+        "Impact":  "277",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4750"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Portfolio\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 226 bytes.",
+        "Impact":  "226",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4753"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Division\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 341 bytes.",
+        "Impact":  "341",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4756"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Region\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 1,184 bytes.",
+        "Impact":  "1184",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4768"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"RSM\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 368 bytes.",
+        "Impact":  "368",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4777"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"OperationCluster\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 505 bytes.",
+        "Impact":  "505",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4780"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Cluster/Community\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 8,711 bytes.",
+        "Impact":  "8711",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4785"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Tier\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 139 bytes.",
+        "Impact":  "139",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4793"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Owner\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 547 bytes.",
+        "Impact":  "547",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4798"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"CommunityState\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 777 bytes.",
+        "Impact":  "777",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4801"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"CommunityCountry\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 123 bytes.",
+        "Impact":  "123",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4803"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"CompetitorID\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 10,719,410 bytes.",
+        "Impact":  "10719410",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4815"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"CareTypeCode\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 1,945,969 bytes.",
+        "Impact":  "1945969",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4822"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Organization\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 11,741,706 bytes.",
+        "Impact":  "11741706",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4836"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"OrganizationType\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 1,945,981 bytes.",
+        "Impact":  "1945981",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4842"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"B2B Location\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 11,736,193 bytes.",
+        "Impact":  "11736193",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4844"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"RoomTypeStyle\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 2,919,027 bytes.",
+        "Impact":  "2919027",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4848"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"factCompetitorToPriceByCareByRoomTypeStyleID\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 14,887,296 bytes.",
+        "Impact":  "14887296",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4854"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"PriceBaseEnd\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 10,717,790 bytes.",
+        "Impact":  "10717790",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4864"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"UnitCapacity\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 7,785,575 bytes.",
+        "Impact":  "7785575",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4867"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"%OrganizationID\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 11,708,148 bytes.",
+        "Impact":  "11708148",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4869"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Inquirer Dashboard\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 70,842,892 bytes.",
+        "Impact":  "70842892",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4871"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"LostInquiryID\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 18,776,885 bytes.",
+        "Impact":  "18776885",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4876"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"DateOfInquiry\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 10,713,299 bytes.",
+        "Impact":  "10713299",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4878"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"InquiryName\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 27,614,945 bytes.",
+        "Impact":  "27614945",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4881"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"ReferralBucket\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 3,892,048 bytes.",
+        "Impact":  "3892048",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4890"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"LostCategory\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 5,838,714 bytes.",
+        "Impact":  "5838714",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4986"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"LostLocation\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 11,771,111 bytes.",
+        "Impact":  "11771111",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4987"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"LostInfluence\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 3,892,090 bytes.",
+        "Impact":  "3892090",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4988"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"LostCustomerID\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 18,795,551 bytes.",
+        "Impact":  "18795551",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4989"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"InquiryNote\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 24,290,658 bytes.",
+        "Impact":  "24290658",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4990"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"ContactJournalID\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4996"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"VisitDate\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4999"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Objective\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5001"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"VisitNote\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5002"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"FactType\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 3,891,981 bytes.",
+        "Impact":  "3891981",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5003"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"MoveInDate\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 8,760,238 bytes.",
+        "Impact":  "8760238",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5004"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"%CustomerIDKey\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 25,955,858 bytes.",
+        "Impact":  "25955858",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5005"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"RoomNote\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 10,760,574 bytes.",
+        "Impact":  "10760574",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5017"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"ARMDashboard\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 15,314,821 bytes.",
+        "Impact":  "15314821",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5028"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"M_EOMOccPercent\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 10,720,445 bytes.",
+        "Impact":  "10720445",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5037"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"InquiryDate\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 11,709,579 bytes.",
+        "Impact":  "11709579",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5046"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"CompetitorRate\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 7,785,548 bytes.",
+        "Impact":  "7785548",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5263"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"JournalTypeCategory\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 2,919,043 bytes.",
+        "Impact":  "2919043",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5355"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"JournalClosedDt\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 10,714,172 bytes.",
+        "Impact":  "10714172",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5360"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"JournalStatusChangeReason\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 1,945,977 bytes.",
+        "Impact":  "1945977",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5365"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"PlannedTourFlg\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 1,945,944 bytes.",
+        "Impact":  "1945944",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5369"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"TelephoneCallFlg\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 1,945,944 bytes.",
+        "Impact":  "1945944",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5372"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"ProductInventoryRoomNumber\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 124,535 bytes.",
+        "Impact":  "124535",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5373"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"ContactJournalID\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4996"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"VisitDate\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "4999"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"Objective\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5001"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"VisitNote\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5002"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MasterMeasDuplicateLabel",
+        "Category":  "Practice",
+        "Label":  "Master Measure Duplicate Label",
+        "Description":  "Two or more Master Measures share the same Name but contain different definitions. This is likely to cause confusion and ambiguity.  The Measures are: \"-, -\"",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "5470"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Expression Syntax Error",
+        "Description":  "The expression failed validation. The error is:\\n Bad field name(s) \"M_RateTarget\" .",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "5878"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Expression Syntax Error",
+        "Description":  "The expression failed validation. The error is:\\n Garbage after expression: \u0027Studio\u0027.",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "6062"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Expression Syntax Error",
+        "Description":  "The expression failed validation. The error is:\\n Garbage after expression: \u0027Studio\u0027.",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "6080"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Expression Syntax Error",
+        "Description":  "The expression failed validation. The error is:\\n Garbage after expression: \u0027Studio\u0027.",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "6084"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Expression Syntax Error",
+        "Description":  "The expression failed validation. The error is:\\n Garbage after expression: \u0027Studio\u0027.",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "6088"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MissingExtension",
+        "Category":  "Quality",
+        "Label":  "Missing Extension",
+        "Description":  "The Extension named \"ecraft-kpi\"  is missing for visualization \"Viz: ecraft-kpi /  (Sheet:Pricing Review ??? By Room Type) (Id:139239e5-a0b0-4758-8fbc-b839a4ee8fe4)\".",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectMeta",
+        "RefMetaId":  "6231"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MissingExtension",
+        "Category":  "Quality",
+        "Label":  "Missing Extension",
+        "Description":  "The Extension named \"ecraft-kpi\"  is missing for visualization \"Viz: ecraft-kpi /  (Sheet:Pricing Review ??? By Room Type) (Id:3561c430-368a-401f-9e8b-27ec98342bfd)\".",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectMeta",
+        "RefMetaId":  "6232"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MissingExtension",
+        "Category":  "Quality",
+        "Label":  "Missing Extension",
+        "Description":  "The Extension named \"ecraft-kpi\"  is missing for visualization \"Viz: ecraft-kpi /  (Sheet:Pricing Review ??? By Room Type) (Id:772e98e4-8eb8-4d36-8495-d7a7f2a21e22)\".",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectMeta",
+        "RefMetaId":  "6233"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MissingExtension",
+        "Category":  "Quality",
+        "Label":  "Missing Extension",
+        "Description":  "The Extension named \"ecraft-kpi\"  is missing for visualization \"Viz: ecraft-kpi /  (Sheet:Pricing Review ??? By Room Type) (Id:8059e88d-91f4-48f8-a6a4-561010c15dab)\".",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectMeta",
+        "RefMetaId":  "6235"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MissingExtension",
+        "Category":  "Quality",
+        "Label":  "Missing Extension",
+        "Description":  "The Extension named \"ecraft-kpi\"  is missing for visualization \"Viz: ecraft-kpi /  (Sheet:Pricing Review ??? By Room Type) (Id:c2707bb5-3bb9-4988-a6e4-246fe4cdef21)\".",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectMeta",
+        "RefMetaId":  "6236"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MissingExtension",
+        "Category":  "Quality",
+        "Label":  "Missing Extension",
+        "Description":  "The Extension named \"ecraft-kpi\"  is missing for visualization \"Viz: ecraft-kpi /  (Sheet:Pricing Review ??? By Room Type) (Id:c23f9def-33c8-4d95-9764-a5a8211b2ada)\".",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectMeta",
+        "RefMetaId":  "6239"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MissingExtension",
+        "Category":  "Quality",
+        "Label":  "Missing Extension",
+        "Description":  "The Extension named \"ecraft-kpi\"  is missing for visualization \"Viz: ecraft-kpi /  (Sheet:Pricing Review ??? By Room Type) (Id:ba9b7c41-1f3f-4dc4-b85a-1d94c1cdeeb2)\".",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectMeta",
+        "RefMetaId":  "6240"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MissingExtension",
+        "Category":  "Quality",
+        "Label":  "Missing Extension",
+        "Description":  "The Extension named \"ecraft-kpi\"  is missing for visualization \"Viz: ecraft-kpi /  (Sheet:Pricing Review ??? By Room Type) (Id:05c53c5d-b4eb-4d08-bec8-974845581649)\".",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectMeta",
+        "RefMetaId":  "6241"
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "Discriminator":  "AUTOGENERATE;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT JoinTable;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT fact_QE;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_dimdate.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_factcommunitytripdetailwithtype.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_factcommunitytripreport.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_factcommunitytripreportpoc.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_mstrcommunity.qvd;",
+        "Statement":  null
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "da0bdef6-1fea-47da-ab1b-75eaafc6bd8d",
+        "Name":  "Room Turn Task Summary",
+        "Description":  "",
+        "Rank":  "-0.5",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "eaaecf9b-553c-4266-a076-2e8e6a27490b",
+        "Name":  "Not Rent Ready Details",
+        "Description":  "",
+        "Rank":  "0",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "fbefb107-021e-40d6-bbfe-214c804edb84",
+        "Name":  "Room Turn Summary",
+        "Description":  "",
+        "Rank":  "-1",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    }
+]

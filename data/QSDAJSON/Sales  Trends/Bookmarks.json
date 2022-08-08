@@ -1,0 +1,112 @@
+[
+    {
+        "QsdaVersion":  "2.1.0",
+        "MetaId":  "12956",
+        "Id":  "ad06e782-6340-4d44-98e0-1dbd1d312a30",
+        "Title":  "Blitz List 8 - Potential Low Income Residents",
+        "SelectionFields":  "PotentialLowIncome, =If( NOT (Match(Status,\u0027Deceased\u0027,\u0027Deceased - Inquiry\u0027,\u0027Not Qualified\u0027,\u0027Moved In\u0027,\u0027Moved Back\u0027)),\u0027Yes\u0027,\u0027No\u0027)",
+        "CreationDate":  "11/25/2020 04:41:01",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "MetaId":  "12957",
+        "Id":  "b81be6d1-fdef-4c97-9070-3c4577bb6ac6",
+        "Title":  "Blitz List 2 - Assessed but Not Moved In",
+        "SelectionFields":  "ResidentAssessmentFlg, =If(IsNull(MoveInDate),\u0027No Move In\u0027), =If( NOT (Match(Status,\u0027Deceased\u0027,\u0027Deceased - Inquiry\u0027,\u0027Moved Back\u0027,\u0027Moved In\u0027,\u0027Moved Out\u0027,\u0027Not Qualified\u0027,\u0027Reserved\u0027)),\u0027Yes\u0027,\u0027No\u0027)",
+        "CreationDate":  "06/11/2019 19:25:54",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "MetaId":  "12958",
+        "Id":  "bd08f714-a7e0-4ba4-9a1d-699bc1fa76d3",
+        "Title":  "Blitz List 1 - Previously Deposited but Not Moved In",
+        "SelectionFields":  "PreviouslyDepositedFlg, =If(IsNull(MoveInDate),\u0027No Move In\u0027), =If( NOT (Match(Status,\u0027Deceased\u0027,\u0027Deceased - Inquiry\u0027,\u0027Moved Back\u0027,\u0027Moved In\u0027,\u0027Moved Out\u0027,\u0027Not Qualified\u0027,\u0027Reserved\u0027)),\u0027Yes\u0027,\u0027No\u0027)",
+        "CreationDate":  "06/10/2019 13:29:47",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "MetaId":  "12959",
+        "Id":  "db4b8be8-565a-4b00-8aa3-c163c4dc7137",
+        "Title":  "Blitz List 5 - Moved to Future Prospect in the last 6 monts",
+        "SelectionFields":  "Status, =If(Date(Floor(InquiryStatusDate))\u003e=Date(Floor(Today()-180)),1,0)",
+        "CreationDate":  "04/10/2020 21:21:57",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "MetaId":  "12960",
+        "Id":  "ed87da5b-68af-49a9-a75f-3b9d688886d3",
+        "Title":  "Blitz List 9 - Previously Deposited without Email Activity over the last 30 days",
+        "SelectionFields":  "PreviouslyDepositedFlg, T30EmailFlg",
+        "CreationDate":  "11/25/2020 04:41:45",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "MetaId":  "12961",
+        "Id":  "f9d246d0-6169-4e4d-aea2-7f0ad9d34a41",
+        "Title":  "Blitz List 6 - Chose a Competitor in the last 12 months",
+        "SelectionFields":  "Status, LostCategory, =If(Date(Floor(InquiryStatusDate))\u003e=Date(Floor(Today()-365)),1,0)",
+        "CreationDate":  "07/24/2020 19:27:58",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "MetaId":  "12962",
+        "Id":  "465337ff-e3a3-46fb-8ece-b7635cd37730",
+        "Title":  "Blitz List 7 - Previous Respites Who Did Not Convert",
+        "SelectionFields":  "Status, FormerRespiteFlg",
+        "CreationDate":  "11/25/2020 04:39:57",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "MetaId":  "12963",
+        "Id":  "b8dde805-13c7-48fe-aa08-576dfee7fdcb",
+        "Title":  "Blitz List 3 - Toured T90",
+        "SelectionFields":  "ActiveCRMStatus, T90TourFlg, =If( NOT (Match(lastStep,\u0027Scheduled Tour\u0027,\u0027Unscheduled Tour\u0027,\u0027Virtual Tour\u0027)) and Date(Floor(LastStepDate))\u003e=Date(Floor(Today()-90)),1,0)",
+        "CreationDate":  "04/10/2020 21:19:17",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "MetaId":  "12964",
+        "Id":  "0cb5fe98-c864-4370-82d0-14cbd9cb1346",
+        "Title":  "Active Leads \u003e 9 Years",
+        "SelectionFields":  "ActiveCRMStatus, =If(Interval(Today()-%DateKey,\u0027D\u0027)/365\u003e9,\u0027Yes\u0027,\u0027No\u0027)",
+        "CreationDate":  "11/25/2020 04:42:13",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "MetaId":  "12965",
+        "Id":  "49b86157-82f0-4f7a-8bf1-cba390397f15",
+        "Title":  "Blitz List 4 - Toured Previously without Contact in 6 months",
+        "SelectionFields":  "ActiveCRMStatus, =If( NOT (IsNull(InitialTourDate)),\u0027Yes\u0027,\u0027No\u0027), =If(LastStepDate\u003cDate(Today()-180) or IsNull(LastStepDate),1,0)",
+        "CreationDate":  "04/10/2020 21:20:02",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    }
+]

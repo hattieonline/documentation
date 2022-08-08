@@ -1,102 +1,6 @@
 [
     {
-        "App":  "Atria-Extract",
-        "Type":  "measure",
-        "Label":  "Completed Initial Tours",
-        "LabelExpression":  null,
-        "Description":  "Completed Initial Tours excluding Atria Home Care.\nPlease note, it includes Not Qualified Tours",
-        "Expression":  "Count({\u003c%CommunityKey-={10163},JournalType={\u0027Scheduled Tour\u0027,\u0027Unscheduled Tour\u0027},JournalClosedFlg={\u00271\u0027},Sequence={\u00271\u0027}\u003e}distinct([%CustomerIDKey]))"
-    },
-    {
-        "App":  "Atria-Extract",
-        "Type":  "measure",
-        "Label":  "Current Month Unit Move Ins",
-        "LabelExpression":  null,
-        "Description":  "Excludes Home Care",
-        "Expression":  "Sum({\u003c%CommunityKey-={10163},[%DateKey]={\u0027\u003e=$(=monthstart(today()))\u0027}\u003e}[M_UnitMoveIns])"
-    },
-    {
-        "App":  "Atria-Extract",
-        "Type":  "measure",
-        "Label":  "Today\u0027s Unit Occupancy",
-        "LabelExpression":  null,
-        "Description":  "Excludes home care, and inactive communities",
-        "Expression":  "sum({\u003c[%CommunityKey]-={10163,10660,10683,10861},[%DateKey]={\u0027\u003e=$(=monthstart(today()))\u0027}\u003e}[M_EOMActual])/\nsum({\u003c[%CommunityKey]-={10163,10660,10683,10861},[%DateKey]={\u0027\u003e=$(=monthstart(today()))\u0027}\u003e}[M_EOMCapacity])"
-    },
-    {
-        "App":  "Atria-Extract",
-        "Type":  "measure",
-        "Label":  "Inquiry To Tour Conversion",
-        "LabelExpression":  null,
-        "Description":  "Initial Tours to Inquiry Conversion\nDoes not include Not Qualified Inquries\nIncludes not Qualified Tours",
-        "Expression":  "Count({\u003c%CommunityKey-={10163},JournalType={\u0027Scheduled Tour\u0027,\u0027Unscheduled Tour\u0027},JournalClosedFlg={\u00271\u0027},Sequence={\u00271\u0027}\u003e}distinct([%CustomerIDKey]))\n/\ncount({\u003c[%CommunityKey]-={10163},Status-={\u0027Not Qualified\u0027}\u003e}InquiryStatusDate)"
-    },
-    {
-        "App":  "Atria-Extract",
-        "Type":  "measure",
-        "Label":  "Today\u0027s Vacant Rooms",
-        "LabelExpression":  null,
-        "Description":  "Excludes Home Care \u0026 Inactive Communities",
-        "Expression":  "count({\u003c[isOccupiedFlg]={0},[%CommunityKey]-={10163,10660,10683,10861},MonthYear=\u003e}[isOccupiedFlg])"
-    },
-    {
-        "App":  "Atria-Extract",
-        "Type":  "measure",
-        "Label":  "CurrentMonthRevenue",
-        "LabelExpression":  null,
-        "Description":  "",
-        "Expression":  "Sum({\u003c%CommunityKey-={10163},[%DateKey]={\u0027\u003e=$(=monthstart(today()))\u0027}\u003e}M_RevenueAtMaturity)-\nSum({\u003c%CommunityKey-={10163},[%DateKey]={\u0027\u003e=$(=monthstart(today()))\u0027},MoveOutDate=-{\u0027\u0027},DayOfResidence-={\u002730\u0027}\u003e}M_RevenueAtMaturity)"
-    },
-    {
-        "App":  "Atria-Extract",
-        "Type":  "measure",
-        "Label":  "Current Week Initial Tours",
-        "LabelExpression":  null,
-        "Description":  "Last 7 days of initial tours that are open or closed",
-        "Expression":  "Count({\u003c%CommunityKey-={10163},[%DateKey]={\"\u003e=$(=Date(today()-7))\"},JournalType={\u0027Scheduled Tour\u0027,\u0027Unscheduled Tour\u0027},Sequence={\u00271\u0027}\u003e}distinct([%CustomerIDKey]))"
-    },
-    {
-        "App":  "Atria-Extract",
-        "Type":  "dimension",
-        "Label":  "RSM",
-        "LabelExpression":  "RSM",
-        "Description":  "",
-        "Expression":  "RSM"
-    },
-    {
-        "App":  "Atria-Extract",
-        "Type":  "dimension",
-        "Label":  "RVP",
-        "LabelExpression":  "RVP",
-        "Description":  "",
-        "Expression":  "RVP"
-    },
-    {
-        "App":  "Atria-Extract",
-        "Type":  "dimension",
-        "Label":  "Community",
-        "LabelExpression":  "Community",
-        "Description":  "Combines Woodlands  \u0026 Setauket",
-        "Expression":  "CampusName"
-    },
-    {
-        "App":  "Atria-Extract",
-        "Type":  "dimension",
-        "Label":  "SVP",
-        "LabelExpression":  "SVP",
-        "Description":  "",
-        "Expression":  "SVP"
-    },
-    {
-        "App":  "Atria-Extract",
-        "Type":  "dimension",
-        "Label":  "Svc",
-        "LabelExpression":  "Svc",
-        "Description":  "Abridged format for CareType",
-        "Expression":  "=if(match(CareType,\u0027Assisted Living\u0027),\u0027AL\u0027,if(match(CareType,\u0027Independent Living\u0027),\u0027IL\u0027,if(match(CareType,\u0027Memory Care\u0027),\u0027LG\u0027,\u0027\u0027)))"
-    },
-    {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Expense Ops Plan (remaining year) - Nonexcluded",
         "LabelExpression":  null,
@@ -104,7 +8,7 @@
         "Expression":  "IF(Month(Today()) \u003c\u003e 1, //For January, just do total prior year actuals. After January, do YTD actual + current month and remaining year Ops\r\n\tSUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AILOPEX\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(Monthstart(Today())))\u003c=$(=Date(YearEnd(Today())))\"}, ExcludeBonusFlg-={\u00271\u0027}\u003e}Amount)\n    -\n    SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027SUBAILOPEX\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(Monthstart(Today())))\u003c=$(=Date(YearEnd(Today())))\"}, ExcludeBonusFlg-={\u00271\u0027}\u003e}Amount),\n    0\n)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Expense Ops Plan (Current Year) - Nonexcluded",
         "LabelExpression":  null,
@@ -112,7 +16,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AILOPEX\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(Yearstart(MonthStart(Today(),-1))))\u003c=$(=Date(YearEnd(MonthStart(Today(),-1))))\"}, ExcludeBonusFlg-={\u00271\u0027}\u003e}Amount)\r\n-\nSUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027SUBAILOPEX\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(Yearstart(MonthStart(Today(),-1))))\u003c=$(=Date(YearEnd(MonthStart(Today(),-1))))\"}, ExcludeBonusFlg-={\u00271\u0027}\u003e}Amount)\n"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Expense Ops Plan (remaining year) - ARUS",
         "LabelExpression":  null,
@@ -120,7 +24,7 @@
         "Expression":  "IF(Month(Today()) \u003c\u003e 1, //For January, just do total prior year actuals. After January, do YTD actual + current month and remaining year Ops\r\n\tSUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AILOPEX\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(Monthstart(Today())))\u003c=$(=Date(YearEnd(Today())))\"}, Division={\u0027Atria Retirement United States\u0027}\u003e}Amount)\n    -\n    SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027SUBAILOPEX\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(Monthstart(Today())))\u003c=$(=Date(YearEnd(Today())))\"}, Division={\u0027Atria Retirement United States\u0027}\u003e}Amount),\n    0\n)\n"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Bonusable NOI Ops Plan (remaining year) - Nonexcluded",
         "LabelExpression":  null,
@@ -128,7 +32,7 @@
         "Expression":  "IF(Month(Today()) \u003c\u003e 1, //For January, just do total prior year actuals. After January, do YTD actual + current month and remaining year Ops\r\n\tSUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027EBITDARM\u0027,\u0027CRISIS\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(Monthstart(Today())))\u003c=$(=Date(YearEnd(Today())))\"}, ExcludeBonusFlg-={\u00271\u0027}\u003e}Amount),\n    0\n)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Crisis Response Ops Plan (remaining year) - ARUS",
         "LabelExpression":  null,
@@ -136,7 +40,7 @@
         "Expression":  "IF(Month(Today()) \u003c\u003e 1, //For January, just do total prior year actuals. After January, do YTD actual + current month and remaining year Ops\r\n   \tSUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027CRISIS\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(Monthstart(Today())))\u003c=$(=Date(YearEnd(Today())))\"}, Division={\u0027Atria Retirement United States\u0027}\u003e}Amount),\n    0\n)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "NOI Ops Plan (remaining year) - ARUS",
         "LabelExpression":  null,
@@ -144,7 +48,7 @@
         "Expression":  "IF(Month(Today()) \u003c\u003e 1, //For January, just do total prior year actuals. After January, do YTD actual + current month and remaining year Ops\r\n   \tSUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027EBITDARM\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(Monthstart(Today())))\u003c=$(=Date(YearEnd(Today())))\"}, Division={\u0027Atria Retirement United States\u0027}\u003e}Amount),\n    0\n)\n"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Bonusable NOI Ops Plan (Current Year) - ARUS",
         "LabelExpression":  null,
@@ -152,7 +56,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027EBITDARM\u0027,\u0027CRISIS\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(vNOIStartARUS)\u003c=$(=Date(YearEnd(MonthStart(Today(),-1))))\"}, Division={\u0027Atria Retirement United States\u0027}\u003e}Amount)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Crisis Response Ops Plan (Current Year) - Nonexcluded",
         "LabelExpression":  null,
@@ -160,7 +64,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027CRISIS\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(Yearstart(MonthStart(Today(),-1))))\u003c=$(=Date(YearEnd(MonthStart(Today(),-1))))\"}, ExcludeBonusFlg-={\u00271\u0027}\u003e}Amount)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Expense Ops Plan (Current Year) - ARUS",
         "LabelExpression":  null,
@@ -168,7 +72,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AILOPEX\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(vNOIStartARUS)\u003c=$(=Date(YearEnd(MonthStart(Today(),-1))))\"}, Division={\u0027Atria Retirement United States\u0027}\u003e}Amount)\r\n-\nSUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027SUBAILOPEX\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(vNOIStartARUS)\u003c=$(=Date(YearEnd(MonthStart(Today(),-1))))\"}, Division={\u0027Atria Retirement United States\u0027}\u003e}Amount)\n"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Revenue Ops Plan (remaining year) - ARUS",
         "LabelExpression":  null,
@@ -176,7 +80,7 @@
         "Expression":  "IF(Month(Today()) \u003c\u003e 1, //For January, just do total prior year actuals. After January, do YTD actual + current month and remaining year Ops\r\n\tSUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AILREV\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(Monthstart(Today())))\u003c=$(=Date(YearEnd(Today())))\"}, Division={\u0027Atria Retirement United States\u0027}\u003e}Amount),\n    0\n)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "NOI Ops Plan (Current Year) - Nonexcluded",
         "LabelExpression":  null,
@@ -184,7 +88,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027EBITDARM\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(MonthStart(Today(),-1))))\u003c=$(=Date(YearEnd(MonthStart(Today(),-1))))\"}, ExcludeBonusFlg-={\u00271\u0027}\u003e}Amount)\r\n"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "NOI Actual (Full YTD) - ARUS",
         "LabelExpression":  "=\u0027NOI\u0027",
@@ -192,7 +96,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027EBITDARM\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(=Date(Yearstart(MonthStart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}, Division={\u0027Atria Retirement United States\u0027}\u003e}Amount)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "NOI Ops Plan (Current Year) - ARUS",
         "LabelExpression":  null,
@@ -200,7 +104,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027EBITDARM\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(vNOIStartARUS)\u003c=$(=Date(YearEnd(MonthStart(Today(),-1))))\"}, Division={\u0027Atria Retirement United States\u0027}\u003e}Amount)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "NOI Actual (Prior Month) - ARUS",
         "LabelExpression":  null,
@@ -208,7 +112,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027EBITDARM\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(=Date(Monthstart(Today(),-1)))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}, Division={\u0027Atria Retirement United States\u0027}\u003e}Amount)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Revenue Ops Plan (remaining year) - Nonexcluded",
         "LabelExpression":  null,
@@ -216,7 +120,7 @@
         "Expression":  "IF(Month(Today()) \u003c\u003e 1, //For January, just do total prior year actuals. After January, do YTD actual + current month and remaining year Ops\r\n\tSUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AILREV\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(Monthstart(Today())))\u003c=$(=Date(YearEnd(Today())))\"}, ExcludeBonusFlg-={\u00271\u0027}\u003e}Amount),\n    0\n)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "NOI Ops Plan (remaining year) - Nonexcluded",
         "LabelExpression":  null,
@@ -224,7 +128,7 @@
         "Expression":  "IF(Month(Today()) \u003c\u003e 1, //For January, just do total prior year actuals. After January, do YTD actual + current month and remaining year Ops\r\n\tSUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027EBITDARM\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(Monthstart(Today())))\u003c=$(=Date(YearEnd(Today())))\"}, ExcludeBonusFlg-={\u00271\u0027}\u003e}Amount),\n    0\n)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Expense Actual (YTD) - ARUS",
         "LabelExpression":  null,
@@ -232,7 +136,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AILOPEX\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(vNOIStartARUS)\u003c=$(=Date(MonthEnd(Today(),-1)))\"}, Division={\u0027Atria Retirement United States\u0027}\u003e}Amount)\r\n-\nSUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027SUBAILOPEX\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(vNOIStartARUS)\u003c=$(=Date(MonthEnd(Today(),-1)))\"}, Division={\u0027Atria Retirement United States\u0027}\u003e}Amount)\n"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "NOI Actual (YTD) - ARUS",
         "LabelExpression":  null,
@@ -240,7 +144,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027EBITDARM\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(vNOIStartARUS)\u003c=$(=Date(MonthEnd(Today(),-1)))\"}, Division={\u0027Atria Retirement United States\u0027}\u003e}Amount)\r\n"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Bonusable NOI Actual (YTD) - Nonexcluded",
         "LabelExpression":  null,
@@ -248,7 +152,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027EBITDARM\u0027,\u0027CRISIS\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(=Date(Yearstart(MonthStart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}, ExcludeBonusFlg-={\u00271\u0027}\u003e}Amount)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "$ Buffer (Success and Negotiation Only)",
         "LabelExpression":  "=\u0027$ Buffer\u0027",
@@ -256,7 +160,7 @@
         "Expression":  "(SUM({\u003c TargetRate={\"\u003e0\"}, EffectiveStatus={\u0027Success\u0027, \u0027Negotiation\u0027}, ExcludeOtherMetricsFlg={\u00271\u0027}\u003e}EffectiveRate)\r\n-\nSUM({\u003c TargetRate={\"\u003e0\"}, EffectiveStatus={\u0027Success\u0027, \u0027Negotiation\u0027}, ExcludeOtherMetricsFlg={\u00271\u0027}\u003e}TargetRate))"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "NOI Ops Plan (YTD) - ARUS",
         "LabelExpression":  null,
@@ -264,7 +168,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027EBITDARM\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(Yearstart(MonthStart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}, Division={\u0027Atria Retirement United States\u0027}\u003e}Amount)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Bonusable NOI % - ARUS",
         "LabelExpression":  null,
@@ -272,7 +176,7 @@
         "Expression":  "Floor((([Bonusable NOI Actual (YTD) - ARUS] + [Bonusable NOI Ops Plan (remaining year) - ARUS]) - [Bonusable NOI Ops Plan (Current Year) - ARUS])\r\n/Fabs([Bonusable NOI Ops Plan (Current Year) - ARUS])+1, .001)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "NOI Actual (YTD) - Nonexcluded",
         "LabelExpression":  null,
@@ -280,7 +184,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027EBITDARM\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(=Date(Yearstart(MonthStart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}, ExcludeBonusFlg-={\u00271\u0027}\u003e}Amount)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Revenue Actual (YTD) - ARUS",
         "LabelExpression":  null,
@@ -288,7 +192,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AILREV\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(vNOIStartARUS)\u003c=$(=Date(MonthEnd(Today(),-1)))\"}, Division={\u0027Atria Retirement United States\u0027}\u003e}Amount)\r\n"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Crisis Response Actual (YTD) - Nonexcluded",
         "LabelExpression":  null,
@@ -296,7 +200,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027CRISIS\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(=Date(Yearstart(MonthStart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}, ExcludeBonusFlg-={\u00271\u0027}\u003e}Amount)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "NOI Ops Plan (Full Current Year) - ARUS",
         "LabelExpression":  "=\u0027Ops Plan\u0027",
@@ -304,7 +208,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027EBITDARM\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(MonthStart(Today(),-1))))\u003c=$(=Date(YearEnd(MonthStart(Today(),-1))))\"}, Division={\u0027Atria Retirement United States\u0027}\u003e}Amount)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Expense Actual (YTD) - Nonexcluded",
         "LabelExpression":  null,
@@ -312,7 +216,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AILOPEX\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(=Date(Yearstart(MonthStart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}, ExcludeBonusFlg-={\u00271\u0027}\u003e}Amount)\r\n-\nSUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027SUBAILOPEX\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(=Date(Yearstart(MonthStart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}, ExcludeBonusFlg-={\u00271\u0027}\u003e}Amount)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Bonusable NOI Actual (YTD) - ARUS",
         "LabelExpression":  null,
@@ -320,7 +224,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027EBITDARM\u0027,\u0027CRISIS\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(vNOIStartARUS)\u003c=$(=Date(MonthEnd(Today(),-1)))\"}, Division={\u0027Atria Retirement United States\u0027}\u003e}Amount)\r\n"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "NOI Ops Plan (Prior Month) - ARUS",
         "LabelExpression":  null,
@@ -328,7 +232,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027EBITDARM\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(Monthstart(Today(),-1)))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}, Division={\u0027Atria Retirement United States\u0027}\u003e}Amount)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Occupancy Ops Plan (YTD)",
         "LabelExpression":  "=\u0027YTD Actual \u0027\r\n\u0026\nIF(vOccupancy=\u0027Units\u0027, \u0027Occupied Units\u0027,\nIF(vOccupancy=\u0027Percent\u0027, \u0027Occupancy %\u0027))",
@@ -336,7 +240,7 @@
         "Expression":  "IF(vOccupancy=\u0027Units\u0027,\r\n\tNUM([Occupied Units Ops Plan (YTD)], \u0027##,##0\u0027),\n\tIF(vOccupancy=\u0027Percent\u0027,\n\t\tNUM((AVG(AGGR(AVG({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AVEOCCUNITS\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(MonthStart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}\u003e}Amount)/\n\t\tAVG({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AVEUNITS\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(MonthStart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}\u003e}Amount), MonthYear, [%CommunityKey]))), \u0027##0.0%\u0027)\n\t)\n)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Total Unoccupied Rooms",
         "LabelExpression":  null,
@@ -344,7 +248,7 @@
         "Expression":  "Count({\u003cFactType={\u0027ProductInventory\u0027}, IsOccupiedFlg={\u00270\u0027}, ExcludeOtherMetricsFlg={\u00270\u0027}\u003e}Distinct ProductInventoryID)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Revenue Ops Plan (Current Year) - ARUS",
         "LabelExpression":  null,
@@ -352,7 +256,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AILREV\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(vNOIStartARUS)\u003c=$(=Date(YearEnd(MonthStart(Today(), -1))))\"}, Division={\u0027Atria Retirement United States\u0027}\u003e}Amount)\r\n"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Prior Year Inquiries",
         "LabelExpression":  "Year(YearStart(MonthStart(Today(),-1),-1)) \u0026 \u0027 Inquiries\u0027",
@@ -360,7 +264,7 @@
         "Expression":  "Count({\u003cFactType={\u0027Inquiries\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(MonthStart(Today(),-1),-1)))\u003c=$(=Date(YearEnd(MonthStart(Today(),-1),-1)))\"}\u003e}InquiryStatusDate)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Crisis Response Ops Plan (remaining year) - Nonexcluded",
         "LabelExpression":  null,
@@ -368,7 +272,7 @@
         "Expression":  "IF(Month(Today()) \u003c\u003e 1, //For January, just do total prior year actuals. After January, do YTD actual + current month and remaining year Ops\r\n\tSUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027CRISIS\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(Monthstart(Today())))\u003c=$(=Date(YearEnd(Today())))\"}, ExcludeBonusFlg-={\u00271\u0027}\u003e}Amount),\n    0\n)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Occupied Units Ops Plan (YTD)",
         "LabelExpression":  null,
@@ -376,7 +280,7 @@
         "Expression":  "SUM(AGGR(AVG({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AVEOCCUNITS\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(MonthStart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}\u003e}Amount), MonthYear, [%CommunityKey]))\r\n/COUNT({\u003c%DateKey={\"\u003e=$(=Date(YearStart(MonthStart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}\u003e} distinct MonthYear)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Target %",
         "LabelExpression":  "=\u0027Target %\u0027",
@@ -384,7 +288,7 @@
         "Expression":  "(SUM({\u003cTargetRate={\"\u003e0\"}, EffectiveRatePrevious={\"\u003e0\"}, EffectiveStatus={\u0027Success\u0027, \u0027Negotiation\u0027}, ExcludeOtherMetricsFlg={\u00271\u0027}\u003e}TargetRate) - SUM({\u003cTargetRate={\"\u003e0\"}, EffectiveRatePrevious={\"\u003e0\"}, EffectiveStatus={\u0027Success\u0027, \u0027Negotiation\u0027}, ExcludeOtherMetricsFlg={\u00271\u0027}\u003e}EffectiveRatePrevious))\r\n/SUM({\u003cTargetRate={\"\u003e0\"}, EffectiveRatePrevious={\"\u003e0\"}, EffectiveStatus={\u0027Success\u0027, \u0027Negotiation\u0027}, ExcludeOtherMetricsFlg={\u00271\u0027}\u003e}EffectiveRatePrevious)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Effective Rate",
         "LabelExpression":  "=\u0027Effective Rate \u0027",
@@ -392,7 +296,7 @@
         "Expression":  "SUM({\u003c TargetRate={\"\u003e0\"}, EffectiveStatus={\u0027Success\u0027, \u0027Negotiation\u0027}, ExcludeOtherMetricsFlg={\u00271\u0027}\u003e}EffectiveRate)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Revenue Ops Plan (Current Year) - Nonexcluded",
         "LabelExpression":  null,
@@ -400,7 +304,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AILREV\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(Yearstart(MonthStart(Today(), -1))))\u003c=$(=Date(YearEnd(MonthStart(Today(), -1))))\"}, ExcludeBonusFlg-={\u00271\u0027}\u003e}Amount)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Crisis Response Ops Plan (Current Year) - ARUS",
         "LabelExpression":  null,
@@ -408,7 +312,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027CRISIS\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(vNOIStartARUS)\u003c=$(=Date(YearEnd(MonthStart(Today(),-1))))\"}, Division={\u0027Atria Retirement United States\u0027}\u003e}Amount)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Revenue Ops Plan - Total",
         "LabelExpression":  "=IF(vValues=\u0027Number\u0027,\r\n\u0027Ops Plan Revenue\u0027,\nIF(vValues=\u0027PerUnit\u0027,\n\u0027Ops Plan Revenue Per Unit\u0027))",
@@ -416,7 +320,7 @@
         "Expression":  "IF(vValues=\u0027Number\u0027,\r\n(SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AILREV\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(Monthstart(Today(),-1))))\u003c=$(=Date(YearEnd(Monthstart(Today(),-1))))\"}\u003e}Amount)),\nIF(vValues=\u0027PerUnit\u0027,\n(SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AILREV\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(Monthstart(Today(),-1))))\u003c=$(=Date(YearEnd(Monthstart(Today(),-1))))\"}\u003e}Amount))\n/\nSUM(AGGR(AVG({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AVEOCCUNITS\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(Monthstart(Today(),-1))))\u003c=$(=Date(YearEnd(Monthstart(Today(),-1))))\"}\u003e}Amount), MonthYear, [%CommunityKey]))\n))"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Crisis Response Actual (YTD) - ARUS",
         "LabelExpression":  null,
@@ -424,7 +328,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027CRISIS\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(vNOIStartARUS)\u003c=$(=Date(MonthEnd(Today(),-1)))\"}, Division={\u0027Atria Retirement United States\u0027}\u003e}Amount)\r\n"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "NOI Ops Plan (Prior Month)",
         "LabelExpression":  null,
@@ -432,7 +336,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027EBITDARM\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(Monthstart(Today(),-1)))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}\u003e}Amount)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Bonusable NOI Ops Plan (remaining year) - ARUS",
         "LabelExpression":  null,
@@ -440,7 +344,7 @@
         "Expression":  "IF(Month(Today()) \u003c\u003e 1, //For January, just do total prior year actuals. After January, do YTD actual + current month and remaining year Ops\r\n\tSUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027EBITDARM\u0027,\u0027CRISIS\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(Monthstart(Today())))\u003c=$(=Date(YearEnd(Today())))\"}, Division={\u0027Atria Retirement United States\u0027}\u003e}Amount),\n    0\n)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Bonusable NOI Ops Plan (Current Year) - Nonexcluded",
         "LabelExpression":  null,
@@ -448,7 +352,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027EBITDARM\u0027,\u0027CRISIS\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(MonthStart(Today(),-1))))\u003c=$(=Date(YearEnd(MonthStart(Today(),-1))))\"}, ExcludeBonusFlg-={\u00271\u0027}\u003e}Amount)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Effective %",
         "LabelExpression":  "=\u0027Effective % \u0027",
@@ -456,7 +360,7 @@
         "Expression":  "([Effective Rate] - SUM({\u003cEffectiveStatus={\u0027Success\u0027, \u0027Negotiation\u0027}, ExcludeOtherMetricsFlg={\u00271\u0027}\u003e}EffectiveRatePrevious))\r\n/SUM({\u003cEffectiveStatus={\u0027Success\u0027, \u0027Negotiation\u0027}, ExcludeOtherMetricsFlg={\u00271\u0027}\u003e}EffectiveRatePrevious)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "$ Buffer",
         "LabelExpression":  "=\u0027$ Buffer\u0027",
@@ -464,7 +368,7 @@
         "Expression":  "(SUM({\u003c TargetRate={\"\u003e0\"}, ExcludeOtherMetricsFlg={\u00271\u0027}\u003e}EffectiveRate)\r\n-\nSUM({\u003c TargetRate={\"\u003e0\"}, ExcludeOtherMetricsFlg={\u00271\u0027}\u003e}TargetRate))"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Expenses Ops Plan",
         "LabelExpression":  "\u0027Ops Plan\u0027",
@@ -472,7 +376,7 @@
         "Expression":  "IF(vValues=\u0027Number\u0027,\r\n(SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AILOPEX\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(Monthstart(Today(),-1))))\u003c=$(=Date(YearEnd(Monthstart(Today(),-1))))\"}\u003e}Amount)-SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027SUBAILOPEX\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(Today())))\u003c=$(=Date(YearEnd(Today())))\"}\u003e}Amount)),\nIF(vValues=\u0027PerUnit\u0027,\n(SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AILOPEX\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(Monthstart(Today(),-1))))\u003c=$(=Date(YearEnd(Monthstart(Today(),-1))))\"}\u003e}Amount)-SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027SUBAILOPEX\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(Today())))\u003c=$(=Date(YearEnd(Today())))\"}\u003e}Amount))\n/\nSUM(AGGR(AVG({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AVEOCCUNITS\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(Monthstart(Today(),-1))))\u003c=$(=Date(YearEnd(Monthstart(Today(),-1))))\"}\u003e}Amount), MonthYear, [%CommunityKey]))\n))"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Rent Ready Rooms",
         "LabelExpression":  null,
@@ -480,7 +384,7 @@
         "Expression":  "Count({\u003cFactType={\u0027ProductInventory\u0027}, IsRoomReadyFlg={\u00271\u0027}, IsOccupiedFlg={\u00270\u0027}, ExcludeOtherMetricsFlg={\u00270\u0027}\u003e}Distinct ProductInventoryID)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Bonusable NOI % - Nonexcluded",
         "LabelExpression":  null,
@@ -488,7 +392,7 @@
         "Expression":  "Floor((([Bonusable NOI Actual (YTD) - Nonexcluded] + [Bonusable NOI Ops Plan (remaining year) - Nonexcluded]) - [Bonusable NOI Ops Plan (Current Year) - Nonexcluded])/Fabs([Bonusable NOI Ops Plan (Current Year) - Nonexcluded])+1, .001)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Occupied Units Actual (YTD)",
         "LabelExpression":  null,
@@ -496,7 +400,7 @@
         "Expression":  "SUM(AGGR(AVG({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AVEOCCUNITS\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(MonthStart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}\u003e}Amount), MonthYear, [%CommunityKey]))\r\n/COUNT({\u003c%DateKey={\"\u003e=$(=Date(YearStart(MonthStart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}\u003e} distinct MonthYear)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Target Rate",
         "LabelExpression":  "=\u0027Target Rate\u0027",
@@ -504,7 +408,7 @@
         "Expression":  "SUM({\u003cTargetRate={\"\u003e0\"}, EffectiveRatePrevious={\"\u003e0\"}, EffectiveStatus={\u0027Success\u0027, \u0027Negotiation\u0027}, ExcludeOtherMetricsFlg={\u00271\u0027}\u003e}TargetRate)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Revenue Actual (YTD) - Nonexcluded",
         "LabelExpression":  null,
@@ -512,7 +416,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AILREV\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(=Date(Yearstart(MonthStart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}, ExcludeBonusFlg-={\u00271\u0027}\u003e}Amount)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Rate Compliance Y2",
         "LabelExpression":  "Year(Yearstart(today(),-2))",
@@ -520,7 +424,7 @@
         "Expression":  "Count({\u003c%DateKey={\"\u003e=$(=Yearstart(today(),-2))\u003c=$(=Yearend(today(),-2))\"}, isSpecializedPayorProgramFlg-={\u00271\u0027}, ComplianceIncludeFlg={\u00271\u0027}, ComplianceCategory={\u0027Compliant\u0027}\u003e}M_MoveInRate)/\r\nCount({\u003c%DateKey={\"\u003e=$(=Yearstart(today(),-2))\u003c=$(=Yearend(today(),-2))\"}, isSpecializedPayorProgramFlg-={\u00271\u0027}, ComplianceIncludeFlg={\u00271\u0027}\u003e}M_MoveInRate)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Occupied Units Ops Plan (Current Year)",
         "LabelExpression":  null,
@@ -528,7 +432,7 @@
         "Expression":  "SUM(AGGR(AVG({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AVEOCCUNITS\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(MonthStart(Today(),-1))))\u003c=$(=Date(YearEnd(MonthStart(Today(),-1))))\"}\u003e}Amount), MonthYear, [%CommunityKey]))\r\n/COUNT({\u003c%DateKey={\"\u003e=$(=Date(YearStart(MonthStart(Today(),-1))))\u003c=$(=Date(YearEnd(MonthStart(Today(),-1))))\"}\u003e} distinct MonthYear)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Alerts Avg Response Time",
         "LabelExpression":  "=\u0027Response Time (Min)\u0027",
@@ -536,7 +440,7 @@
         "Expression":  "Avg({\u003c[Resident Device]={\u0027Resident Device\u0027}, ResponseRequired={\u0027Response Required\u0027}, EventFlg={\u0027Event\u0027}, Response={\u0027Responded\u0027}, ExcludeOtherMetricsFlg={\u00270\u0027}\u003e} ResponseTime)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Starting Rate",
         "LabelExpression":  "=\u0027Starting Rate\u0027",
@@ -544,7 +448,7 @@
         "Expression":  "SUM({\u003cEffectiveRatePrevious={\"\u003e0\"}, EffectiveStatus={\u0027Success\u0027, \u0027Negotiation\u0027}, ExcludeOtherMetricsFlg={\u00271\u0027}\u003e}EffectiveRatePrevious)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "NOI Actual (YTD)",
         "LabelExpression":  "=\u0027NOI\u0027",
@@ -552,7 +456,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027EBITDARM\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(=Date(Yearstart(MonthStart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}\u003e}Amount)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Rate Compliance Y1",
         "LabelExpression":  "Year(Yearstart(today(),-1))",
@@ -560,7 +464,7 @@
         "Expression":  "Count({\u003c%DateKey={\"\u003e=$(=Yearstart(today(),-1))\u003c=$(=Yearend(today(),-1))\"}, isSpecializedPayorProgramFlg-={\u00271\u0027}, ComplianceIncludeFlg={\u00271\u0027}, ComplianceCategory={\u0027Compliant\u0027}\u003e}M_MoveInRate)/\r\nCount({\u003c%DateKey={\"\u003e=$(=Yearstart(today(),-1))\u003c=$(=Yearend(today(),-1))\"}, isSpecializedPayorProgramFlg-={\u00271\u0027}, ComplianceIncludeFlg={\u00271\u0027}\u003e}M_MoveInRate)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Occupancy Ops Plan (Current Year)",
         "LabelExpression":  "=IF(Month(Today()) = 1, \r\n\tYear(MonthStart(Today(),-1)),\n    \u0027Current Year\u0027\n)\n\u0026\u0027 Ops Plan \u0027\n\u0026\nIF(vOccupancy=\u0027Units\u0027, \u0027Occupied Units\u0027,\nIF(vOccupancy=\u0027Percent\u0027, \u0027Occupancy %\u0027))",
@@ -568,7 +472,7 @@
         "Expression":  "IF(vOccupancy=\u0027Units\u0027,\r\nNUM([Occupied Units Ops Plan (Current Year)], \u0027###,##0\u0027),\nIF(vOccupancy=\u0027Percent\u0027,\nNUM(AVG(AGGR(AVG({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AVEOCCUNITS\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(MonthStart(Today(),-1))))\u003c=$(=Date(YearEnd(MonthStart(Today(),-1))))\"}\u003e}Amount)/\n\t\t AVG({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AVEUNITS\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(MonthStart(Today(),-1))))\u003c=$(=Date(YearEnd(MonthStart(Today(),-1))))\"}\u003e}Amount), MonthYear, [%CommunityKey])), \u0027##0.0%\u0027)\n))\n\n\n"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Occupancy Actual (YTD)",
         "LabelExpression":  "=IF(Month(Today()) = 1, \r\n\tYear(MonthStart(Today(),-1)),\n    \u0027YTD\u0027\n)\n\u0026\u0027 Actual \u0027\n\u0026\nIF(vOccupancy=\u0027Units\u0027, \u0027Occupied Units\u0027,\nIF(vOccupancy=\u0027Percent\u0027, \u0027Occupancy %\u0027))",
@@ -576,7 +480,7 @@
         "Expression":  "IF(vOccupancy=\u0027Units\u0027,\r\nNUM([Occupied Units Actual (YTD)], \u0027###,##0\u0027),\nIF(vOccupancy=\u0027Percent\u0027,\nNUM(AVG(AGGR(AVG({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AVEOCCUNITS\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(MonthStart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}\u003e}Amount)/\n\t\t AVG({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AVEUNITS\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(MonthStart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}\u003e}Amount), MonthYear, [%CommunityKey])), \u0027##0.0%\u0027)\n))\n\n\n\n\n\n"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Revenue Actual - YTD",
         "LabelExpression":  "=IF(vValues=\u0027Number\u0027,\r\n\u0027YTD Actual Revenue\u0027,\nIF(vValues=\u0027PerUnit\u0027,\n\u0027YTD Revenue Per Unit\u0027))",
@@ -584,7 +488,7 @@
         "Expression":  "IF(vValues=\u0027Number\u0027,\r\n(SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AILREV\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(Monthstart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}\u003e}Amount)),\nIF(vValues=\u0027PerUnit\u0027,\n(SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AILREV\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(Monthstart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}\u003e}Amount))\n/\nSUM(AGGR(AVG({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AVEOCCUNITS\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(Monthstart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}\u003e}Amount), MonthYear, [%CommunityKey]))\n))"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Rate Compliance Y0",
         "LabelExpression":  "Year(today())",
@@ -592,7 +496,7 @@
         "Expression":  "Count({\u003c%DateKey={\"\u003e=$(=Yearstart(today()))\u003c=$(=Yearend(today()))\"}, isSpecializedPayorProgramFlg-={\u00271\u0027}, ComplianceIncludeFlg={\u00271\u0027}, ComplianceCategory={\u0027Compliant\u0027}\u003e}M_MoveInRate)/\r\nCount({\u003c%DateKey={\"\u003e=$(=Yearstart(today()))\u003c=$(=Yearend(today()))\"}, isSpecializedPayorProgramFlg-={\u00271\u0027}, ComplianceIncludeFlg={\u00271\u0027}\u003e}M_MoveInRate)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "NOI Ops Plan (YTD)",
         "LabelExpression":  null,
@@ -600,7 +504,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027EBITDARM\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(Yearstart(MonthStart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}\u003e}Amount)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "REVPOR",
         "LabelExpression":  "\u0027Actual\u0027",
@@ -608,7 +512,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AILREV\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(MOnthstart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}\u003e}Amount)\r\n/\nSUM(AGGR(AVG({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AVEOCCUNITS\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(Monthstart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}\u003e}Amount), MonthYear, [%CommunityKey]))"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Expenses Actual - YTD",
         "LabelExpression":  "\u0027Actual\u0027",
@@ -616,7 +520,7 @@
         "Expression":  "IF(vValues=\u0027Number\u0027,\r\n(SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AILOPEX\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(Monthstart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}\u003e}Amount)\n-SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027SUBAILOPEX\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(Monthstart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}\u003e}Amount)),\nIF(vValues=\u0027PerUnit\u0027,\n(SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AILOPEX\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(Monthstart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}\u003e}Amount)\n-SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027SUBAILOPEX\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(Monthstart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}\u003e}Amount))\n/\nSUM(AGGR(AVG({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027AVEOCCUNITS\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(Monthstart(Today(),-1))))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}\u003e}Amount), MonthYear, [%CommunityKey]))\n))"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "% of Rent Ready Rooms",
         "LabelExpression":  null,
@@ -624,7 +528,7 @@
         "Expression":  "[Rent Ready Rooms] / [Total Unoccupied Rooms]"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "NOI Ops Plan (Current Year)",
         "LabelExpression":  "=\u0027Ops Plan\u0027",
@@ -632,7 +536,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027EBITDARM\u0027}, Scenario={\u0027OP_CURRENT\u0027}, %DateKey={\"\u003e=$(=Date(YearStart(MonthStart(Today(),-1))))\u003c=$(=Date(YearEnd(MonthStart(Today(),-1))))\"}\u003e}Amount)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "Alerts",
         "LabelExpression":  "=\u0027Alert Count\u0027",
@@ -640,7 +544,7 @@
         "Expression":  "Count({\u003c[Resident Device]={\u0027Resident Device\u0027}, ResponseRequired={\u0027Response Required\u0027}, EventFlg={\u0027Event\u0027}, Response={\u0027Responded\u0027}, ExcludeOtherMetricsFlg={\u00270\u0027}\u003e} UniqueCode)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "measure",
         "Label":  "NOI Actual (Prior Month)",
         "LabelExpression":  null,
@@ -648,7 +552,7 @@
         "Expression":  "SUM({\u003cFactType={\u0027OneStream\u0027}, AccountGroup={\u0027EBITDARM\u0027}, Scenario={\u0027Actual\u0027}, %DateKey={\"\u003e=$(=Date(Monthstart(Today(),-1)))\u003c=$(=Date(MonthEnd(Today(),-1)))\"}\u003e}Amount)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "MSA",
         "LabelExpression":  "MSA",
@@ -656,7 +560,7 @@
         "Expression":  "=MarketCluster"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "DSD",
         "LabelExpression":  "DSD",
@@ -664,7 +568,7 @@
         "Expression":  "RSM"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "RVP",
         "LabelExpression":  "RVP",
@@ -672,7 +576,7 @@
         "Expression":  "RVP"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "Referral Bucket",
         "LabelExpression":  "Referral Bucket",
@@ -680,7 +584,7 @@
         "Expression":  "=ReferralBucket"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "Inquiry Name",
         "LabelExpression":  "Inquiry Name",
@@ -688,7 +592,7 @@
         "Expression":  "=InquiryName"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "Portfolio",
         "LabelExpression":  "Portfolio",
@@ -696,7 +600,7 @@
         "Expression":  "=Portfolio"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "Secondary Referral Bucket",
         "LabelExpression":  "Secondary Referral Bucket",
@@ -704,7 +608,7 @@
         "Expression":  "=SecondaryReferralBucket"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "Desired Room Type",
         "LabelExpression":  "Desired Room Type",
@@ -712,7 +616,7 @@
         "Expression":  "=RoomType"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "Referral Source",
         "LabelExpression":  "Referral Source",
@@ -720,7 +624,7 @@
         "Expression":  "ReferralBucket; ReferralCategory; =Organization; ReferredBy"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "Division-\u003eCampus Name",
         "LabelExpression":  "Division-\u003eCampus Name",
@@ -728,7 +632,7 @@
         "Expression":  "Division; Region; CampusName"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "Referral Source (prior to 2016)",
         "LabelExpression":  "Referral Source (prior to 2016)",
@@ -736,7 +640,7 @@
         "Expression":  "=IF(ISNULL(ReferralBucket), \u0027Inquired prior to \u0027 \u0026 date(YearStart(Today(),-3)),\nReferralBucket); =ReferralCategory; =Organization; =ReferredBy"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "Secondary Referral Source",
         "LabelExpression":  "Secondary Referral Source",
@@ -744,7 +648,7 @@
         "Expression":  "=SecondaryOrganization"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "Cluster",
         "LabelExpression":  "Cluster",
@@ -752,7 +656,7 @@
         "Expression":  "=OperationCluster"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "View",
         "LabelExpression":  "View",
@@ -760,7 +664,7 @@
         "Expression":  "=$(=vCommunityorCreateBy)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "Community",
         "LabelExpression":  "Community",
@@ -768,7 +672,7 @@
         "Expression":  "CampusName"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "eLead?",
         "LabelExpression":  "eLead?",
@@ -776,7 +680,7 @@
         "Expression":  "=if(IsEleadFlg=1,\u0027Yes\u0027,\u0027No\u0027)"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "Move Out Reasons",
         "LabelExpression":  "Move Out Reasons",
@@ -784,7 +688,7 @@
         "Expression":  "MoveOutCategory; MoveOutReasonShort"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "SVP",
         "LabelExpression":  "SVP",
@@ -792,7 +696,7 @@
         "Expression":  "SVP"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "Brand",
         "LabelExpression":  "Brand",
@@ -800,7 +704,7 @@
         "Expression":  "=Brand"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "Organization",
         "LabelExpression":  "Organization",
@@ -808,7 +712,7 @@
         "Expression":  "Region; CampusName"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "Community\u003eResident",
         "LabelExpression":  "Community\u003eResident",
@@ -816,7 +720,7 @@
         "Expression":  "CommunityName; Resident"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "Svc Type",
         "LabelExpression":  "Svc Type",
@@ -824,7 +728,7 @@
         "Expression":  "CareType"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "Time",
         "LabelExpression":  "Time",
@@ -832,7 +736,7 @@
         "Expression":  "Year; MonthName; DayOfMonth"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "Sales Organization",
         "LabelExpression":  "Sales Organization",
@@ -840,7 +744,7 @@
         "Expression":  "RSM; CampusName"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "Sales Support",
         "LabelExpression":  "Sales Support",
@@ -848,7 +752,7 @@
         "Expression":  "VPSales"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "Inquiry Created By",
         "LabelExpression":  "Inquiry Created By",
@@ -856,7 +760,7 @@
         "Expression":  "InquiryCreateBy"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "Lost Reasons",
         "LabelExpression":  "Lost Reasons",
@@ -864,107 +768,11 @@
         "Expression":  "LostCategory; LostLocation"
     },
     {
-        "App":  "Atria-OpsCall",
+        "App":  "Atria-CommunityOperations-OpsCall",
         "Type":  "dimension",
         "Label":  "Inquiry Status",
         "LabelExpression":  "Inquiry Status",
         "Description":  "",
         "Expression":  "Status"
-    },
-    {
-        "App":  "Atria-Transform",
-        "Type":  "measure",
-        "Label":  "Completed Initial Tours",
-        "LabelExpression":  null,
-        "Description":  "Completed Initial Tours excluding Atria Home Care.\nPlease note, it includes Not Qualified Tours",
-        "Expression":  "Count({\u003c%CommunityKey-={10163},JournalType={\u0027Scheduled Tour\u0027,\u0027Unscheduled Tour\u0027},JournalClosedFlg={\u00271\u0027},Sequence={\u00271\u0027}\u003e}distinct(CustomerID))"
-    },
-    {
-        "App":  "Atria-Transform",
-        "Type":  "measure",
-        "Label":  "Current Month Unit Move Ins",
-        "LabelExpression":  null,
-        "Description":  "Excludes Home Care",
-        "Expression":  "Sum({\u003c%CommunityKey-={10163},[%DateKey]={\u0027\u003e=$(=monthstart(today()))\u0027}\u003e}[M_UnitMoveIns])"
-    },
-    {
-        "App":  "Atria-Transform",
-        "Type":  "measure",
-        "Label":  "Today\u0027s Unit Occupancy",
-        "LabelExpression":  null,
-        "Description":  "Excludes home care, and inactive communities",
-        "Expression":  "sum({\u003c[%CommunityKey]-={10163,10660,10683,10861},[%DateKey]={\u0027\u003e=$(=monthstart(today()))\u0027}\u003e}[M_EOMActual])/\nsum({\u003c[%CommunityKey]-={10163,10660,10683,10861},[%DateKey]={\u0027\u003e=$(=monthstart(today()))\u0027}\u003e}[M_EOMCapacity])"
-    },
-    {
-        "App":  "Atria-Transform",
-        "Type":  "measure",
-        "Label":  "Inquiry To Tour Conversion",
-        "LabelExpression":  null,
-        "Description":  "Initial Tours to Inquiry Conversion\nDoes not include Not Qualified Inquries\nIncludes not Qualified Tours",
-        "Expression":  "Count({\u003c%CommunityKey-={10163},JournalType={\u0027Scheduled Tour\u0027,\u0027Unscheduled Tour\u0027},JournalClosedFlg={\u00271\u0027},Sequence={\u00271\u0027}\u003e}distinct(CustomerID))\n/\ncount({\u003c[%CommunityKey]-={10163},Status-={\u0027Not Qualified\u0027}\u003e}InquiryStatusDate)"
-    },
-    {
-        "App":  "Atria-Transform",
-        "Type":  "measure",
-        "Label":  "Today\u0027s Vacant Rooms",
-        "LabelExpression":  null,
-        "Description":  "Excludes Home Care \u0026 Inactive Communities",
-        "Expression":  "count({\u003c[isOccupiedFlg]={0},[%CommunityKey]-={10163,10660,10683,10861},MonthYear=\u003e}[isOccupiedFlg])"
-    },
-    {
-        "App":  "Atria-Transform",
-        "Type":  "measure",
-        "Label":  "CurrentMonthRevenue",
-        "LabelExpression":  null,
-        "Description":  "",
-        "Expression":  "Sum({\u003c%CommunityKey-={10163},[%DateKey]={\u0027\u003e=$(=monthstart(today()))\u0027}\u003e}M_RevenueAtMaturity)-\nSum({\u003c%CommunityKey-={10163},[%DateKey]={\u0027\u003e=$(=monthstart(today()))\u0027},MoveOutDate=-{\u0027\u0027},DayOfResidence-={\u002730\u0027}\u003e}M_RevenueAtMaturity)"
-    },
-    {
-        "App":  "Atria-Transform",
-        "Type":  "measure",
-        "Label":  "Current Week Initial Tours",
-        "LabelExpression":  null,
-        "Description":  "Last 7 days of initial tours that are open or closed",
-        "Expression":  "Count({\u003c%CommunityKey-={10163},[%DateKey]={\"\u003e=$(=Date(today()-7))\"},JournalType={\u0027Scheduled Tour\u0027,\u0027Unscheduled Tour\u0027},Sequence={\u00271\u0027}\u003e}distinct(CustomerID))"
-    },
-    {
-        "App":  "Atria-Transform",
-        "Type":  "dimension",
-        "Label":  "RSM",
-        "LabelExpression":  "RSM",
-        "Description":  "",
-        "Expression":  "RSM"
-    },
-    {
-        "App":  "Atria-Transform",
-        "Type":  "dimension",
-        "Label":  "RVP",
-        "LabelExpression":  "RVP",
-        "Description":  "",
-        "Expression":  "RVP"
-    },
-    {
-        "App":  "Atria-Transform",
-        "Type":  "dimension",
-        "Label":  "Community",
-        "LabelExpression":  "Community",
-        "Description":  "Combines Woodlands  \u0026 Setauket",
-        "Expression":  "CampusName"
-    },
-    {
-        "App":  "Atria-Transform",
-        "Type":  "dimension",
-        "Label":  "SVP",
-        "LabelExpression":  "SVP",
-        "Description":  "",
-        "Expression":  "SVP"
-    },
-    {
-        "App":  "Atria-Transform",
-        "Type":  "dimension",
-        "Label":  "Svc",
-        "LabelExpression":  "Svc",
-        "Description":  "Abridged format for CareType",
-        "Expression":  "=if(match(CareType,\u0027Assisted Living\u0027),\u0027AL\u0027,if(match(CareType,\u0027Independent Living\u0027),\u0027IL\u0027,if(match(CareType,\u0027Memory Care\u0027),\u0027LG\u0027,\u0027\u0027)))"
     }
 ]

@@ -1,0 +1,52 @@
+[
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "3a3dcc9f-96c1-474c-a45c-ce958e19f415",
+        "Name":  "Database Advancements",
+        "Description":  "",
+        "Rank":  "0.875",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "d1c75f71-e25e-4740-846f-b29285b622a8",
+        "Name":  "Community Overview",
+        "Description":  "",
+        "Rank":  "-1.6875",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "dMamd",
+        "Name":  "Active Database",
+        "Description":  "",
+        "Rank":  "3",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "QRpQjPP",
+        "Name":  "Today\u0027s Snapshot",
+        "Description":  "",
+        "Rank":  "-3",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "db06cdcf-b334-45b9-9e20-9c789a1d32a2",
+        "Name":  "Database Management",
+        "Description":  "",
+        "Rank":  "-1.375",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    }
+]

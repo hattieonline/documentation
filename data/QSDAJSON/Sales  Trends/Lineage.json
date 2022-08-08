@@ -1,0 +1,58 @@
+[
+    {
+        "Discriminator":  "AUTOGENERATE;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT TempLast;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT TempNext;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT fact_Sales_Dashboard;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_dimdate.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_facteleadcreationjournalactivity.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_factinquirybyreferral.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_factrevenuebymovein.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_factunitoccupancybymonth.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_firstjournalactivity.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_journalactivity.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_lastjournalactivity.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_mstrcommunity.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_nextjournalactivity.qvd;",
+        "Statement":  null
+    }
+]

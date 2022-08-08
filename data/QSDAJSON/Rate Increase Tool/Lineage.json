@@ -1,0 +1,22 @@
+[
+    {
+        "Discriminator":  "AUTOGENERATE;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT FactTable;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_dimdate.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_mstrcommunity.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_newrateincrease.qvd;",
+        "Statement":  null
+    }
+]

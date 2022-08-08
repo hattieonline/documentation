@@ -1,0 +1,14 @@
+[
+    {
+        "Discriminator":  "{STORE - [lib://DataShare/QVD Transform\\QVD_Transform_NewRateIncrease.qvd](qvd)};",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_newrateincrease.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_rateincreasedescriptivetemp.qvd;",
+        "Statement":  null
+    }
+]

@@ -1,0 +1,11 @@
+{
+    "QsdaVersion":  "2.1.0",
+    "MetaId":  "1448",
+    "Id":  "HjgbXBm",
+    "Title":  "Open POC More Than 30 Days Old",
+    "SelectionFields":  "%DateKey, POC Status",
+    "CreationDate":  "04/19/2018 22:00:35",
+    "Published":  "True",
+    "Approved":  "True",
+    "OwnerName":  "hattie.sager"
+}

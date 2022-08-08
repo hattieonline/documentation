@@ -1,0 +1,50 @@
+[
+    {
+        "Discriminator":  "AUTOGENERATE;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT Outcome;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT fact_incident_temp;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT fact_table;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT final_flg;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT final_outcome;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT flg;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_dimdate.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd extract\\qvd_extract_mstrcustomer.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_mstrcommunity.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_mstrincident.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\use1-ms02\\datashare\\qvd transform\\qvd_transform_mstrrentroll.qvd;",
+        "Statement":  null
+    }
+]

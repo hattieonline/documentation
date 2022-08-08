@@ -1,0 +1,142 @@
+[
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "OuterJoinTables",
+        "Category":  "Performance",
+        "Label":  "Tables can be Outer Joined",
+        "Description":  "Tables \"results \u0026 final_details\" have one-to-one relationship. Consider outer joining.",
+        "Impact":  "0",
+        "RefObjectType":  "TableFieldMeta",
+        "RefMetaId":  "5317"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"original_language\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 176 bytes.",
+        "Impact":  "176",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5018"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"original_title\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 5,128 bytes.",
+        "Impact":  "5128",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5019"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"GenreID\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 615 bytes.",
+        "Impact":  "615",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5021"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"keywordID\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 23,988 bytes.",
+        "Impact":  "23988",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5023"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"homepage\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 8,690 bytes.",
+        "Impact":  "8690",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5027"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"imdb_id\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 3,410 bytes.",
+        "Impact":  "3410",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5029"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"overview\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 61,592 bytes.",
+        "Impact":  "61592",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5030"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"release_date\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5033"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"runtime\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 1,306 bytes.",
+        "Impact":  "1306",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5036"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"ReleaseYear\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 447 bytes.",
+        "Impact":  "447",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5047"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"release_date\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5033"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Expression Syntax Error",
+        "Description":  "The expression failed validation. The error is:\\n Bad field name(s) \"Expression3\" .",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "5273"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Expression Syntax Error",
+        "Description":  "The expression failed validation. The error is:\\n Bad field name(s) \"CampusName\" \"%CommunityKey\" \"CampusName\" \"SVP\" \"SVP\" \"RVP\" \"RVP\" \"Brand\" \"Brand\" \"Portfolio\" \"Portfolio\" \"MarketCluster\" \"MarketCluster\" \"OperationCluster\" \"OperationCluster\" \"Owner\" \"Owner\" .",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "5398"
+    }
+]

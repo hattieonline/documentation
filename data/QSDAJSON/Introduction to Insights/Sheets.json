@@ -1,0 +1,42 @@
+[
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "1513abfb-cc5a-46b6-8d9b-839328b947e9",
+        "Name":  "Visuals",
+        "Description":  "An introduction to data visualization, dimensions, and measures.",
+        "Rank":  "-0.5",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "c969ed36-df04-4698-9f6f-09776c67073d",
+        "Name":  "Data Interactions",
+        "Description":  "Overview of filtering and selecting your data.",
+        "Rank":  "0",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "fce0267b-b382-4b8e-bc0d-37d338fe6bcb",
+        "Name":  "Navigation",
+        "Description":  "The Hub, Apps, Sheets, and how to navigate through them.",
+        "Rank":  "-1",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "7cada742-ac8c-4c5f-9a09-6e053bfa2a39",
+        "Name":  "Chart Interactions",
+        "Description":  "Tips for making the most of Insights visualizations (details about measures, exporting data)",
+        "Rank":  "1",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    }
+]

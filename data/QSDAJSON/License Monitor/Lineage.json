@@ -1,0 +1,1282 @@
+[
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ZeroRowTable",
+        "Category":  "Resource",
+        "Label":  "0-row table",
+        "Description":  "Table \"License_LoginAccessGroups\" contains zero rows. It could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "TableMeta",
+        "RefMetaId":  "6593"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "TableFieldsUnused",
+        "Category":  "Resource",
+        "Label":  "All fields unused but keys",
+        "Description":  "None of the fields in table \"Minute_Table\" are found to be used in charts. Unless this is a link table, the table could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "TableMeta",
+        "RefMetaId":  "6601"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MissingKeyValue",
+        "Category":  "Quality",
+        "Label":  "Missing Key value",
+        "Description":  "\"TableField: CommandList; Command\" is a Primary Key with a subset ratio of less than 100%.  This indicates a likely missing Dimension value.",
+        "Impact":  "0",
+        "RefObjectType":  "TableFieldMeta",
+        "RefMetaId":  "6512"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MissingKeyValue",
+        "Category":  "Quality",
+        "Label":  "Missing Key value",
+        "Description":  "\"TableField: User; UserId\" is a Primary Key with a subset ratio of less than 100%.  This indicates a likely missing Dimension value.",
+        "Impact":  "0",
+        "RefObjectType":  "TableFieldMeta",
+        "RefMetaId":  "6533"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MissingKeyValue",
+        "Category":  "Quality",
+        "Label":  "Missing Key value",
+        "Description":  "\"TableField: App; AppId\" is a Primary Key with a subset ratio of less than 100%.  This indicates a likely missing Dimension value.",
+        "Impact":  "0",
+        "RefObjectType":  "TableFieldMeta",
+        "RefMetaId":  "6549"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MissingKeyValue",
+        "Category":  "Quality",
+        "Label":  "Missing Key value",
+        "Description":  "\"TableField: allocationUser; UserId\" is a Primary Key with a subset ratio of less than 100%.  This indicates a likely missing Dimension value.",
+        "Impact":  "0",
+        "RefObjectType":  "TableFieldMeta",
+        "RefMetaId":  "6586"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MissingKeyValue",
+        "Category":  "Quality",
+        "Label":  "Missing Key value",
+        "Description":  "\"TableField: allocationMessage; Message\" is a Primary Key with a subset ratio of less than 100%.  This indicates a likely missing Dimension value.",
+        "Impact":  "0",
+        "RefObjectType":  "TableFieldMeta",
+        "RefMetaId":  "6587"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MissingKeyValue",
+        "Category":  "Quality",
+        "Label":  "Missing Key value",
+        "Description":  "\"TableField: AllocationAffectedEntity; Affected Entity\" is a Primary Key with a subset ratio of less than 100%.  This indicates a likely missing Dimension value.",
+        "Impact":  "0",
+        "RefObjectType":  "TableFieldMeta",
+        "RefMetaId":  "6588"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "OuterJoinTables",
+        "Category":  "Performance",
+        "Label":  "Tables can be Outer Joined",
+        "Description":  "Tables \"User \u0026 allocationUser\" have one-to-one relationship. Consider outer joining.",
+        "Impact":  "0",
+        "RefObjectType":  "TableFieldMeta",
+        "RefMetaId":  "6533"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"LogEntryPeriodStart\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 4,138,117 bytes.",
+        "Impact":  "4138117",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5923"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"ProxyPackageId\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 3,297,764 bytes.",
+        "Impact":  "3297764",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5936"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"RequestSequenceId\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 14,407 bytes.",
+        "Impact":  "14407",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5943"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"process_name\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 28,819 bytes.",
+        "Impact":  "28819",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5947"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Logger\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 58,480 bytes.",
+        "Impact":  "58480",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5953"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Severity\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 28,813 bytes.",
+        "Impact":  "28813",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5959"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"_proxySessionPackage\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 5,853,801 bytes.",
+        "Impact":  "5853801",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5963"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Context\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 72,685 bytes.",
+        "Impact":  "72685",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5974"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Result\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 43,240 bytes.",
+        "Impact":  "43240",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5980"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"ObjectId\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 88,139 bytes.",
+        "Impact":  "88139",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5983"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"security_class\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 28,819 bytes.",
+        "Impact":  "28819",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5994"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Status\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 28,817 bytes.",
+        "Impact":  "28817",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5999"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"CommandType\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 32 bytes.",
+        "Impact":  "32",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6041"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"User Access Quarantined\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 16 bytes.",
+        "Impact":  "16",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6053"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"User Access Token Count\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 16 bytes.",
+        "Impact":  "16",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6055"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Login Access Created\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6073"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Login Access Modified\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6076"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Login Access Modified by\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6079"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Login Access Token Count\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6092"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"User Directory\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 86 bytes.",
+        "Impact":  "86",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6098"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"License Type Enabled\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 22 bytes.",
+        "Impact":  "22",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6107"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"License Access Enabled\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 12 bytes.",
+        "Impact":  "12",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6110"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"License Token Cost\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 0 bytes.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6115"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"License Serial Number\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 27 bytes.",
+        "Impact":  "27",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6140"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"License Name \u0026 Organization\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 10 bytes.",
+        "Impact":  "10",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6143"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"License LEF\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 22 bytes.",
+        "Impact":  "22",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6145"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"License Created Date\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 10 bytes.",
+        "Impact":  "10",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6148"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"License Modified Date\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 10 bytes.",
+        "Impact":  "10",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6150"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"License Message\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 111 bytes.",
+        "Impact":  "111",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6153"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"License Message + Details\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 190 bytes.",
+        "Impact":  "190",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6162"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"hour_sort\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 71,787 bytes.",
+        "Impact":  "71787",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6199"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"last28days\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 14,327 bytes.",
+        "Impact":  "14327",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6214"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "UnusedField",
+        "Category":  "Resource",
+        "Label":  "Unused Field",
+        "Description":  "The field \"Minute\" was not used in any charts or master items. This field could likely be dropped from the data model with no loss of analysis. Dropping this field would recover 105 bytes.",
+        "Impact":  "105",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6225"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"Login Access Rule\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5906"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"Analyzer Capacity Used (Minutes)\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6007"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"UsageId\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6022"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"Quarantined UserId\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6066"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"User Access Quarantine End\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6069"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"Login Access Created\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6073"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"Login Access Modified\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6076"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"Login Access Modified by\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6079"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"Login Passes Used\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6082"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"Login Passes Remaining\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6085"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"Login Passes Assigned\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6089"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"Login Access Token Count\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6092"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"License Token Cost\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6115"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"License Unavailable Tokens\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6123"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"License Allocated Analyzer Capacity (Minutes)\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6130"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"License Used Analyzer Capacity (Minutes)\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6132"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "NullField",
+        "Category":  "Resource",
+        "Label":  "100% Null field",
+        "Description":  "The field \"License Unavailable Analyzer Capacity (Minutes)\" contains only null values. This field could likely be dropped from the data model with no loss of analysis.",
+        "Impact":  "0",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6135"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "AutoNumberKey",
+        "Category":  "Resource",
+        "Label":  "Key can be Autonumbered",
+        "Description":  "This key field \"_TimeDIM_Link\" was not found in any charts. Consider autonumbering to save 354,105 bytes of RAM.",
+        "Impact":  "354105",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "5909"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "AutoNumberKey",
+        "Category":  "Resource",
+        "Label":  "Key can be Autonumbered",
+        "Description":  "This key field \"Hour Timeline\" was not found in any charts. Consider autonumbering to save 36,560 bytes of RAM.",
+        "Impact":  "36560",
+        "RefObjectType":  "FieldMeta",
+        "RefMetaId":  "6164"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MasterMeasDuplicateLabel",
+        "Category":  "Practice",
+        "Label":  "Master Measure Duplicate Label",
+        "Description":  "Two or more Master Measures share the same Name but contain different definitions. This is likely to cause confusion and ambiguity.  The Measures are: \"User Access Users, User Access Users\"",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "6325"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MasterMeasDuplicateLabel",
+        "Category":  "Practice",
+        "Label":  "Master Measure Duplicate Label",
+        "Description":  "Two or more Master Measures share the same Name but contain different definitions. This is likely to cause confusion and ambiguity.  The Measures are: \"Login Access Users, Login Access Users\"",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "6327"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MasterMeasDuplicateLabel",
+        "Category":  "Practice",
+        "Label":  "Master Measure Duplicate Label",
+        "Description":  "Two or more Master Measures share the same Name but contain different definitions. This is likely to cause confusion and ambiguity.  The Measures are: \"Daily Average, Daily Average\"",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "6342"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MasterMeasDuplicateLabel",
+        "Category":  "Practice",
+        "Label":  "Master Measure Duplicate Label",
+        "Description":  "Two or more Master Measures share the same Name but contain different definitions. This is likely to cause confusion and ambiguity.  The Measures are: \"User Access Sessions, User Access Sessions\"",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "6343"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MasterMeasDuplicateLabel",
+        "Category":  "Practice",
+        "Label":  "Master Measure Duplicate Label",
+        "Description":  "Two or more Master Measures share the same Name but contain different definitions. This is likely to cause confusion and ambiguity.  The Measures are: \"Login Access Passes, Login Access Passes\"",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "6348"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MasterMeasDuplicateLabel",
+        "Category":  "Practice",
+        "Label":  "Master Measure Duplicate Label",
+        "Description":  "Two or more Master Measures share the same Name but contain different definitions. This is likely to cause confusion and ambiguity.  The Measures are: \"Access Denials, Access Denials\"",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "6358"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "MasterMeasDuplicateDef",
+        "Category":  "Practice",
+        "Label":  "Master Measure Duplicate Definition",
+        "Description":  "Two or more Master Measures contain the same effective definition but use different names.  This may create ambiguity for Developers or Users. The Measures are: \"Analyzer Capacity Minutes*, Analyzer Capacity Minutes Used (All-time)*\"",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "6317"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionMatchingMeasure",
+        "Category":  "Practice",
+        "Label":  "Expression Matching Measure",
+        "Description":  "This expression matches the Master Measure \\\"Login Access Passes\\\". Recommended  to use the Master Measure instead.",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8523"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionMatchingMeasure",
+        "Category":  "Practice",
+        "Label":  "Expression Matching Measure",
+        "Description":  "This expression matches the Master Measure \\\"Apps\\\". Recommended  to use the Master Measure instead.",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8602"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionMatchingMeasure",
+        "Category":  "Practice",
+        "Label":  "Expression Matching Measure",
+        "Description":  "This expression matches the Master Measure \\\"Analyzer Capacity Minutes Used Last Month\\\". Recommended  to use the Master Measure instead.",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8611"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Expression Syntax Error",
+        "Description":  "The expression failed validation. The error is:\\n Bad field name(s) \"Level\" .",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "6355"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Expression Syntax Error",
+        "Description":  "The expression failed validation. The error is:\\n Bad field name(s) \"Level\" .",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "6373"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Expression Syntax Error",
+        "Description":  "The expression failed validation. The error is:\\n Bad field name(s) \"SessionCount\" \"UsageID\" .",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8664"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Expression Syntax Error",
+        "Description":  "The expression failed validation. The error is:\\n Garbage after expression: \u0027)\u0027.",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8674"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Expression Syntax Error",
+        "Description":  "The expression failed validation. The error is:\\n Bad field name(s) \"SessionCount\" \"UsageID\" .",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8680"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Expression Syntax Error",
+        "Description":  "The expression failed validation. The error is:\\n Bad field name(s) \"UsageID\" \"UserName\" .",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8681"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Expression Syntax Error",
+        "Description":  "The expression failed validation. The error is:\\n Error in set modifier ad hoc element list:",
+        "Impact":  null,
+        "RefObjectType":  null,
+        "RefMetaId":  null
+    },
+    {
+        "QsdaVersion":  "\u0027",
+        "Flag":  "\u0027 or \u0027)\u0027 expected.\"",
+        "Category":  "0",
+        "Label":  "VizObjectExpressionMeta",
+        "Description":  "8702",
+        "Impact":  null,
+        "RefObjectType":  null,
+        "RefMetaId":  null
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ExpressionSyntaxError",
+        "Category":  "Quality",
+        "Label":  "Expression Syntax Error",
+        "Description":  "The expression failed validation. The error is:\\n Error in set modifier ad hoc element list:",
+        "Impact":  null,
+        "RefObjectType":  null,
+        "RefMetaId":  null
+    },
+    {
+        "QsdaVersion":  "\u0027",
+        "Flag":  "\u0027 or \u0027)\u0027 expected.\"",
+        "Category":  "0",
+        "Label":  "VizObjectExpressionMeta",
+        "Description":  "8703",
+        "Impact":  null,
+        "RefObjectType":  null,
+        "RefMetaId":  null
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Analyzer Capacity Help Link\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"analyzer_capacity_help_link\"",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "6315"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Allocated User Access/ Licensed Professional Users\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Token Type\", \"License Allocated Tokens\", \"License Total Tokens\"",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "6332"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Available Analyzer Capacity (Minutes)\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Allocated Analyzer Capacity (Minutes)\", \"License Used Analyzer Capacity (Minutes)\", \"License Unavailable Analyzer Capacity (Minutes)\"",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "6346"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Analyzer Capacity Time Used\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Used Analyzer Capacity (Minutes)\"",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "6349"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Login Tokens or Analyzer Access Used\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Total Tokens\", \"License Token Type\"",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "6353"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Allocated Login Access/ Licensed Analyzer Access\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Token Type\", \"License Allocated Tokens\", \"License Total Tokens\"",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "6363"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Analyzer Capacity Total Time (Minutes)\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Allocated Analyzer Capacity (Minutes)\"",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "6374"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Available Login Access/ Unallocated Analyzer Access\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Token Type\", \"License Allocated Tokens\", \"License Used Tokens\", \"License Unavailable Tokens\", \"License Total Available Tokens\", \"License Total Tokens\"",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "6379"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Analyzer Capacity Usage Message\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"analyzer_capacity_message\"",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "6380"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Unallocated Tokens / Access\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Total Available Tokens\", \"License Total Tokens\"",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "6381"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Total Tokens / Access\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Total Tokens\"",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "6382"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Available User Access/ Unallocated Professional Access\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Token Type\", \"License Allocated Tokens\", \"License Used Tokens\", \"License Quarantined Tokens\", \"License Total Available Tokens\", \"License Total Tokens\"",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "6384"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Allocated Analyzer Capacity (Minutes)\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8453"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"analyzer capacity\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Token Type\", \"License Allocated Analyzer Capacity (Minutes)\", \"License Used Analyzer Capacity (Minutes)\", \"License Unavailable Analyzer Capacity (Minutes)\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8462"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"analyzer\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Token Type\", \"License Total Tokens\", \"License Allocated Tokens\", \"License Used Tokens\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8463"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"professional\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Token Type\", \"License Total Tokens\", \"License Allocated Tokens\", \"License Used Tokens\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8465"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Unallocated Tokens / Access\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Total Available Tokens\", \"License Total Tokens\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8478"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Total Tokens / Access\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Total Tokens\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8479"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Available Login Access/ Unallocated Analyzer Access\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Token Type\", \"License Allocated Tokens\", \"License Used Tokens\", \"License Unavailable Tokens\", \"License Total Available Tokens\", \"License Total Tokens\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8480"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Analyzer Capacity Time Used\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Used Analyzer Capacity (Minutes)\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8481"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Allocated Analyzer Capacity (Minutes)\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8482"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Allocated Analyzer Capacity (Minutes)\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8484"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Available User Access/ Unallocated Professional Access\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Token Type\", \"License Allocated Tokens\", \"License Used Tokens\", \"License Quarantined Tokens\", \"License Total Available Tokens\", \"License Total Tokens\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8485"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Allocated User Access/ Licensed Professional Users\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Token Type\", \"License Allocated Tokens\", \"License Total Tokens\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8487"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Allocated Login Access/ Licensed Analyzer Access\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Token Type\", \"License Allocated Tokens\", \"License Total Tokens\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8488"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Analyzer Capacity Total Time (Minutes)\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Allocated Analyzer Capacity (Minutes)\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8489"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Last 7 Days\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"dimNum\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8497"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Last 28 Days\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"dimNum\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8498"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Last 90 Days\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"dimNum\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8500"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"dimNum\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8504"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Analyzer Capacity Help Link\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"analyzer_capacity_help_link\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8506"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Analyzer Capacity Usage Message\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"analyzer_capacity_message\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8507"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Professional\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Token Type\", \"License Total Tokens\", \"License Allocated Tokens\", \"License Used Tokens\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8579"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Analyzer\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Token Type\", \"License Total Tokens\", \"License Allocated Tokens\", \"License Used Tokens\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8581"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Analyzer Capacity\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Token Type\", \"License Allocated Analyzer Capacity (Minutes)\", \"License Used Analyzer Capacity (Minutes)\", \"License Unavailable Analyzer Capacity (Minutes)\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8582"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"User Access\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Total Tokens\", \"License Token Type\", \"License Allocated Tokens\", \"License Used Tokens\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8584"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Login Access\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Token Type\", \"License Allocated Tokens\", \"License Used Tokens\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8585"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"License Message\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Created \u0026 Modified Message\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8587"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"license details\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Details\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8588"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Allocated Analyzer Capacity (Minutes)\", \"License Used Analyzer Capacity (Minutes)\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8592"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Allocated Analyzer Capacity (Minutes)\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8607"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Allocated Analyzer Capacity (Minutes)\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8621"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "DataIslandExpression",
+        "Category":  "Performance",
+        "Label":  "Data Island Expression",
+        "Description":  "The expression \\\"Available Analyzer Capacity (Minutes)\\\" uses a Field from an island table.  Improper use of island fields may lead to performance problems. The field(s) are: \"License Allocated Analyzer Capacity (Minutes)\", \"License Used Analyzer Capacity (Minutes)\", \"License Unavailable Analyzer Capacity (Minutes)\"",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8694"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ConditionalAggregation",
+        "Category":  "Performance",
+        "Label":  "Conditional Aggregation",
+        "Description":  "The expression contains a conditional aggregation which may cause poor performance due to multiple aggregation calculations.",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "6332"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ConditionalAggregation",
+        "Category":  "Performance",
+        "Label":  "Conditional Aggregation",
+        "Description":  "The expression contains a conditional aggregation which may cause poor performance due to multiple aggregation calculations.",
+        "Impact":  "0",
+        "RefObjectType":  "MasterMeasureMeta",
+        "RefMetaId":  "6363"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ConditionalAggregation",
+        "Category":  "Performance",
+        "Label":  "Conditional Aggregation",
+        "Description":  "The expression contains a conditional aggregation which may cause poor performance due to multiple aggregation calculations.",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8487"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Flag":  "ConditionalAggregation",
+        "Category":  "Performance",
+        "Label":  "Conditional Aggregation",
+        "Description":  "The expression contains a conditional aggregation which may cause poor performance due to multiple aggregation calculations.",
+        "Impact":  "0",
+        "RefObjectType":  "VizObjectExpressionMeta",
+        "RefMetaId":  "8488"
+    }
+]

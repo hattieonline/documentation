@@ -1,0 +1,646 @@
+[
+    {
+        "Discriminator":  "AUTOGENERATE;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AtriaDW;",
+        "Statement":  "CompetitorToPrice:"
+    },
+    {
+        "Discriminator":  "LOAD ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "factCompetitorToPriceByCareByRoomTypeStyleID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CompetitorID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     CareTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     CareType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CareTypeCode",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CareTypeCode as CareType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     RoomTypeStyleID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RoomTypeStyle",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "IF(RoomTypeStyle=\u0027One Bedroom\u0027",
+        "Statement":  "\u00271 BR\u0027"
+    },
+    {
+        "Discriminator":  "PriceBaseBegin",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "PriceBaseEnd",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "UnitCapacity;SQL SELECT *",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM AtriaDW.Pricing.factCompetitorToPriceByCareByRoomTypeStyle\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AtriaDW;",
+        "Statement":  "LEFT JOIN (TempCareType)"
+    },
+    {
+        "Discriminator":  "LOAD",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// mstrCompetitor",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CompetitorID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     PropertyID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Competitor as Organization",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\u0027Competitor\u0027 as OrganizationType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     Status",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     Address1",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     Address2",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     City",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     State",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     PostalCode",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     Country",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     Metro",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     CBSACode",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     County",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     Latitude",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     Longitude",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "GeoMakePoint(Latitude",
+        "Statement":  "Longitude) as [B2B Location];SQL SELECT *"
+    },
+    {
+        "Discriminator":  "FROM AtriaDW.Pricing.mstrCompetitor\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AtriaDW;",
+        "Statement":  "LEFT JOIN (TempCompetitiveVisits)"
+    },
+    {
+        "Discriminator":  "LOAD",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// mstrCompetitor",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CompetitorID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     PropertyID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Competitor as Organization",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\u0027Competitor\u0027 as OrganizationType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     Status",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     Address1",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     Address2",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     City",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     State",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     PostalCode",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     Country",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     Metro",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     CBSACode",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     County",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     Latitude",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     Longitude",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "GeoMakePoint(Latitude",
+        "Statement":  "Longitude) as [B2B Location];SQL SELECT *"
+    },
+    {
+        "Discriminator":  "FROM AtriaDW.Pricing.mstrCompetitor\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AtriaDW;",
+        "Statement":  "LEFT JOIN (TempCompetitors)"
+    },
+    {
+        "Discriminator":  "LOAD",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// mstrCompetitor",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CompetitorID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     PropertyID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Competitor as Organization",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\u0027Competitor\u0027 as OrganizationType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     Status",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     Address1",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     Address2",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     City",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     State",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     PostalCode",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     Country",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     Metro",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     CBSACode",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     County",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     Latitude",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     Longitude",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "GeoMakePoint(Latitude",
+        "Statement":  "Longitude) as [B2B Location];SQL SELECT *"
+    },
+    {
+        "Discriminator":  "FROM AtriaDW.Pricing.mstrCompetitor\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AtriaDW;",
+        "Statement":  "LOAD "
+    },
+    {
+        "Discriminator":  "//\tEffectiveDT",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "EffectiveDT as %DateKey",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// \tFullDateUSA",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// \tDayOfMonth",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// \tDaySuffix",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// \tDayName",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// \tDayOfWeekUSA",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// \tDayOfWeekInMonth",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// \tDayOfWeekInYear",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "MonthDayCount",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// \tDayOfQuarter",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// \tDayOfYear",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// \tWeekOfMonth",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// \tWeekOfQuarter",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// \tWeekOfYear",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// \tMonth",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// \tMonthName",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// \tMonthOfQuarter",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// \tQuarter",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// \tQuarterName",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// \tYear",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// \tYearName",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "MonthYear;dimdate:",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "Select",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "*",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM AtriaDW.Dimension.dimDate",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "where EffectiveDT \u003e=\u00271/1/1900\u0027 and EffectiveDT \u003c=\u00272/12/9015\u0027\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AtriaDW;",
+        "Statement":  "SQL SELECT *"
+    },
+    {
+        "Discriminator":  "FROM AtriaDW.Pricing.factCompetitorToPriceByCareByRoomTypeStyle\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AtriaDW;",
+        "Statement":  "SQL SELECT *"
+    },
+    {
+        "Discriminator":  "FROM AtriaDW.Pricing.mstrCompetitor\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AtriaDW;",
+        "Statement":  "SQL SELECT *"
+    },
+    {
+        "Discriminator":  "FROM AtriaDW.Pricing.mstrCompetitorToCommunity\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AtriaDW;",
+        "Statement":  "TempCareType:"
+    },
+    {
+        "Discriminator":  "LOAD ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// CompetitorToCommunityID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     CommunityID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CommunityNumber as [%CommunityKey]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CompetitorID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     CareTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     CareType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CareTypeCode",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CareTypeCode as CareType;SQL SELECT *",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM AtriaDW.Pricing.mstrCompetitorToCommunity\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AtriaDW;",
+        "Statement":  "TempCompetitiveVisits:"
+    },
+    {
+        "Discriminator":  "LOAD ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// CompetitorToCommunityID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     CommunityID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CommunityNumber as [%CommunityKey]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CompetitorID;SQL SELECT *",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM AtriaDW.Pricing.mstrCompetitorToCommunity\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AtriaDW;",
+        "Statement":  "TempCompetitors:"
+    },
+    {
+        "Discriminator":  "LOAD ",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "// CompetitorToCommunityID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     CommunityID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CommunityNumber as [%CommunityKey]",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CompetitorID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     CareTypeID",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "//     CareType",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "CareTypeCode as CareType;SQL SELECT *",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM AtriaDW.Pricing.mstrCompetitorToCommunity\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "AtriaDW;",
+        "Statement":  "dimdate:"
+    },
+    {
+        "Discriminator":  "Select",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "*",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "FROM AtriaDW.Dimension.dimDate",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "where EffectiveDT \u003e=\u00271/1/1900\u0027 and EffectiveDT \u003c=\u00272/12/9015\u0027\"",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT CompetitorToPrice;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT FactTable;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT TempCareType;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT TempCareType2;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT TempCompetitiveVisits;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "RESIDENT TempCompetitors;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\qlik.atriacom.com\\datashare\\qvd transform\\qvd_transform_factcontactjournalactivity.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\qlik.atriacom.com\\datashare\\qvd transform\\qvd_transform_factinquirybyreferral.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\qlik.atriacom.com\\datashare\\qvd transform\\qvd_transform_factrevenuebymovein.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\qlik.atriacom.com\\datashare\\qvd transform\\qvd_transform_factscorecard.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\qlik.atriacom.com\\datashare\\qvd transform\\qvd_transform_factunitoccupancybymonth.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\qlik.atriacom.com\\datashare\\qvd transform\\qvd_transform_journalactivity.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\qlik.atriacom.com\\datashare\\qvd transform\\qvd_transform_mstrcommunity.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\qlik.atriacom.com\\datashare\\qvd transform\\qvd_transform_mstrcorporation.qvd;",
+        "Statement":  null
+    },
+    {
+        "Discriminator":  "\\\\qlik.atriacom.com\\datashare\\qvd transform\\qvd_transform_mstrproductinventory.qvd;",
+        "Statement":  null
+    }
+]

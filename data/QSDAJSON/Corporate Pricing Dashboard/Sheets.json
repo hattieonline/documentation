@@ -1,0 +1,62 @@
+[
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "72d4b7f4-3078-45ac-be80-d1156786e52b",
+        "Name":  "Revenue Metrics",
+        "Description":  "",
+        "Rank":  "-0.3828125",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "vVudJ",
+        "Name":  "Advised Rate Variance Leaderboard",
+        "Description":  "",
+        "Rank":  "-0.265625",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "vZtmTDn",
+        "Name":  "Pricing Review",
+        "Description":  "",
+        "Rank":  "-1.5",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "zGxwUnJ",
+        "Name":  "Trends",
+        "Description":  "",
+        "Rank":  "-2.5",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "GjtUBG",
+        "Name":  "Move In Detail",
+        "Description":  "",
+        "Rank":  "-0.03125",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    },
+    {
+        "QsdaVersion":  "2.1.0",
+        "Id":  "ad5c6311-7c43-4fd3-89d5-8509e84e09df",
+        "Name":  "Pricing Review ??? By Room Type",
+        "Description":  "",
+        "Rank":  "-0.44140625",
+        "Published":  "True",
+        "Approved":  "True",
+        "OwnerName":  "hattie.sager"
+    }
+]

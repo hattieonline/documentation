@@ -1,0 +1,16 @@
+{
+    "QsdaVersion":  "2.1.0",
+    "MetaId":  "4406",
+    "Name":  "RateIncrease",
+    "NoOfRows":  "0",
+    "NoOfFields":  "31",
+    "KeyCount":  "0",
+    "NonKeyUseCount":  "0",
+    "IsIsland":  "False",
+    "IsDirectDiscovery":  "False",
+    "Comment":  "",
+    "IsSynthetic":  "False",
+    "IsLoose":  "False",
+    "RowPointerBits":  "0",
+    "TotalBytes":  "0"
+}
