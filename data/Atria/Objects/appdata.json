@@ -774,5 +774,197 @@
         "LabelExpression":  "Inquiry Status",
         "Description":  "",
         "Expression":  "Status"
+    },
+    {
+        "App":  "Atria-Extract",
+        "Type":  "measure",
+        "Label":  "Completed Initial Tours",
+        "LabelExpression":  null,
+        "Description":  "Completed Initial Tours excluding Atria Home Care.\nPlease note, it includes Not Qualified Tours",
+        "Expression":  "Count({\u003c%CommunityKey-={10163},JournalType={\u0027Scheduled Tour\u0027,\u0027Unscheduled Tour\u0027},JournalClosedFlg={\u00271\u0027},Sequence={\u00271\u0027}\u003e}distinct([%CustomerIDKey]))"
+    },
+    {
+        "App":  "Atria-Extract",
+        "Type":  "measure",
+        "Label":  "Current Month Unit Move Ins",
+        "LabelExpression":  null,
+        "Description":  "Excludes Home Care",
+        "Expression":  "Sum({\u003c%CommunityKey-={10163},[%DateKey]={\u0027\u003e=$(=monthstart(today()))\u0027}\u003e}[M_UnitMoveIns])"
+    },
+    {
+        "App":  "Atria-Extract",
+        "Type":  "measure",
+        "Label":  "Today\u0027s Unit Occupancy",
+        "LabelExpression":  null,
+        "Description":  "Excludes home care, and inactive communities",
+        "Expression":  "sum({\u003c[%CommunityKey]-={10163,10660,10683,10861},[%DateKey]={\u0027\u003e=$(=monthstart(today()))\u0027}\u003e}[M_EOMActual])/\nsum({\u003c[%CommunityKey]-={10163,10660,10683,10861},[%DateKey]={\u0027\u003e=$(=monthstart(today()))\u0027}\u003e}[M_EOMCapacity])"
+    },
+    {
+        "App":  "Atria-Extract",
+        "Type":  "measure",
+        "Label":  "Inquiry To Tour Conversion",
+        "LabelExpression":  null,
+        "Description":  "Initial Tours to Inquiry Conversion\nDoes not include Not Qualified Inquries\nIncludes not Qualified Tours",
+        "Expression":  "Count({\u003c%CommunityKey-={10163},JournalType={\u0027Scheduled Tour\u0027,\u0027Unscheduled Tour\u0027},JournalClosedFlg={\u00271\u0027},Sequence={\u00271\u0027}\u003e}distinct([%CustomerIDKey]))\n/\ncount({\u003c[%CommunityKey]-={10163},Status-={\u0027Not Qualified\u0027}\u003e}InquiryStatusDate)"
+    },
+    {
+        "App":  "Atria-Extract",
+        "Type":  "measure",
+        "Label":  "Today\u0027s Vacant Rooms",
+        "LabelExpression":  null,
+        "Description":  "Excludes Home Care \u0026 Inactive Communities",
+        "Expression":  "count({\u003c[isOccupiedFlg]={0},[%CommunityKey]-={10163,10660,10683,10861},MonthYear=\u003e}[isOccupiedFlg])"
+    },
+    {
+        "App":  "Atria-Extract",
+        "Type":  "measure",
+        "Label":  "CurrentMonthRevenue",
+        "LabelExpression":  null,
+        "Description":  "",
+        "Expression":  "Sum({\u003c%CommunityKey-={10163},[%DateKey]={\u0027\u003e=$(=monthstart(today()))\u0027}\u003e}M_RevenueAtMaturity)-\nSum({\u003c%CommunityKey-={10163},[%DateKey]={\u0027\u003e=$(=monthstart(today()))\u0027},MoveOutDate=-{\u0027\u0027},DayOfResidence-={\u002730\u0027}\u003e}M_RevenueAtMaturity)"
+    },
+    {
+        "App":  "Atria-Extract",
+        "Type":  "measure",
+        "Label":  "Current Week Initial Tours",
+        "LabelExpression":  null,
+        "Description":  "Last 7 days of initial tours that are open or closed",
+        "Expression":  "Count({\u003c%CommunityKey-={10163},[%DateKey]={\"\u003e=$(=Date(today()-7))\"},JournalType={\u0027Scheduled Tour\u0027,\u0027Unscheduled Tour\u0027},Sequence={\u00271\u0027}\u003e}distinct([%CustomerIDKey]))"
+    },
+    {
+        "App":  "Atria-Extract",
+        "Type":  "dimension",
+        "Label":  "RSM",
+        "LabelExpression":  "RSM",
+        "Description":  "",
+        "Expression":  "RSM"
+    },
+    {
+        "App":  "Atria-Extract",
+        "Type":  "dimension",
+        "Label":  "RVP",
+        "LabelExpression":  "RVP",
+        "Description":  "",
+        "Expression":  "RVP"
+    },
+    {
+        "App":  "Atria-Extract",
+        "Type":  "dimension",
+        "Label":  "Community",
+        "LabelExpression":  "Community",
+        "Description":  "Combines Woodlands  \u0026 Setauket",
+        "Expression":  "CampusName"
+    },
+    {
+        "App":  "Atria-Extract",
+        "Type":  "dimension",
+        "Label":  "SVP",
+        "LabelExpression":  "SVP",
+        "Description":  "",
+        "Expression":  "SVP"
+    },
+    {
+        "App":  "Atria-Extract",
+        "Type":  "dimension",
+        "Label":  "Svc",
+        "LabelExpression":  "Svc",
+        "Description":  "Abridged format for CareType",
+        "Expression":  "=if(match(CareType,\u0027Assisted Living\u0027),\u0027AL\u0027,if(match(CareType,\u0027Independent Living\u0027),\u0027IL\u0027,if(match(CareType,\u0027Memory Care\u0027),\u0027LG\u0027,\u0027\u0027)))"
+    },
+    {
+        "App":  "Atria-Transform",
+        "Type":  "measure",
+        "Label":  "Completed Initial Tours",
+        "LabelExpression":  null,
+        "Description":  "Completed Initial Tours excluding Atria Home Care.\nPlease note, it includes Not Qualified Tours",
+        "Expression":  "Count({\u003c%CommunityKey-={10163},JournalType={\u0027Scheduled Tour\u0027,\u0027Unscheduled Tour\u0027},JournalClosedFlg={\u00271\u0027},Sequence={\u00271\u0027}\u003e}distinct(CustomerID))"
+    },
+    {
+        "App":  "Atria-Transform",
+        "Type":  "measure",
+        "Label":  "Current Month Unit Move Ins",
+        "LabelExpression":  null,
+        "Description":  "Excludes Home Care",
+        "Expression":  "Sum({\u003c%CommunityKey-={10163},[%DateKey]={\u0027\u003e=$(=monthstart(today()))\u0027}\u003e}[M_UnitMoveIns])"
+    },
+    {
+        "App":  "Atria-Transform",
+        "Type":  "measure",
+        "Label":  "Today\u0027s Unit Occupancy",
+        "LabelExpression":  null,
+        "Description":  "Excludes home care, and inactive communities",
+        "Expression":  "sum({\u003c[%CommunityKey]-={10163,10660,10683,10861},[%DateKey]={\u0027\u003e=$(=monthstart(today()))\u0027}\u003e}[M_EOMActual])/\nsum({\u003c[%CommunityKey]-={10163,10660,10683,10861},[%DateKey]={\u0027\u003e=$(=monthstart(today()))\u0027}\u003e}[M_EOMCapacity])"
+    },
+    {
+        "App":  "Atria-Transform",
+        "Type":  "measure",
+        "Label":  "Inquiry To Tour Conversion",
+        "LabelExpression":  null,
+        "Description":  "Initial Tours to Inquiry Conversion\nDoes not include Not Qualified Inquries\nIncludes not Qualified Tours",
+        "Expression":  "Count({\u003c%CommunityKey-={10163},JournalType={\u0027Scheduled Tour\u0027,\u0027Unscheduled Tour\u0027},JournalClosedFlg={\u00271\u0027},Sequence={\u00271\u0027}\u003e}distinct(CustomerID))\n/\ncount({\u003c[%CommunityKey]-={10163},Status-={\u0027Not Qualified\u0027}\u003e}InquiryStatusDate)"
+    },
+    {
+        "App":  "Atria-Transform",
+        "Type":  "measure",
+        "Label":  "Today\u0027s Vacant Rooms",
+        "LabelExpression":  null,
+        "Description":  "Excludes Home Care \u0026 Inactive Communities",
+        "Expression":  "count({\u003c[isOccupiedFlg]={0},[%CommunityKey]-={10163,10660,10683,10861},MonthYear=\u003e}[isOccupiedFlg])"
+    },
+    {
+        "App":  "Atria-Transform",
+        "Type":  "measure",
+        "Label":  "CurrentMonthRevenue",
+        "LabelExpression":  null,
+        "Description":  "",
+        "Expression":  "Sum({\u003c%CommunityKey-={10163},[%DateKey]={\u0027\u003e=$(=monthstart(today()))\u0027}\u003e}M_RevenueAtMaturity)-\nSum({\u003c%CommunityKey-={10163},[%DateKey]={\u0027\u003e=$(=monthstart(today()))\u0027},MoveOutDate=-{\u0027\u0027},DayOfResidence-={\u002730\u0027}\u003e}M_RevenueAtMaturity)"
+    },
+    {
+        "App":  "Atria-Transform",
+        "Type":  "measure",
+        "Label":  "Current Week Initial Tours",
+        "LabelExpression":  null,
+        "Description":  "Last 7 days of initial tours that are open or closed",
+        "Expression":  "Count({\u003c%CommunityKey-={10163},[%DateKey]={\"\u003e=$(=Date(today()-7))\"},JournalType={\u0027Scheduled Tour\u0027,\u0027Unscheduled Tour\u0027},Sequence={\u00271\u0027}\u003e}distinct(CustomerID))"
+    },
+    {
+        "App":  "Atria-Transform",
+        "Type":  "dimension",
+        "Label":  "RSM",
+        "LabelExpression":  "RSM",
+        "Description":  "",
+        "Expression":  "RSM"
+    },
+    {
+        "App":  "Atria-Transform",
+        "Type":  "dimension",
+        "Label":  "RVP",
+        "LabelExpression":  "RVP",
+        "Description":  "",
+        "Expression":  "RVP"
+    },
+    {
+        "App":  "Atria-Transform",
+        "Type":  "dimension",
+        "Label":  "Community",
+        "LabelExpression":  "Community",
+        "Description":  "Combines Woodlands  \u0026 Setauket",
+        "Expression":  "CampusName"
+    },
+    {
+        "App":  "Atria-Transform",
+        "Type":  "dimension",
+        "Label":  "SVP",
+        "LabelExpression":  "SVP",
+        "Description":  "",
+        "Expression":  "SVP"
+    },
+    {
+        "App":  "Atria-Transform",
+        "Type":  "dimension",
+        "Label":  "Svc",
+        "LabelExpression":  "Svc",
+        "Description":  "Abridged format for CareType",
+        "Expression":  "=if(match(CareType,\u0027Assisted Living\u0027),\u0027AL\u0027,if(match(CareType,\u0027Independent Living\u0027),\u0027IL\u0027,if(match(CareType,\u0027Memory Care\u0027),\u0027LG\u0027,\u0027\u0027)))"
     }
 ]
